@@ -1,0 +1,413 @@
+@import "_settings.scss";
+
+
+
+
+
+//////////////////////// HEADER ////////////////////////
+
+.header-wrapper{
+    width: 100%;
+    height: calc(59px + (5 / 680) * (100vw - 320px));    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.5rem + 1.5vw);
+    z-index: 100;
+    padding-top: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
+    padding-bottom: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
+    padding-left: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
+    padding-right: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
+    position: fixed;
+    .header-left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header-name{
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+        .header-icons{
+            width: auto;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            cursor: pointer;
+            &.fa-solid{
+                filter: blur(0px);
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+    }
+    .header-right{
+        width: 100%;
+        position: fixed;
+        transform: translateY(-200%);
+        opacity: 0;
+        top: clamp(50px, calc(50px + calc((55 - 50) / (730 - 320)) * (100vw - 50px)), 55px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 20px ;
+        animation: MenuClose 0.8s ease-in forwards;
+        font-weight: 400;
+        font-size: 1.2rem;
+        &.open{
+            animation: MenuOpen 0.5s ease-out forwards;
+
+        }
+        .header-list{
+            width: 100%;
+            font-size: 20px;
+            display: flex;
+            padding: 10px 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            &>ul{
+                &>li>a{
+                    text-align: center;
+                }
+            }
+            a:hover{
+                color:rgb(207, 160, 97);
+            }
+        }
+        .header-buttons-container{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-left: 50px;
+            &>a{
+                margin-right: 20px;
+            }
+            &>span>i{
+                color: white;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.header-barre{
+    height: 1px;
+    width: 40%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+///////////////////////// SCROLL BOUTON /////////////////////////
+
+.buttonToTop{
+    scroll-behavior: smooth;
+    position: fixed;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 25px;
+    color: white;
+    border-radius: 25%;
+    border: none;
+    background-color: $secondary-color;
+    font-size: 30px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    &.active{
+        opacity: 1;
+        cursor: pointer;
+    
+    }
+    &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+        background-color: $tertiary-color;
+        color: white;
+    }
+}
+
+///////////////////////////// HOME /////////////////////////////
+
+//////////////////////////// PRESENTATION ////////////////////////
+#home_presentation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 120px;
+    padding-top: clamp(70px, calc(70px + calc((120 - 70) / (1440 - 320)) * (100vw - 70px)), 120px);
+    img{
+        width: clamp(150px, calc(150px + calc((300 - 150) / (1440 - 320)) * (100vw - 150px)), 300px);
+        height: clamp(150px, calc(150px + calc((300 - 150) / (1440 - 320)) * (100vw - 150px)), 300px);
+        border-radius: 50%;
+        margin: 10px;
+        border: solid  $tertiary-color clamp(2px, calc(2px + calc((5 - 2) / (1440 - 320)) * (100vw - 2px)), 5px);
+        object-fit: cover;
+    }
+    .home-title-container{
+        position: absolute;
+        width: clamp(320px, calc(320px + calc((1200 - 320) / (1440 - 320)) * (100vw - 320px)), 1200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include fluid-bottom(320px, 799px, 35px, 10px);            
+        h1{
+            text-align: center;
+            @include fluid-type(320px, 1440px, 30px, 70px);
+            font-family: $font-logo-prenom;
+            
+        }
+        h2{
+            text-align: center;
+            @include fluid-type(320px, 1440px, 20px, 50px);
+            font-family: $font-logo-nom;
+            .deco_presentation{
+                background-color: $quaternary-color;
+                width: 100%;
+                height: 50px;
+                border-radius: 50%;
+                transform: rotate3d(1, -0.62, 0.5, 90deg);
+            }
+        }
+    }
+}
+
+//////////////////////////// EXPERTISE ////////////////////////
+
+#home_expertise{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    padding: 14px;
+    #expertise_title{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-family: $font-logo-nom;
+    }
+    #expertiseCard_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+//////////////////////// EXPERTISE CARD ///////////////////////
+
+.expertise_card{
+    border-style: solid;
+        &#card-un{
+            border-width: 3px 3px 1.5px 3px;
+        }
+        &#card-deux{
+            border-width: 1.5px 3px;
+        }
+        &#card-trois{
+            border-width: 1.5px  3px 3px 3px;
+        }
+    .expertise_card_top_container{
+        background-color: red;
+        padding: 20px 15px;
+        display:flex;
+        flex-direction: row;
+        position: relative;
+        display:flex ;
+        align-items: center;
+        justify-content: space-between;
+        .expertise_card_collapse_-{
+            position: absolute;
+            padding-right: 10px;
+            top: 0;
+            right: 0;
+            font-size: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .expertise_card_icon{
+            flex: 1;
+            object-fit: cover;
+            
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+
+        }
+        .expertise_card_title_container{
+            flex: 10;
+            h3{
+                font-family: $font-logo-nom;
+            }
+            .expertise_card_title_h{
+
+                .expertise_card_title_span{
+                    position: relative;
+                    z-index: 0;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 10%;
+                        z-index: -1;
+                        height: 0.3em;
+                        width: 100%;
+                        left: 10%;
+                        background: linear-gradient(65deg, #5F6BD2 0%, #5F6BD2 100%, rgba(255, 209, 0, 0) 100%);
+                    }
+                }
+            }
+        }
+    }
+    .expertise_card_bottom_container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 15px;
+        .expertise_card_decoration_container{
+            margin:2px;
+        }
+        .expertise-card-description_container{
+            position: relative;
+            &::after{
+                opacity: 0.3;
+                content: '';
+                width: 0;
+                height: 65%;
+                position: absolute;
+                background-color: white;
+                border: 0.1px solid white;
+                bottom: 17%;
+                left: 17px;
+            }
+        }
+        .expertise_card_description_content{
+            display:block;
+            font-size: 12px;
+            padding-left: 35px;
+                &::before , &::after {
+                    opacity: 0,3;
+                    display: block;
+                    margin-left: -35px;
+                }
+                &::before {
+                    margin-bottom: 5px;
+                    content: "<h3>";
+
+                }
+                &::after {
+                    margin-top: 5px;
+                    content: "</h3>";
+
+                }
+        }
+    }
+}
+
+
+//////////////////////////// WORKS ////////////////////////
+
+#works-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aquamarine;
+    padding: 100px 15px;
+
+    #works_projets_list_container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+//////////////////////// PROJET PERSO /////////////////////
+
+
+#works_personnal_container{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    #works_personnal_text_container{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 15px;
+        #works_personnal_text_title{
+            font-size: $H3-font-size;
+            font-family: $font-title;
+        }
+        #works_personnal_text_title_p{
+            font-size: $P-font-size;
+            font-family: $font-primary;
+        }
+    }
+    #works_personnal_content{
+        background-color: #5F6BD2;
+        width: 40%;
+        height: 500px;
+        .work_personnal_content_text{
+            background-color: green;
+        }
+        .video3D{
+            background-color: saddlebrown;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+/////////////////////////// PROJETS ///////////////////////
+
+
+
+
+/////////////////////////// EXPERIENCE PROFESSIONEL ///////////////////////
+
+
+
+/////////////////////////// COLLAPSE ///////////////////////
+
+
+/////////////////////////// CONTACT ///////////////////////
+
+
+/////////////////////////// GAUCHE ///////////////////////
+
+
+
+/////////////////////////// DROITE ///////////////////////
+
+
+
+
+@import "_media.scss";

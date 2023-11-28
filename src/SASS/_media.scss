@@ -1,0 +1,209 @@
+
+@media screen and (min-width: 800px) {
+    
+
+//////////////////////// HEADER ////////////////////////
+
+.header-wrapper{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .header-left{
+        justify-content: flex-start;
+        &.icons{
+        display: none;
+        }
+    }
+    .header-right{
+        background: none;
+        flex-direction: row;
+        justify-content: space-between;
+        position:static;
+        top: 0;
+        opacity: 1;
+        padding: 0px 10px;
+
+
+        .header-list{
+            flex: 10;
+            flex-direction: row;
+            justify-content: space-between;
+            display: flex;
+            padding: 0px 0px;
+            &>li{
+                margin: 0px 10px;
+                padding: 0px 0px;
+            }
+        }
+        .header-buttons-container{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            & .header-button{
+                flex: 2;
+            }
+            &>a{
+                margin-right: 0px;
+            }
+            &>span>i{
+                margin-left: 30px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.header-barre{
+    width: 1px;
+    height: 30px;
+    border: $quinary-color 1px solid;
+}
+
+
+
+///////////////////////// SCROLL BOUTON /////////////////////////
+
+
+
+///////////////////////////// HOME /////////////////////////////
+
+//////////////////////////// PRESENTATION ////////////////////////
+
+#home_presentation{
+    .home-title-container{
+        @include fluid-bottom(800px, 1440px, 20px, -20px);            
+
+    }
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    img{
+        margin: 20px;
+    }
+    .deco_presentation{
+        width: 1200px;
+        height: 200px;
+        transform: rotate3d(1, -0.58, 0.5, 93deg);
+    }
+}
+
+//////////////////////////// EXPERTISE ////////////////////////
+
+#home_expertise{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    #expertise_title{
+        margin-top: 150px;
+        font-size: 50px;
+    }
+    #expertiseCard_container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 50px 100px;
+    }
+}
+
+//////////////////////// EXPERTISE CARD ///////////////////////
+
+.expertise_card{
+    width: 366px;
+    height: 305px;
+        &#card-un{
+            border-width: 3px 1.5px 3px 3px;
+        }
+        &#card-deux{
+            border-width: 3px 1.5px;
+        }
+        &#card-trois{
+            border-width: 3px  3px 3px 1.5px;
+        }
+    .expertise_card_top_container{
+        padding: 30px 20px;
+        .expertise_card_icon{
+            margin-right: 40px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .expertise_card_bottom_container{
+        .expertise_card_decoration_container{
+            margin:5px;
+        }
+
+    }
+}
+
+//////////////////////////// WORKS ////////////////////////
+
+//////////////////////// PROJET PERSO /////////////////////
+
+
+/////////////////////////// PROJETS ///////////////////////
+
+.workCard_article_container{
+    background-color: azure;
+    border-radius: 10px;
+    width: 376px;
+    height: 380px;
+    overflow: hidden;
+    margin: 30px;
+    // Image container , celui qui contient l'image qui va scale
+    .workCard_image_container{
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        // L'image
+        .workCard_image_content{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            animation: forwards 1s ease-in-out scaleImageWork;
+        }
+    }
+    .workCard_text_container{
+        width: 100%;
+        height: 20%;
+        color: red;
+        padding: 10px 20px;
+        .wordCard_text_title{
+            font-size: 20px;
+            font-family: $font-logo-nom;
+            margin: 10px;
+        }
+    }
+}
+
+/////////////////////////// EXPERIENCE PROFESSIONEL ///////////////////////
+
+#experience-container{
+    width: 100%;
+    padding: 30px 20px;
+    font-size: $H2-font-size;
+    display: flex;
+    justify-content: center;
+}
+
+/////////////////////////// COLLAPSE ///////////////////////
+/////////////////////////// CONTACT ///////////////////////
+#contact-container{
+    width: 100%;
+    padding: 30px 20px;
+}
+/////////////////////////// GAUCHE ///////////////////////
+
+
+
+/////////////////////////// DROITE ///////////////////////
+
+
+
+}

@@ -1,0 +1,79 @@
+{
+    "expertise":[
+        {
+            "title":"Frontend Developer,",
+            "soustitle":"React, NodeJS, SASS",
+            "id":"card-un",
+            "icon":"../../public/pictures/icons/site-internet-quote.png",
+            "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement."
+        },
+        {
+            "title":"React Native, Expo Go,",
+            "soustitle":"Android, IOS, Web",
+            "id": "card-deux",
+            "icon":"../../public/pictures/icons/mobile.png",
+            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application."
+        },
+        {
+            "title":"SEO",
+            "soustitle":"Website",
+            "id":"card-trois",
+            "icon":"../../public/pictures/icons/mobile.png",
+            "paragraph":" Avoir un beau site c'est bien, avori de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel."
+        }
+        
+    ],
+    "works":[
+        {
+            "name":"Kasa",
+            "image":"../../public/pictures/images/image-attractive.jpg",
+            "support":"Web Developpement",
+            "id":"1"
+        },
+        {
+            "name":"Sophie Bruel - Portfolio",
+            "image":"../../public/pictures/images/Landscape-Color.jpg",
+            "support":"Web Developpement",
+            "id":"2"
+        },
+        {
+            "name":"Kasa",
+            "image":"../../public/pictures/images/image-attractive.jpg",
+            "support":"Web Developpement",
+            "id":"3"
+        }
+    ],
+    "entreprises":[{
+        "name":"entreprise 1",
+        "job":"poste 1",
+        "localisation":"Paris,75006",
+        "website":"www.google.com",
+        "logo":"../../public/pictures/images/react-native.png",
+        "id":"1",
+        "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
+        "avis":[{
+            "surname":"nom1",
+            "name":"prenom1",
+            "picture":"../../public/pictures/images/react-native.png",
+            "comment":"lorem*20"
+        }]
+
+    },
+{
+        "name":"entreprise 2",
+        "job":"poste 2",
+        "localisation":"Paris,75015",
+        "website":"www.twitch.tv",
+        "logo":"../assets/images/react-native.png",
+        "id":"2",
+        "technologies":["REACT-NATIVE","EXPO GO"],
+        "avis":[{
+            "surname":"nom2",
+            "name":"prenom2",
+            "picture":"../assets/images/react-native.png",
+            "comment":"lorem*20"
+        }]
+
+    }
+]
+}
