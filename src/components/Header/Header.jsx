@@ -82,7 +82,7 @@ const HandleOpen = () => {
                             Pierre
                         </NavLink>
                     </div>
-                        {windowWidth <= 800? 
+                        {windowWidth < 800? 
                         (
                             <div className="header-icons">
                                 <i onClick={HandleOpen} className={` fa-solid fa-bars`}/> 

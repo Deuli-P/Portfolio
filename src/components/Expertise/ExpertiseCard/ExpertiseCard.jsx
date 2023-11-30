@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useContext} from "react";
-import ThemeContext from '../../Context/ThemeContext';
+import ThemeContext from '../../../Context/ThemeContext';
 
 // Card de presentation de mes compétences.
 // Icon , titre , sous titre, paragraphe et decoration ::before/ ::after.
@@ -17,8 +17,8 @@ const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
     // Si id est 3 alors ::after sera linear gradient green
 
     return (
-        <article className={`expertise_card ${theme === "dark" ? "expertise-border-light": "expertise-border-dark"}`} id={id}>
-            <div className={`expertise_card_top_container ${theme === "dark" ? "expertise-bg-card-top-light": "expertise-bg-card-top-dark"}`}>
+        <article className={`expertise_card ${theme === "dark" ? "expertise-border-light expertise-card-bg-light": "expertise-border-dark expertise-card-bg-dark"}`} id={id}>
+            <div className={`expertise_card_top_container `}>
                 <div className={`expertise_card_icon ${theme === "dark" ? "h3-light-color": "h3-dark-color"}`}>
                     <img src={icons} alt="Icon"/>
                 </div>
@@ -32,9 +32,9 @@ const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
                         </h3>
                 </div>
             </div>
-            <div className={`expertise_card_bottom_container ${theme === "dark" ? "expertise-bg-bot-light": "expertise-bg-bot-light"}`}>
+            <div className={`expertise_card_bottom_container `}>
                 <div className="expertise-card-description_container">
-                    <div className={`expertise_card_description_content ${theme === "dark" ? "expertise-bg-bot-light": "expertise-bg-bot-light"}`}>
+                    <div className={`expertise_card_description_content `}>
                         {paragraph}
                     </div>
                 </div>

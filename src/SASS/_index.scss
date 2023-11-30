@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: space-between;
         .header-name{
-            font-size: 2rem;
+            font-size: $H1-font-size;
             font-weight: bold;
             cursor: pointer;
 
@@ -199,6 +199,7 @@
     align-items: center;
     padding-bottom: 100px;
     padding: 14px;
+    
     #expertise_title{
         text-align: center;
         margin-top: 50px;
@@ -206,7 +207,7 @@
         font-size: 30px;
         font-family: $font-logo-nom;
     }
-    #expertiseCard_container{
+    .expertise_card_container{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -218,6 +219,7 @@
 
 .expertise_card{
     border-style: solid;
+    max-width: 400px;
         &#card-un{
             border-width: 3px 3px 1.5px 3px;
         }
@@ -228,7 +230,6 @@
             border-width: 1.5px  3px 3px 3px;
         }
     .expertise_card_top_container{
-        background-color: red;
         padding: 20px 15px;
         display:flex;
         flex-direction: row;
@@ -248,30 +249,34 @@
         .expertise_card_icon{
             flex: 1;
             object-fit: cover;
-            
+            margin-right: clamp(5px, calc(5px + calc((20 - 10) / (1440 - 320)) * (100vw - 5px)), 20px);
             width: 40px;
             height: 40px;
-            background-color: blue;
+            img{
+                width: 40px;
+                height: 40px;
+            }
 
         }
         .expertise_card_title_container{
-            flex: 10;
+            flex: 6;
             h3{
+                @include fluid-type(320px, 1440px, 15px, 20px);
                 font-family: $font-logo-nom;
             }
             .expertise_card_title_h{
-
-                .expertise_card_title_span{
+                .expertise_card_title_span{ // Surlignement
                     position: relative;
                     z-index: 0;
-                    &::after{
+                    font-size: 0.9375rem;
+                    font-size: clamp(0.9375rem, 0.6452244258872653rem + 1.4613778705636742vw, 1.375rem);                    &::after{
                         content: "";
                         position: absolute;
                         bottom: 10%;
                         z-index: -1;
                         height: 0.3em;
-                        width: 100%;
-                        left: 10%;
+                        width: 90%;
+                        left: 15%;
                         background: linear-gradient(65deg, #5F6BD2 0%, #5F6BD2 100%, rgba(255, 209, 0, 0) 100%);
                     }
                 }
@@ -283,6 +288,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 15px;
+        height:auto;
         .expertise_card_decoration_container{
             margin:2px;
         }
@@ -324,7 +330,7 @@
 }
 
 
-//////////////////////////// WORKS ////////////////////////
+//////////////////////////// PROJETS ////////////////////////
 
 #works-container {
     width: 100%;
@@ -333,7 +339,6 @@
     justify-content: center;
     background-color: aquamarine;
     padding: 100px 15px;
-
     #works_projets_list_container{
         display: flex;
         flex-direction: row;
@@ -344,36 +349,85 @@
     }
 }
 
-//////////////////////// PROJET PERSO /////////////////////
+////////////////////////  GEPALEMO /////////////////////
 
 
 #works_personnal_container{
-    margin-top: 150px;
+    padding-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     #works_personnal_text_container{
         display: flex;
         flex-direction: column;
-        width: 40%;
-        padding: 15px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
         #works_personnal_text_title{
             font-size: $H3-font-size;
             font-family: $font-title;
+            padding: 10px 0px;
+            text-align: center;
         }
-        #works_personnal_text_title_p{
-            font-size: $P-font-size;
+        #works_personnal_text_p{
+            @include fluid-type(320px, 1440px, 14px, 20px);
             font-family: $font-primary;
+            text-justify: distribute;
+            text-align: center;
         }
     }
     #works_personnal_content{
         background-color: #5F6BD2;
-        width: 40%;
-        height: 500px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        padding: 40px 10px 60px 60px;
         .work_personnal_content_text{
-            background-color: green;
+            width: 60%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0px 0px 70px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &>strong{
+                @include fluid-type(320px, 1440px, 20px, 32px);
+                color: rgb(255, 0, 0);
+                white-space: nowrap;
+            }
+            .work_personnal_content_fleche{
+                padding: 10px 0px 20px 50px;
+                width: 70px;
+                transform: scaleY(-1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    filter: invert(100%);
+                }
+            }
+            &>button{
+                padding: 5px 10px;
+                width: 70%;
+                border-radius: 10px;
+                border: none;
+                background-color: saddlebrown;
+                @include fluid-type(320px, 1440px, 20px, 32px);
+            }
         }
         .video3D{
-            background-color: saddlebrown;
+            background: url("../../public/pictures/gif/mobile-animation.gif") no-repeat center center ;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -382,32 +436,345 @@
 
 
 
+/////////////////////////// LISTE ///////////////////////
+/////////////////////////// FILTER ///////////////////////
 
+#works_projets_fitler-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    .work_projets_filter_title-container{
+        text-align: center;
+        .works_projets_filter-text{
+            padding-bottom: 3px;
+            border-bottom: 2px;
+            border-bottom-style: solid;
+            font-size: 20px;
+        }
+    }
+    .work_projets_filter_button-container{
+        padding: 10px 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .work_projet_filter-button{
+            padding: 5px;
+            margin: 5px;
+            border-style:dashed;
+            
+            width: auto;
+            border-width: 2px;
+            border-radius: 5px;
+            border-color: rgb(255, 255, 255,0.3);
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            &.hovered{
+                border-color: rgba(255, 166, 0,0.5);
+                color: orange;
+            }
 
+        }
+    }
+    
+}
 
+/////////////////////////// CARDS ///////////////////////
+#works_projets_list_container{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/////////////////////////// PROJETS ///////////////////////
-
-
-
+.workCard_article_container{
+    border-radius: 10px;
+    background: linear-gradient(65deg, #5F6BD2 0%, #5F6BD2 100%, rgba(255, 209, 0, 0) 100%);
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    .workCard_image_container{
+        width: 100%;
+        height: 140px;
+        max-height: auto;
+        z-index: 1;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        
+        }
+    }
+    .workCard_text_container{
+        max-height: 30%;
+        padding: 5px 20px;
+        width: 100%;
+    }
+}
 
 /////////////////////////// EXPERIENCE PROFESSIONEL ///////////////////////
 
+#home_experiences{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &>h3{
+
+    }
+}
 
 
 /////////////////////////// COLLAPSE ///////////////////////
+.experience_collapse_article-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    .experience_collapse_top-container{
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .experience_collapse__top-h4{
+            @include fluid-type(320px, 1440px, 20px, 28px);
+        }
+        .experience_collapse__top-title>h4{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            padding: 10px 5px;
+            .experise_collapse_top_at{
+                display: none;
+            }
+        }
+        .experience_collapse__top-date{
+            display: none;
+        }
+        .experience_collapse__top-chevron{
+            width: 10%;
+            text-align: center;
+            @include fluid-type(320px, 1440px, 30px, 42px);
+        }
+    }
+}
 
+.experience_collapse_bot-container{
+    border-radius: 5px;
+    padding: 10px;
+    .experience_collapse_bot-logo{
+        width: 90px;
+        height: 90px;
+        .experience_collapse_logo-content{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: red
+        }
+    }
+    .experience_collapse_bot_content-container{
 
+        .experience_collapse_bot-url-location {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 0px;
+            .fa-solid{
+                width: 10%;
+            }
+            .experience_collapse_bot-location,
+            .experience_collapse_bot-url {
+                padding: 3px 0px;
+                display: flex;
+                flex-direction: row;
+                margin-right: 10px
+            }
+        }
+        .experience_collapse_bot-text-techno{
+            &>p{
+                margin-bottom: 10px;
+            } 
+            .experience_collapse_bot-techno{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .experience_collapse_bot_techno-element{
+                    width: auto;
+                    padding: 5px 15px;
+                    text-align: center;
+                    margin: 4px;
+                    border-radius: 20px;
+                    background-color: blue;
+                    color: white
+                }
+            }
+        }
+    }
+}
 /////////////////////////// CONTACT ///////////////////////
+#home_contact{
+    display: flex;
+    flex-direction:column-reverse;
+    padding-bottom: 100px;
+    #contact-zone{
+        padding: 20px ;
+    }
+}
+
+/////////////////////////// ADRESS ///////////////////////
+
+#contact-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    &>h5{
+        @include fluid-type(320px, 1440px, 20px, 28px);
+        padding-bottom: 20px;
+    }
+    &>p{
+        @include fluid-type(320px, 1440px, 16px, 22px);
+    
+    }
+}
+
+#contact-lien{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .contact_lien-container{
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        &>a{
+            background-color: red;
+            border-radius: 20px;
+            padding: 10px;
+            width:30%;
+            height: 100%;
+            text-align: center;
+        }
+        
+    }
+}
+
+/////////////////////////// FORMULAIRE ///////////////////////
+
+.contact_lien-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .contact-lien_form-title{
+        @include fluid-type(320px, 1440px, 20px, 28px);
+        padding-bottom: 20px;
+    }
+    .contact_form-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        .contact_form-label{
+            @include fluid-type(320px, 1440px, 16px, 22px);
+            padding: 10px 0px;
+        }
+        .contact_form-input{
+            padding: 5px;
+            border-radius: 5px;
+            border-style: dashed;
+            border-width: 1px;
+        }
+        &>textarea{
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .contact_form-button{
+            width: 50%;
+            height: 100%;
+            border-style: solid;
+            border-width: 1px;
+        }
+    }
+}
 
 
-/////////////////////////// GAUCHE ///////////////////////
+/////////////////////////// AVIS ///////////////////////
+.contact_avis_article-container {
+    padding: 20px;
+    width: 100%;
+    .contact_avis_top-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .contact_avis_top-guillemet{
+            width: 100px;
+            height: 70px;
+            opacity: 0.65;
+            zoom: 0.5;
+            margin-bottom: 70px;
+        }
+        .contact_avis_top-photo{
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 4px;
+            border-color: white;
+            object-fit: cover;
+        }
+    }
+    .contact_avis_bot-container{
+        color: white;
+        .contact_avis_bot-commentaire{
+            @include fluid-type(320px, 1440px, 16px, 22px);
+            padding: 10px 0px;
+            display: flex; 
+            flex-direction: column;
+        }
+        .contact_avis_bot-signature{
+            &>h6{
+                @include fluid-type(320px, 1440px, 18px, 24px);
+                font-weight: bold;
+            }
+            &>p{
+                @include fluid-type(320px, 1440px, 16px, 22px);
 
-
-
-/////////////////////////// DROITE ///////////////////////
-
-
+            }
+        }
+    }
+}
 
 
 @import "_media.scss";

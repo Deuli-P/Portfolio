@@ -8,18 +8,18 @@
             "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement."
         },
         {
-            "title":"React Native, Expo Go,",
-            "soustitle":"Android, IOS, Web",
-            "id": "card-deux",
-            "icon":"../../public/pictures/icons/mobile.png",
-            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application."
-        },
-        {
             "title":"SEO",
             "soustitle":"Website",
-            "id":"card-trois",
+            "id":"card-deux",
+            "icon":"../../public/pictures/icons/seo-search-symbol.png",
+            "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel."
+        },
+        {
+            "title":"React Native, Expo Go,",
+            "soustitle":"Android, IOS, Web",
+            "id": "card-trois",
             "icon":"../../public/pictures/icons/mobile.png",
-            "paragraph":" Avoir un beau site c'est bien, avori de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel."
+            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application."
         }
         
     ],
@@ -27,53 +27,96 @@
         {
             "name":"Kasa",
             "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Web Developpement",
+            "support":"Web",
             "id":"1"
         },
         {
             "name":"Sophie Bruel - Portfolio",
             "image":"../../public/pictures/images/Landscape-Color.jpg",
-            "support":"Web Developpement",
+            "support":"Web",
             "id":"2"
         },
         {
-            "name":"Kasa",
+            "name":"Print-it",
             "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Web Developpement",
+            "support":"Web",
             "id":"3"
+        },
+        {
+            "name":"Booki",
+            "image":"../../public/pictures/images/image-attractive.jpg",
+            "support":"Web",
+            "id":"4"
+        },
+        {
+            "name":"Nina Carducci",
+            "image":"../../public/pictures/images/image-attractive.jpg",
+            "support":"SEO",
+            "id":"5"
+        },
+        {
+            "name":"Menu Maker",
+            "image":"../../public/pictures/images/image-attractive.jpg",
+            "support":"Gestion",
+            "id":"6"
         }
     ],
     "entreprises":[{
-        "name":"entreprise 1",
-        "job":"poste 1",
+        "name":"Samsung",
+        "job":"Front-end Developer",
         "localisation":"Paris,75006",
         "website":"www.google.com",
-        "logo":"../../public/pictures/images/react-native.png",
+        "description":"J'ai eu a faire de nombreuse tache au cours de cette aventure chez Samsung, entre reparer des bugs de site et application coté utilisateur, ou encore faire des taches de maintenance, j'ai aussi eu l'occasion de travailler sur des projets plus ambitieux comme la refonte d'un site web ou encore la création d'une application mobile.",
+        "logo":"../../public/pictures/icons/site-internet-quote.png",
         "id":"1",
         "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
-        "avis":[{
-            "surname":"nom1",
-            "name":"prenom1",
-            "picture":"../../public/pictures/images/react-native.png",
-            "comment":"lorem*20"
-        }]
+        "avis":{
+            "surname":"Eric",
+            "name":"Lafitte",
+            "job":"CEO",
+            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
+            "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
+            "BGColor":"#0067dc"
+        }
 
     },
 {
-        "name":"entreprise 2",
-        "job":"poste 2",
-        "localisation":"Paris,75015",
+        "name":"Twitch Inc",
+        "job":"Fullstack Developer",
+        "localisation":"Angoulême,16000",
         "website":"www.twitch.tv",
-        "logo":"../assets/images/react-native.png",
+        "description":"J'ai eu la chance de travailler sur le developmmenet de nouvelles fonctionnalitées pour l'entreprise, que ce soit pour de l'utilisation interne ou pour les utilisateurs finaux.",
+        "logo":"../../public/pictures/icons/guillemet.png",
         "id":"2",
         "technologies":["REACT-NATIVE","EXPO GO"],
-        "avis":[{
-            "surname":"nom2",
-            "name":"prenom2",
-            "picture":"../assets/images/react-native.png",
-            "comment":"lorem*20"
-        }]
+        "avis":{
+            "surname":"John",
+            "name":"Doe",
+            "job":" Chef de projet",
+            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
+            "comment":"Tamal is one of the best professionals that we have known in web development skills. Between his skills you can find good communication and accuracy with the planning in complex projects.",
+            "BGColor": "#923fe6"
+        }
 
     }
-]
+],
+    "categories":[
+        {
+            "name":"Web",
+            "id":"1"
+        },
+        {
+            "name":"Gestion",
+            "id":"2"
+        },
+        {
+            "name":"SEO",
+            "id":"3"
+        },
+        {
+            "name":"Mobile",
+            "id":"4"
+        }
+    ]
+
 }

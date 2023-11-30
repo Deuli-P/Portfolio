@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
 //WorkCard.jsx
-import{ useState, useEffect } from 'react';
+import{ useState } from 'react';
 
-const WorkCard = ({image,name,supportDiffusion}) => {
+const WorkCard = ({image,name,supportDiffusion,theme}) => {
 
     const [MouseIn, setMouseIn] = useState(false);
 
-    useEffect(() => {
-       
-    }, [MouseIn]);
 
     const HandleMoveIn =(e) => {
             setMouseIn(true);
@@ -23,11 +20,11 @@ const WorkCard = ({image,name,supportDiffusion}) => {
 
     return (
         <article 
-            className="workCard_article_container" 
+            className={`workCard_article_container ${ theme === "dark" ? 'bg-projet-light' : 'bg-projet-dark'}`}
             onMouseEnter={HandleMoveIn} 
             onMouseLeave={HandleMoveOut}
         >
-            <div className="workCard_image_container">
+            <div className={`workCard_image_container `}>
                 <img src={image} 
                     alt="Project" 
                     className={
@@ -37,9 +34,9 @@ const WorkCard = ({image,name,supportDiffusion}) => {
                         
                 />
             </div>
-            <div className="workCard_text_container">
-                <h6 className='wordCard_text_title'>{name}</h6>
-                <p>{MouseIn ? ("Show project -") : (supportDiffusion) }</p> 
+            <div className={`workCard_text_container ${ theme === "dark" ? 'bg-projet-light' : 'bg-projet-dark'}`}>
+                <h6 className={`wordCard_text_title ${ theme === "dark" ? 'p1-light-color' : 'p1-dark-color'}`}>{name}</h6>
+                <p className={`wordCard_text_title ${ theme === "dark" ? 'p1-light-color' : 'p1-dark-color'}`}>{MouseIn ? ("Show project -") : (supportDiffusion) }</p> 
             </div>
         </article>
     );

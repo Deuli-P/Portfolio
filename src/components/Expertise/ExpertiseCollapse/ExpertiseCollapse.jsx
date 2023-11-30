@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import {useEffect, useState, useContext} from 'react';
-import ThemeContext from '../../Context/ThemeContext';
-import expertiseData from '../../data/expertise.json'
+import ThemeContext from '../../../Context/ThemeContext';
 
 const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id}) => {
 
@@ -19,7 +18,9 @@ const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id}) => {
 
     return (
         <article className={`expertise_card ${theme === "dark" ? "expertise-border-light": "expertise-border-dark"}`} id={id}>
-            <div className='expertise_card_top_container' onClick={HandleOpen}>
+            <div 
+                className={`expertise_card_top_container ${theme === "dark" ? "expertise-bg-collapse-top-light": "expertise-bg-collapse-top-dark"} ${isOpen ? "open" : ""}`} 
+                onClick={HandleOpen}>
                 <div className={`expertise_card_icon ${theme === "dark" ? "h3-light-color": "h3-dark-color"}`}>
                     <img src={icons} alt="Icon"/>
                 </div>
@@ -37,9 +38,9 @@ const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id}) => {
                  <span className={`expertise_card_collapse_- ${theme === "dark" ? "expertise-border-light": "expertise-border-dark"}`}>{isOpen ? "-" : "+" }</span>
             </div>
             {isOpen && (
-                <div className={`expertise_card_bottom_container ${theme === "dark" ? "expertise-bg-bot-light": "expertise-bg-bot-light"}`}>
+                <div className={`expertise_card_bottom_container ${theme === "dark" ? "expertise-bg-bot-light": "expertise-bg-bot-dark"}`}>
                     <div className="expertise-card-description_container">
-                        <div className="expertise_card_description_content">
+                    <div className={`expertise_card_description_content `}>
                             {paragraph}
                         </div>
                     </div>
