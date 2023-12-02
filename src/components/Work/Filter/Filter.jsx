@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import categorie from "../../../data/expertise.json";
+import "./Filter.scss";
 
-const Filter = ({FilterChange ,theme}) => {
+
+const Filter = ({FilterChange}) => {
 
 
     const [categories, setCategories] = useState(categorie.categories);
@@ -26,14 +28,13 @@ const Filter = ({FilterChange ,theme}) => {
     return (
         <div id="works_projets_fitler-container">
             <div className={`work_projets_filter_title-container`}>
-                <span className={`works_projets_filter-text ${ theme === "dark" ? 'p1-light-color' : 'p1-dark-color'}`}>Filtrer par</span>
+                <span className={`works_projets_filter-text`}>Filtrer par</span>
             </div>
             <div className={`work_projets_filter_button-container`}>
                 <p 
                     className={`
                         work_projet_filter-button 
-                        ${hovered === "" ? 'hovered' : ''}
-                        ${ theme === "dark" ? 'p1-light-color' : 'p1-dark-color'}
+                        ${hovered === "" ? 'hovered':''}
                     `}
                     onClick={HandleChange}
                     data-name=""
@@ -51,7 +52,6 @@ const Filter = ({FilterChange ,theme}) => {
                             className={`
                                 work_projet_filter-button 
                                 ${hovered === item.name ? 'hovered' : ''} 
-                                ${ theme === "dark" ? 'p1-light-color' : 'p1-dark-color'}
                             `}
                         >
                             {item.name}

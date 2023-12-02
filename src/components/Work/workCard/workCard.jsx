@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 //WorkCard.jsx
 import{ useState } from 'react';
+import "./WorkCard.scss";
 
 const WorkCard = ({image,name,supportDiffusion,theme}) => {
 

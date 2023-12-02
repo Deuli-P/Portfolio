@@ -21,56 +21,24 @@
 /////// H1 ///////
 
 $H1-font-size: clamp(2.5rem, calc(2.5rem + calc((3 - 2.5) / (1440 - 320)) * (100vw - 2.5rem)), 3rem);
-$H1-color-light: #FB8500;
-$H1-color-dark: #FB8500;
-
-.h1-light-color{
-    color: $H1-color-light;
-}
-.h1-dark-color{
-    color: $H1-color-dark;
-}
+$H1-color-light: #194391;
+$H1-color-dark: #fb8500;
 
 
 /////// H2 ///////
 
-$H2-font-size: 2rem clamp(1.7rem, calc(1.7rem + calc((2 - 1.7) / (1440 - 320)) * (100vw - 1.7rem)),2rem);
-$H2-color-light: #e3e2de;
-$H2-color-dark: #d9e0e8;
+$H2-font-size: clamp(1.7rem, calc(1.7rem + calc((2 - 1.7) / (1440 - 320)) * (100vw - 1.7rem)),2rem);
+$H2-color-light: #074C7B;
+$H2-color-dark: #EEEBF2;
 $H2-color-light-active:#FFB703;
 $H2-color-dark-active:#FFB703;
 
-.h2-light-color{
-    color: $H2-color-light;
-    &:active{
-        color: $H2-color-light-active;
-    &:visited{
-        color: $H2-color-light;
-        ;
-    }
-    }
-}
-.h2-dark-color{
-    color: $H2-color-dark;
-    &:active,&:visited,&:hover{
-        color: $H2-color-dark-active !important;
-    }
-    
-}
-
-
-.h2-light-color-active{
-    color: $H2-color-light;
-}
-.h2-dark-color-active{
-    color: $H2-color-dark;
-}
 
 /////// H3 ///////
 
 $H3-font-size: 1.75rem;
-$H3-color-light: #FFB703;
-$H3-color-dark: #6e5d31;
+$H3-color-light: #141E26;
+$H3-color-dark: #ffa540;
 
 .h3-light-color{
     color: $H3-color-light;
@@ -85,38 +53,20 @@ $H4-font-size: 1.5rem;
 $H4-color-light: #FFB703;
 $H4-color-dark: #6e5209;
 
-.h4-light-color{
-    color: $H4-color-light;
-}
-.h4-dark-color{
-    color: $H4-color-dark;
-}
 
 /////// PARAGRAPHE OPTION 1 ///////
 
 $P-font-size: clamp(12px, calc(12px + calc((16 - 12) / (1440 - 320)) * (100vw - 12px)), 16px);
 $P1-color-light: black;
-$P1-color-dark: white;
+$P1-color-dark: #EEF1F2;
 
-.p1-light-color{
-    color: $P1-color-light;
-}
-.p1-dark-color{
-    color: $P1-color-dark;
-}
 
 /////// PARAGRAPHE OPTION 2 ///////
 
 $P-font-size: clamp(12px, calc(12px + calc((16 - 12) / (1440 - 320)) * (100vw - 12px)), 16px);
 $P2-color-light: purple;
-$P2-color-dark: pink;
+$P2-color-dark: rgb(230, 225, 226);
 
-.p2-light-color{
-    color: $P2-color-light;
-}
-.p2-dark-color{
-    color: $P2-color-dark;
-}
 
 /////// SPAN ///////
 
@@ -124,34 +74,14 @@ $SPAN-font-size: 1.5rem;
 $SPAN-color-light: black;
 $SPAN-color-dark: white;
 
-.span-light-color{
-    color: $SPAN-color-light;
-}
-.span-dark-color{
-    color: $SPAN-color-dark;
-}
 
 
 /////// BG ///////
 
-$BG1-color-light: #8e8e7f;
-$BG1-color-dark: #1e1e1a;
-$BG2-color-light: #717167;
-$BG2-color-dark: #343421;
-
-.bg-light-color{
-    background-color: $BG1-color-light;
-}
-.bg-dark-color{
-    background-color: $BG1-color-dark;
-}
-
-.bg-alt-light-color{
-    background-color: $BG2-color-light;
-}
-.bg-alt-dark-color{
-    background-color: $BG2-color-dark;
-}
+$BG1-color-light: #d3e2e5;
+$BG2-color-dark: #141E26;
+$BG2-color-light: #b6bdbe;
+$BG1-color-dark: #1A191D;
 
 /////// BUTTON ///////
 /////// BUTTON NORMAL ///////
@@ -214,177 +144,34 @@ $BUTTON-HOVER-BORDER-dark: #f39c12;
 }
 
 
-////// EXPERTISE  ///////
-
-/////// BORDER EXPERTISE  ///////
-
-$EXPERTISE-BORDER-light: gray;
-$EXPERTISE-BORDER-dark: white;
-
-.expertise-border-light{
-    border-color: $EXPERTISE-BORDER-light;
-    color: $EXPERTISE-BORDER-light;
-}
-
-.expertise-border-dark{
-    border-color: $EXPERTISE-BORDER-dark;
-    color: $EXPERTISE-BORDER-dark;
-}
-////// EXPERTISE CARD ///////
-
-$EXPERTISE-CARD-BG--light: blue;
-$EXPERTISE-CARD-BG--dark: rgb(74, 74, 141);
-
-.expertise-card-bg-light{
-    background-color: $EXPERTISE-CARD-BG--light;
-}
-.expertise-card-bg-dark{
-    background-color: $EXPERTISE-CARD-BG--dark;
-}
 
 
-////// EXPERTISE COLLAPSE ///////
-/////// BACKGROUND EXPERTISE COLLAPSE BOT ///////
-
-$EXPERTISE-COLLAPSE-BG-BOT-light: #8ECAE6;
-$EXPERTISE-COLLAPSE-BG-BOT-dark: #bfcfd7;
-
-.expertise-bg-bot-light{
-    background-color: $EXPERTISE-COLLAPSE-BG-BOT-light;
-}
-.expertise-bg-bot-dark{
-    background-color: $EXPERTISE-COLLAPSE-BG-BOT-dark;
-}
-
-/////// BACKGROUND EXPERTISE COLLAPSE TOP ///////
-
-$EXPERTISE-COLLAPSE-BG-TOP-CLOSE-color-light: rgb(95, 15, 42) ;
-$EXPERTISE-COLLAPSE-BG-TOP-CLOSE-color-dark: rgb(51, 99, 99);
-$EXPERTISE-COLLAPSE-BG-TOP-OPEN-color-light: rgb(192, 68, 111);
-$EXPERTISE-COLLAPSE-BG-TOP-OPEN-color-dark: rgb(106, 160, 160);
-
-.expertise-bg-collapse-top-light{
-    background-color: $EXPERTISE-COLLAPSE-BG-TOP-CLOSE-color-light;
-    &.open{
-        background-color: $EXPERTISE-COLLAPSE-BG-TOP-OPEN-color-light;
-    }
-}
-.expertise-bg-collapse-top-dark{
-    background-color: $EXPERTISE-COLLAPSE-BG-TOP-CLOSE-color-dark;
-    &.open{
-        background-color: $EXPERTISE-COLLAPSE-BG-TOP-OPEN-color-dark;
-        ;
-    }
-}
-
-
-
-
-
-/////// BACKGROUND EXPERIENCE COLLAPSE TOP ///////
-
-$EXPERIENCE-BG-TOP-light: rgb(186, 34, 186);
-$EXPERIENCE-BG-TOP-dark: purple;
-
-.experience-bg-top-light{
-    background-color: $EXPERIENCE-BG-TOP-light;
-}
-.experience-bg-top-dark{
-    background-color: $EXPERIENCE-BG-TOP-dark;
-}
-/////// BACKGROUND EXPERIENCE COLLAPSE BOT ///////
-
-$EXPERIENCE-BG-BOT-light: rgb(188, 98, 188);
-$EXPERIENCE-BG-BOT-dark: rgb(196, 14, 196);
-
-.experience-bg-bot-light{
-    background-color: $EXPERIENCE-BG-BOT-light;
-}
-.experience-bg-bot-dark{
-    background-color: $EXPERIENCE-BG-BOT-dark;
-}
-
-/////// BACKGROUND EXPERIENCECARD TECHNOLOGY ///////
-
-$EXPERIENCE-BG-TECHNO-color-light: blue;
-$EXPERIENCE-BG-TECHNO-color-dark: blue;
-
-.bg-experience-techno-light{
-    background-color: $EXPERIENCE-BG-TECHNO-color-light;
-}
-.bg-experience-techno-dark{
-    background-color: $EXPERIENCE-BG-TECHNO-color-dark;
-}
 
 
 /////// PROJETCARD ///////
 /////// BACKGROUND PROJETCARD ///////
 
-$PROJET-BG-color-light: aqua;
-$PROJET-BG-color-dark: darkgray;
+$PROJET-BG-light: aqua;
+$PROJET-BG-dark: #24222F;
 
-.bg-projet-light{
-    background-color: $PROJET-BG-color-light;
-}
-.bg-projet-dark{
-    background-color: $PROJET-BG-color-dark;
-}
 
 
 /////// BORDER PHOTO ///////
 
 $BORDER-PHOTO-color-light: orange;
-$BORDER-PHOTO-color-dark: orange;
+$BORDER-PHOTO-color-dark: #EEEBF2;
 
-.border-photo-light{
-    border-color: $BORDER-PHOTO-color-light;
-}
-.border-photo-dark{
-    border-color: $BORDER-PHOTO-color-dark;
-}
 
 /////// BACKGROUND HEADER ///////
 
-$BGHEADER-color-light: #2a3433;
-$BGHEADER-color-dark: blue;
+$HEADER-color-light: #141E26;
+$HEADER-color-dark: #D7D7D9;
 
-.bg-header-light{
-    background-color: $BGHEADER-color-light;
-}
-.bg-header-dark{
-    background-color: $BGHEADER-color-dark;
-}
+/////// LIEN HEADER ///////
 
-//////// BARRE HEADER ////////
+$HEADER-ACTIVE-light: #141E26;
+$HEADER-ACTIVE-dark: #D7D7D9;
 
-$BARREHEADER-color-light: #4fbbb0;
-$BARREHEADER-color-dark: rgb(202, 202, 206);
-
-.barre-header-dark{
-    border-color: $BARREHEADER-color-dark;
-}
-.barre-header-light{
-    border-color: $BARREHEADER-color-light;
-}
-
-
-
-$primary-color: #1abc9c;
-$secondary-color: #2ecc71;
-$tertiary-color: #3498db;
-$quaternary-color: #9b59b6;
-$quinary-color: #34495e;
-$bg-color: #394e53;
-$bg-color-darker: #2c3e50;
-$bg-color-lighter: #ecf0f1;
-/////// LOGO COLORS ///////
-$logo-color-prenom:#F39C12;
-$logo-color-nom:#3498DB;
-$logo-color-dot:#E74C3C;
-$logo-color-dev:#58D68D;
-
-/////// TEXT COLORS ///////
-$text-color: #2c3e50;
 
 ///////////// TYPOGRAPHY /////////////
 $font-primary: 'Roboto', sans-serif;

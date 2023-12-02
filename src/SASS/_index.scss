@@ -2,638 +2,76 @@
 
 
 
+/////////////////////////// Header ///////////////////////
 
+@import "../components/Header/Header.scss";
 
-//////////////////////// HEADER ////////////////////////
+/////////////////////////// Burger Menu ///////////////////////
 
-.header-wrapper{
-    width: 100%;
-    height: calc(59px + (5 / 680) * (100vw - 320px));    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(0.5rem + 1.5vw);
-    z-index: 100;
-    padding-top: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
-    padding-bottom: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
-    padding-left: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
-    padding-right: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
-    position: fixed;
-    .header-left{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .header-name{
-            font-size: $H1-font-size;
-            font-weight: bold;
-            cursor: pointer;
+@import "../components/Expertise/expertise.scss";
 
-        }
-        .header-icons{
-            width: auto;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            cursor: pointer;
-            &.fa-solid{
-                filter: blur(0px);
-                transition: 0.3s ease-in-out;
-            }
-        }
+/////////////////////////// Presentation ///////////////////////
 
-    }
-    .header-right{
-        width: 100%;
-        position: fixed;
-        transform: translateY(-200%);
-        opacity: 0;
-        top: clamp(50px, calc(50px + calc((55 - 50) / (730 - 320)) * (100vw - 50px)), 55px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0 20px ;
-        animation: MenuClose 0.8s ease-in forwards;
-        font-weight: 400;
-        font-size: 1.2rem;
-        &.open{
-            animation: MenuOpen 0.5s ease-out forwards;
+@import "../components/Presentation/Presentation.scss";
 
-        }
-        .header-list{
-            width: 100%;
-            font-size: 20px;
-            display: flex;
-            padding: 10px 0;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            &>ul{
-                &>li>a{
-                    text-align: center;
-                }
-            }
-            a:hover{
-                color:rgb(207, 160, 97);
-            }
-        }
-        .header-buttons-container{
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            margin-left: 50px;
-            &>a{
-                margin-right: 20px;
-            }
-            &>span>i{
-                color: white;
-                font-size: 30px;
-            }
-        }
-    }
-}
+/////////////////////////// Expertise ///////////////////////
 
-.header-barre{
-    height: 1px;
-    width: 40%;
-    border-style: solid;
-    border-width: 1px;
-}
+@import "../components/Expertise/expertise.scss";
 
+/////////////////////////// Experience ///////////////////////
 
-///////////////////////// SCROLL BOUTON /////////////////////////
+@import "../components/Experience/ExperienceCollapse/experience.scss";
 
-.buttonToTop{
-    scroll-behavior: smooth;
-    position: fixed;
-    font-size: 32px;
-    width: 50px;
-    height: 50px;
-    bottom: 25px;
-    right: 25px;
-    color: white;
-    border-radius: 25%;
-    border: none;
-    background-color: $secondary-color;
-    font-size: 30px;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    &.active{
-        opacity: 1;
-        cursor: pointer;
-    
-    }
-    &:hover{
-        opacity: 0.5;
-        cursor: pointer;
-        background-color: $tertiary-color;
-        color: white;
-    }
-}
-
-///////////////////////////// HOME /////////////////////////////
-
-//////////////////////////// PRESENTATION ////////////////////////
-#home_presentation{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-bottom: 120px;
-    padding-top: clamp(70px, calc(70px + calc((120 - 70) / (1440 - 320)) * (100vw - 70px)), 120px);
-    img{
-        width: clamp(150px, calc(150px + calc((300 - 150) / (1440 - 320)) * (100vw - 150px)), 300px);
-        height: clamp(150px, calc(150px + calc((300 - 150) / (1440 - 320)) * (100vw - 150px)), 300px);
-        border-radius: 50%;
-        margin: 10px;
-        border: solid  $tertiary-color clamp(2px, calc(2px + calc((5 - 2) / (1440 - 320)) * (100vw - 2px)), 5px);
-        object-fit: cover;
-    }
-    .home-title-container{
-        position: absolute;
-        width: clamp(320px, calc(320px + calc((1200 - 320) / (1440 - 320)) * (100vw - 320px)), 1200px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @include fluid-bottom(320px, 799px, 35px, 10px);            
-        h1{
-            text-align: center;
-            @include fluid-type(320px, 1440px, 30px, 70px);
-            font-family: $font-logo-prenom;
-            
-        }
-        h2{
-            text-align: center;
-            @include fluid-type(320px, 1440px, 20px, 50px);
-            font-family: $font-logo-nom;
-            .deco_presentation{
-                background-color: $quaternary-color;
-                width: 100%;
-                height: 50px;
-                border-radius: 50%;
-                transform: rotate3d(1, -0.62, 0.5, 90deg);
-            }
-        }
-    }
-}
-
-//////////////////////////// EXPERTISE ////////////////////////
-
-#home_expertise{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 100px;
-    padding: 14px;
-    
-    #expertise_title{
-        text-align: center;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        font-size: 30px;
-        font-family: $font-logo-nom;
-    }
-    .expertise_card_container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-//////////////////////// EXPERTISE CARD ///////////////////////
-
-.expertise_card{
-    border-style: solid;
-    max-width: 400px;
-        &#card-un{
-            border-width: 3px 3px 1.5px 3px;
-        }
-        &#card-deux{
-            border-width: 1.5px 3px;
-        }
-        &#card-trois{
-            border-width: 1.5px  3px 3px 3px;
-        }
-    .expertise_card_top_container{
-        padding: 20px 15px;
-        display:flex;
-        flex-direction: row;
-        position: relative;
-        display:flex ;
-        align-items: center;
-        justify-content: space-between;
-        .expertise_card_collapse_-{
-            position: absolute;
-            padding-right: 10px;
-            top: 0;
-            right: 0;
-            font-size: 30px;
-            display: flex;
-            justify-content: flex-end;
-        }
-        .expertise_card_icon{
-            flex: 1;
-            object-fit: cover;
-            margin-right: clamp(5px, calc(5px + calc((20 - 10) / (1440 - 320)) * (100vw - 5px)), 20px);
-            width: 40px;
-            height: 40px;
-            img{
-                width: 40px;
-                height: 40px;
-            }
-
-        }
-        .expertise_card_title_container{
-            flex: 6;
-            h3{
-                @include fluid-type(320px, 1440px, 15px, 20px);
-                font-family: $font-logo-nom;
-            }
-            .expertise_card_title_h{
-                .expertise_card_title_span{ // Surlignement
-                    position: relative;
-                    z-index: 0;
-                    font-size: 0.9375rem;
-                    font-size: clamp(0.9375rem, 0.6452244258872653rem + 1.4613778705636742vw, 1.375rem);                    &::after{
-                        content: "";
-                        position: absolute;
-                        bottom: 10%;
-                        z-index: -1;
-                        height: 0.3em;
-                        width: 90%;
-                        left: 15%;
-                        background: linear-gradient(65deg, #5F6BD2 0%, #5F6BD2 100%, rgba(255, 209, 0, 0) 100%);
-                    }
-                }
-            }
-        }
-    }
-    .expertise_card_bottom_container{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 15px;
-        height:auto;
-        .expertise_card_decoration_container{
-            margin:2px;
-        }
-        .expertise-card-description_container{
-            position: relative;
-            &::after{
-                opacity: 0.3;
-                content: '';
-                width: 0;
-                height: 65%;
-                position: absolute;
-                background-color: white;
-                border: 0.1px solid white;
-                bottom: 17%;
-                left: 17px;
-            }
-        }
-        .expertise_card_description_content{
-            display:block;
-            font-size: 12px;
-            padding-left: 35px;
-                &::before , &::after {
-                    opacity: 0,3;
-                    display: block;
-                    margin-left: -35px;
-                }
-                &::before {
-                    margin-bottom: 5px;
-                    content: "<h3>";
-
-                }
-                &::after {
-                    margin-top: 5px;
-                    content: "</h3>";
-
-                }
-        }
-    }
-}
-
-
-//////////////////////////// PROJETS ////////////////////////
+/////////////////////////// PROJETS ///////////////////////
 
 #works-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: aquamarine;
     padding: 100px 15px;
-    #works_projets_list_container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-    }
-}
-
-////////////////////////  GEPALEMO /////////////////////
-
-
-#works_personnal_container{
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    #works_personnal_text_container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        width: 100%;
-        #works_personnal_text_title{
-            font-size: $H3-font-size;
-            font-family: $font-title;
-            padding: 10px 0px;
-            text-align: center;
-        }
-        #works_personnal_text_p{
-            @include fluid-type(320px, 1440px, 14px, 20px);
-            font-family: $font-primary;
-            text-justify: distribute;
-            text-align: center;
-        }
-    }
-    #works_personnal_content{
-        background-color: #5F6BD2;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        position: relative;
-        padding: 40px 10px 60px 60px;
-        .work_personnal_content_text{
-            width: 60%;
-            height: 100px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: 0px 0px 70px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            &>strong{
-                @include fluid-type(320px, 1440px, 20px, 32px);
-                color: rgb(255, 0, 0);
-                white-space: nowrap;
-            }
-            .work_personnal_content_fleche{
-                padding: 10px 0px 20px 50px;
-                width: 70px;
-                transform: scaleY(-1);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    width: 50px;
-                    height: 50px;
-                    object-fit: cover;
-                    filter: invert(100%);
-                }
-            }
-            &>button{
-                padding: 5px 10px;
-                width: 70%;
-                border-radius: 10px;
-                border: none;
-                background-color: saddlebrown;
-                @include fluid-type(320px, 1440px, 20px, 32px);
-            }
-        }
-        .video3D{
-            background: url("../../public/pictures/gif/mobile-animation.gif") no-repeat center center ;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-}
-
-
-
-
-/////////////////////////// LISTE ///////////////////////
-/////////////////////////// FILTER ///////////////////////
-
-#works_projets_fitler-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-    .work_projets_filter_title-container{
-        text-align: center;
-        .works_projets_filter-text{
-            padding-bottom: 3px;
-            border-bottom: 2px;
-            border-bottom-style: solid;
-            font-size: 20px;
-        }
-    }
-    .work_projets_filter_button-container{
-        padding: 10px 0px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        .work_projet_filter-button{
-            padding: 5px;
-            margin: 5px;
-            border-style:dashed;
-            
-            width: auto;
-            border-width: 2px;
-            border-radius: 5px;
-            border-color: rgb(255, 255, 255,0.3);
-            text-align: center;
-            font-size: 20px;
-            cursor: pointer;
-            &.hovered{
-                border-color: rgba(255, 166, 0,0.5);
-                color: orange;
-            }
-
-        }
-    }
     
 }
 
-/////////////////////////// CARDS ///////////////////////
+/////////////////////////// Personnel section ///////////////////////
+
+@import "../components/Work/Personnal/Personnal.scss";
+
+
+/////////////////////////// Filter ///////////////////////
+
 #works_projets_list_container{
     padding:20px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.workCard_article_container{
-    border-radius: 10px;
-    background: linear-gradient(65deg, #5F6BD2 0%, #5F6BD2 100%, rgba(255, 209, 0, 0) 100%);
-    width: 100%;
-    height: 100%;
-    max-height: 200px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 15px;
-    .workCard_image_container{
-        width: 100%;
-        height: 140px;
-        max-height: auto;
-        z-index: 1;
-        overflow: hidden;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        
-        }
-    }
-    .workCard_text_container{
-        max-height: 30%;
-        padding: 5px 20px;
-        width: 100%;
-    }
-}
-
-/////////////////////////// EXPERIENCE PROFESSIONEL ///////////////////////
-
-#home_experiences{
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    &>h3{
 
-    }
 }
 
+@import "../components/Work/Filter/filter.scss";
 
-/////////////////////////// COLLAPSE ///////////////////////
-.experience_collapse_article-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
-    .experience_collapse_top-container{
-        border-radius: 5px;
-        margin-bottom: 10px;
-        padding: 10px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .experience_collapse__top-h4{
-            @include fluid-type(320px, 1440px, 20px, 28px);
-        }
-        .experience_collapse__top-title>h4{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 90%;
-            padding: 10px 5px;
-            .experise_collapse_top_at{
-                display: none;
-            }
-        }
-        .experience_collapse__top-date{
-            display: none;
-        }
-        .experience_collapse__top-chevron{
-            width: 10%;
-            text-align: center;
-            @include fluid-type(320px, 1440px, 30px, 42px);
-        }
-    }
-}
+///////////////////////// Project card /////////////////////
 
-.experience_collapse_bot-container{
-    border-radius: 5px;
-    padding: 10px;
-    .experience_collapse_bot-logo{
-        width: 90px;
-        height: 90px;
-        .experience_collapse_logo-content{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-color: red
-        }
-    }
-    .experience_collapse_bot_content-container{
 
-        .experience_collapse_bot-url-location {
-            display: flex;
-            flex-direction: column;
-            padding: 5px 0px;
-            .fa-solid{
-                width: 10%;
-            }
-            .experience_collapse_bot-location,
-            .experience_collapse_bot-url {
-                padding: 3px 0px;
-                display: flex;
-                flex-direction: row;
-                margin-right: 10px
-            }
-        }
-        .experience_collapse_bot-text-techno{
-            &>p{
-                margin-bottom: 10px;
-            } 
-            .experience_collapse_bot-techno{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                .experience_collapse_bot_techno-element{
-                    width: auto;
-                    padding: 5px 15px;
-                    text-align: center;
-                    margin: 4px;
-                    border-radius: 20px;
-                    background-color: blue;
-                    color: white
-                }
-            }
-        }
-    }
-}
+@import "../components/Work/workCard/workCard.scss";
+
+/////////////////////////// Avis ///////////////////////
+
+@import "../components/Contact/Avis/Avis.scss";
+
+/////////////////////////// Form ///////////////////////
+
+@import "../components/Contact/Form/Form.scss";
+
+/////////////////////////// Bouton to Top ///////////////////////
+
+@import "../components/ChevronToUp/BoutonToUp.scss";
+
+
 /////////////////////////// CONTACT ///////////////////////
+
 #home_contact{
     display: flex;
     flex-direction:column-reverse;
@@ -687,94 +125,6 @@
     }
 }
 
-/////////////////////////// FORMULAIRE ///////////////////////
-
-.contact_lien-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .contact-lien_form-title{
-        @include fluid-type(320px, 1440px, 20px, 28px);
-        padding-bottom: 20px;
-    }
-    .contact_form-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-        .contact_form-label{
-            @include fluid-type(320px, 1440px, 16px, 22px);
-            padding: 10px 0px;
-        }
-        .contact_form-input{
-            padding: 5px;
-            border-radius: 5px;
-            border-style: dashed;
-            border-width: 1px;
-        }
-        &>textarea{
-            height: 100px;
-            margin-bottom: 15px;
-        }
-        .contact_form-button{
-            width: 50%;
-            height: 100%;
-            border-style: solid;
-            border-width: 1px;
-        }
-    }
-}
-
-
 /////////////////////////// AVIS ///////////////////////
-.contact_avis_article-container {
-    padding: 20px;
-    width: 100%;
-    .contact_avis_top-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        .contact_avis_top-guillemet{
-            width: 100px;
-            height: 70px;
-            opacity: 0.65;
-            zoom: 0.5;
-            margin-bottom: 70px;
-        }
-        .contact_avis_top-photo{
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            border-style: solid;
-            border-width: 4px;
-            border-color: white;
-            object-fit: cover;
-        }
-    }
-    .contact_avis_bot-container{
-        color: white;
-        .contact_avis_bot-commentaire{
-            @include fluid-type(320px, 1440px, 16px, 22px);
-            padding: 10px 0px;
-            display: flex; 
-            flex-direction: column;
-        }
-        .contact_avis_bot-signature{
-            &>h6{
-                @include fluid-type(320px, 1440px, 18px, 24px);
-                font-weight: bold;
-            }
-            &>p{
-                @include fluid-type(320px, 1440px, 16px, 22px);
 
-            }
-        }
-    }
-}
-
-
-@import "_media.scss";
+@import "./media.scss";

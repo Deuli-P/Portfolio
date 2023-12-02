@@ -2,29 +2,26 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useContext} from "react";
 import ThemeContext from '../../../Context/ThemeContext';
-
 // Card de presentation de mes compétences.
 // Icon , titre , sous titre, paragraphe et decoration ::before/ ::after.
 // Mobile = collapse? 
 
 const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
 
+
     const { theme } = useContext(ThemeContext);
-    // Si id est 1 alors ::after sera linear gradient pink
 
-    // Si id est 2 alors ::after sera linear gradient blue
 
-    // Si id est 3 alors ::after sera linear gradient green
 
     return (
-        <article className={`expertise_card ${theme === "dark" ? "expertise-border-light expertise-card-bg-light": "expertise-border-dark expertise-card-bg-dark"}`} id={id}>
+        <article className={`expertise_card-article expertise-card`} id={id}>
             <div className={`expertise_card_top_container `}>
-                <div className={`expertise_card_icon ${theme === "dark" ? "h3-light-color": "h3-dark-color"}`}>
+                <div className={`expertise_card_icon `}>
                     <img src={icons} alt="Icon"/>
                 </div>
                 <div className="expertise_card_title_container">
-                        <h3 className={`expertise_card_title_h ${theme === "dark" ? "h3-light-color": "h3-dark-color"}`}>
-                            <span className="expertise_card_title_span">
+                        <h3 className={`expertise_card_title_h `}>
+                            <span className={`expertise_card_title_span `}>
                                 {title}
                             </span>
                             <br/>
@@ -35,7 +32,7 @@ const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
             <div className={`expertise_card_bottom_container `}>
                 <div className="expertise-card-description_container">
                     <div className={`expertise_card_description_content `}>
-                        {paragraph}
+                        <p>{paragraph}</p>
                     </div>
                 </div>
             </div>

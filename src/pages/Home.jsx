@@ -9,7 +9,7 @@ import photo from '../../public/pictures/images/pierre-antoniutti-converti.webp'
 // DATA
 import jsonData from '../data/expertise.json';
 // SCROLL TO UP BOUTON
-import ScrollToUp from '../components/ChevronToUp/scrollToUp';
+// import ScrollToUp from '../components/ChevronToUp/scrollToUp';
 // DARK/LIGHT MODE
 import ThemeContext from '../Context/ThemeContext';
 //  WORKS
@@ -20,6 +20,13 @@ import ExperienceCollapse from '../components/Experience/ExperienceCollapse/Expe
 // CONTACT
 import Avis from '../components/Contact/Avis/Avis';
 import Form from '../components/Contact/Form/Form';
+import Personnal from '../components/Work/Personnal/Personnal';
+import Presentation from '../components/Presentation/Presentation';
+
+
+
+
+
 
 const HomePage = () => {
     const { theme } = useContext(ThemeContext);
@@ -68,77 +75,45 @@ const HomePage = () => {
 
     return (
         <>
-            <section id='home_presentation' className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
-                <img src={photo} alt="Pierre Antoniutti" />
-                <div className={`home-title-container`}>
-                    <h1 className={theme ==='dark'? "h1-light-color":"h1-dark-color"}>Pierre Antoniutti</h1>
-                    <h2 className={theme ==='dark'? "h2-light-color":"h2-dark-color"}>Frontend & mobile developper
-                    <div className={`deco_presentation ${theme ==='dark'? "deco-light":"deco-dark"}`}></div>
-                    </h2>
+            <section id='home_presentation' className={theme === "dark" ? "dark": "light"}>
+               <Presentation photo={photo}/>
+            </section>
+            <section id='home_expertise' className={theme === "dark" ? "light": "dark"}>
+                <h3 id='expertise_title'>Expertise</h3>
+                <div className="expertise_card_container">
+                    {expertiseData.map((item, idx) => (
+                        windowWidth >= 800 ? 
+                            (
+                                <ExpertiseCard
+                                icons={item.icon}
+                                title={item.title}
+                                paragraph={item.paragraph}
+                                soustitle={item.soustitle}
+                                key={idx}
+                                id={item.id} 
+                                color={item.color}
+                                />
+                            )
+                            :
+                            (
+                                <ExpertiseCollapse
+                                icons={item.icon}
+                                title={item.title}
+                                paragraph={item.paragraph}
+                                soustitle={item.soustitle}
+                                key={idx}
+                                id={item.id} 
+                                />
+                            )
+                        
+                    ))}
                 </div>
             </section>
-            <section id='home_expertise' className={theme === "dark" ? "bg-alt-light-color": "bg-alt-dark-color"}>
-                <h3 id='expertise_title' className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Expertise</h3>
-                <div >
-                    <div className="expertise_card_container">
-                        {expertiseData.map((item, idx) => (
-                            windowWidth >= 800 ? 
-                                (
-                                    <ExpertiseCard
-                                    icons={item.icon}
-                                    title={item.title}
-                                    paragraph={item.paragraph}
-                                    soustitle={item.soustitle}
-                                    key={idx}
-                                    id={item.id} 
-                                    />
-                                )
-                                :
-                                (
-                                    <ExpertiseCollapse
-                                    icons={item.icon}
-                                    title={item.title}
-                                    paragraph={item.paragraph}
-                                    soustitle={item.soustitle}
-                                    key={idx}
-                                    id={item.id} 
-                                    />
-                                )
-                            
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section id='home_projets' className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
-                <div id='works_personnal_container'>
-                    <div id='works_personnal_text_container'>
-                        <h3 id='works_personnal_text_title' className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>My work</h3>
-                        <p id='works_personnal_text_p' className={theme === "dark" ? "p1-light-color": "p1-dark-color"}>
-                            Lorsque j'étais entrain de me former en developpeement web front-end j'ai voulu m'essayer au développement mobile à travers une petite application de dialogue à partir d'image.
-                        </p>
-                    </div>
-                    <div id='works_personnal_content' className={`${theme === "dark" ? "light": 'dark'}`}>
-                        {/* Projet perso Gépalémo */}
-                        <div className={`work_personnal_content_text ${theme === "dark" ? "light": 'dark'}`}>
-                            <strong className={`${theme === "dark" ? "light": 'dark'}`}>Featured project</strong>
-                            <div className={`work_personnal_content_fleche ${theme === "dark" ? "light": 'dark'}`}>
-                                <img src="../../public/pictures/images/fleche-dessin-main.png" alt="Flêche" />
-                            </div>
-                            <button 
-                                className={`${theme === "dark" ? "light": 'dark'}`}
-                                onClick={() => {console.log("click sur Mobile");}}
-                            >
-                                View Project</button>
-                        </div>
-                        <div className="video3D">
-
-                        </div>
-                    </div>
-                </div>
+            <section id='home_projets' className={theme === "dark" ? "light": "dark"}>
+                <Personnal/>
                 <div id='works_projets_container'>
                     <Filter
                         FilterChange={FilterChange} 
-                        theme={theme}
                         />
                     <div id="works_projets_list_container">
                             {filteredWork?.map((item, idx) => (
@@ -147,14 +122,13 @@ const HomePage = () => {
                                 image={item.image}
                                 key={idx}
                                 supportDiffusion={item.support}
-                                theme={theme}
                                 />
                             ))}
                     </div>
                 </div>
             </section>
-            <section id='home_experiences' className={theme === "dark" ? "bg-alt-light-color": "bg-alt-dark-color"}>
-                <h3 className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Professionnal Expérience</h3>
+            <section id='home_experiences' className={theme === "dark" ? "light": "dark"}>
+                <h3>Professionnal Expérience</h3>
                 {entreprisesData.map((item, idx) => (
                     <ExperienceCollapse 
                         isOpen={isOpenCollapse === item.id}
@@ -174,7 +148,7 @@ const HomePage = () => {
                     />
                     ))}
             </section>
-            <section id="home_contact" className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
+            <section id="home_contact" className={theme === "dark" ? "light": "dark"}>
                         <div id="contact-zone">
                             <div id="contact-title">
                                 <h5 className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Disponible pour projet professionnel.</h5>
@@ -184,16 +158,16 @@ const HomePage = () => {
                                 <div className="contact_lien-container">
                                     <a 
                                         href="https://www.linkedin.com/in/pierre-antoniutti-a05b15111/"
-                                        className={`button ${theme === "dark" ? "button-light": "button-dark"}`}
+                                        className={`button ${theme === "dark" ? "dark": "light"}`}
                                     >LinkedIn</a>
                                     <a 
                                         href="https://github.com/Deuli-P"
-                                        className={`button ${theme === "dark" ? "button-light": "button-dark"}`}
+                                        className={`button ${theme === "dark" ? "dark": "light"}`}
                                     >Github</a>
                                 </div>
-                                <div className="contact_lien-form">
+                                <div id="contact_lien-form">
                                     <h4 
-                                        className={`contact-lien_form-title ${theme === "dark" ? "h3-light-color": "h3-dark-color"}`}
+                                        className={`contact-lien_form-title ${theme === "dark" ? "dark": "light"}`}
                                     >Contactez moi</h4>
                                 < Form theme={theme}/>
                                 </div>

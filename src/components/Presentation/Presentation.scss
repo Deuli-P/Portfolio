@@ -1,0 +1,46 @@
+@import '../../SASS/_settings';
+
+#home_presentation{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: clamp(20px, calc(20px + calc((30 - 20) / (1440 - 320)) * (100vw - 20px)), 30px);
+    padding-top: clamp(70px, calc(70px + calc((120 - 70) / (1440 - 320)) * (100vw - 70px)), 120px);
+    img{
+        width: clamp(150px, calc(150px + calc((600 - 150) / (1440 - 320)) * (100vw - 150px)), 600px);
+        height: clamp(150px, calc(150px + calc((600 - 150) / (1440 - 320)) * (100vw - 150px)), 600px);
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border-style: solid ;
+        border-width: clamp(2px, calc(2px + calc((5 - 2) / (1440 - 320)) * (100vw - 2px)), 5px);
+        object-fit: cover;
+    }
+    .home-title-container{
+        width: clamp(320px, calc(320px + calc((1200 - 320) / (1440 - 320)) * (100vw - 320px)), 1200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            text-align: center;
+            @include fluid-type(320px, 1440px, 30px, 70px);
+            font-family: $font-logo-prenom;
+            
+        }
+        h2{
+            text-align: center;
+            @include fluid-type(320px, 1440px, 20px, 50px);
+            font-family: $font-logo-nom;
+            .deco_presentation{
+                width: 100%;
+                height: 50px;
+                border-radius: 50%;
+                transform: rotate3d(1, -0.62, 0.5, 90deg);
+            }
+        }
+    }
+}
+

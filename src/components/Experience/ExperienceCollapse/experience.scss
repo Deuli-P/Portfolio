@@ -1,0 +1,173 @@
+@import '../../../SASS/settings';
+
+
+//////////////////// COLOR  /////////////
+///////  TOP ///////
+$EXPERIENCE-BG-CLOSE-TOP: #490C86DE;
+$EXPERIENCE-BG-OPEN-TOP: #740cdc;
+/////// BOT ///////
+$EXPERIENCE-BG-BOT:  #241d41;
+/////// TECHNOLOGY ///////
+$EXPERIENCE-BG-TECHNO: #2c3599;
+////// TEXT ///////
+$TEXT-COLOR:white;
+
+/////////////////////////// SECTION  ///////////////////////
+
+#home_experiences{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 40px;
+    &>h3{
+        @include fluid-type(320px, 1440px, 35px, 52px);
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: clamp(20px, calc(20px + calc((60 - 20) / (1440 - 320)) * (100vw - 20px)), 60px);
+    }
+    &.light{
+        &>h3{
+            color: $H3-color-light;
+        }
+        background-color: $BG2-color-light;
+    }
+    &.dark{
+        &>h3{
+            color: $H3-color-dark;
+        }
+        background-color: $BG2-color-dark;
+    }
+}
+
+
+/////////////////////////// COLLAPSE ///////////////////////
+.experience_collapse_article-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: $TEXT-COLOR;
+    .experience_collapse_top-container{
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $EXPERIENCE-BG-CLOSE-TOP;
+        &.open{
+            background-color: $EXPERIENCE-BG-OPEN-TOP;
+        }
+        .experience_collapse__top-h4{
+            @include fluid-type(320px, 1440px, 20px, 28px);
+        }
+        .experience_collapse__top-title>h4{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90%;
+            padding: 10px 5px;
+            .experise_collapse_top_at{
+                display: none;
+            }
+        }
+        .experience_collapse__top-date{
+            display: none;
+        }
+        .experience_collapse__top-chevron{
+            width: 10%;
+            text-align: center;
+            @include fluid-type(320px, 1440px, 30px, 42px);
+        }
+    }
+    .experience_collapse_bot-container{
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: $EXPERIENCE-BG-BOT;
+
+        .experience_collapse_bot-logo{
+            width: 90px;
+            height: 90px;
+            .experience_collapse_logo-content{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background-color: red
+            }
+        }
+        .experience_collapse_bot_content-container{
+            .experience_collapse_bot-url-location {
+                display: flex;
+                flex-direction: column;
+                padding: 5px 0px;
+                .fa-solid{
+                    width: 10%;
+                    color:$EXPERIENCE-BG-OPEN-TOP;
+                }
+                .experience_collapse_bot-location,
+                .experience_collapse_bot-url {
+                    padding: 3px 0px;
+                    display: flex;
+                    flex-direction: row;
+                    margin-right: 10px
+                }
+            }
+            .experience_collapse_bot-text-techno{
+                &>p{
+                    margin-bottom: 10px;
+                } 
+                .experience_collapse_bot-techno{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    padding-bottom: 30px;
+                    .experience_collapse_bot_techno-element{
+                        width: auto;
+                        padding: 5px 15px;
+                        text-align: center;
+                        margin: 4px;
+                        border-radius: 20px;
+                        background-color: $EXPERIENCE-BG-TECHNO;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+
+///////////////////// 768PX ///////////////////////
+
+
+@media screen and (min-width: 768px) {
+    .experience_collapse_article-container {
+        width: 70%;
+    }
+}
+
+///////////////////// 1024PX ///////////////////////
+
+@media screen and (min-width: 1024px) {
+    .experience_collapse_article-container {
+        width: 60%;
+    }
+}
+
+
+
+

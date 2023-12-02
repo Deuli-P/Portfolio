@@ -1,0 +1,123 @@
+@import '../../../SASS/_settings';
+
+/////////////////////////// FILTER ///////////////////////
+///////// TEXT //////////
+/// TITLE ///
+$FILTER-TEXT-LIGHT: #242425;
+$FILTER-TEXT-DARK: #eeecdf;
+/// UNSLECTED BORDER ////
+$FILTER-BORDER-UNSELECT-LIGHT: #737376;
+$FILTER-BORDER-UNSELECT-DARK: #d5d6de;
+//// SELECTED BORDER ////
+$FILTER-BORDER-SELECTED: orange;
+
+//// SELECTED BORDER ////
+$FILTER-BORDER-HOVER-LIGHT: rgb(221, 175, 90);
+$FILTER-BORDER-HOVER-DARK: rgb(165, 122, 42);
+
+
+#works_projets_fitler-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    .work_projets_filter_title-container{
+        text-align: center;
+        .works_projets_filter-text{
+            padding-bottom: 3px;
+            border-bottom: 2px;
+            border-bottom-style: solid;
+            font-size: 20px;
+        }
+    }
+    .work_projets_filter_button-container{
+        padding: 10px 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .work_projet_filter-button{
+            padding: 5px;
+            margin: 5px;
+            border-style:dashed;
+            width: auto;
+            border-width: 2px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            scale: 1;
+            transition: 0.3s ease-out;
+            &:hover{
+                scale: 1.2;
+            }
+        }
+    }
+
+}
+
+
+
+#home_projets{
+    &.light{
+        #works_projets_fitler-container{
+            .work_projets_filter_title-container{
+                .works_projets_filter-text{
+                    color: $FILTER-TEXT-LIGHT;
+                    border-color: $FILTER-BORDER-SELECTED;
+                }
+            }
+            .work_projets_filter_button-container{
+                color: $FILTER-TEXT-LIGHT;
+                .work_projet_filter-button{
+                    border-color: $FILTER-BORDER-UNSELECT-LIGHT;
+                    &:hover{
+                        border-color: $FILTER-BORDER-HOVER-LIGHT;
+                    }
+                    &.hovered{
+                        border-color: $FILTER-BORDER-SELECTED;
+                        color: $FILTER-BORDER-SELECTED;
+                    }
+        
+                }
+            }
+        
+        }
+    }
+    &.dark{
+        #works_projets_fitler-container{
+            .work_projets_filter_title-container{
+                .works_projets_filter-text{
+                    color: $FILTER-TEXT-DARK;
+                    border-color: $FILTER-BORDER-SELECTED;
+                }
+            }
+            .work_projets_filter_button-container{
+                color: $FILTER-TEXT-DARK;
+                .work_projet_filter-button{
+                    border-color: $FILTER-BORDER-UNSELECT-DARK;
+                    &:hover{
+                        border-color: $FILTER-BORDER-HOVER-DARK;
+                    }
+                    &.hovered{
+                        border-color: $FILTER-BORDER-SELECTED;
+                        color: $FILTER-BORDER-SELECTED;
+                    }
+        
+                }
+            }
+        
+        }
+    }
+
+
+
+
+}
+
+

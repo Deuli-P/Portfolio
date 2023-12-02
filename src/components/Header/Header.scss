@@ -1,0 +1,191 @@
+@import '../../SASS/settings';
+
+.header-wrapper{
+    width: 100%;
+    height: calc(59px + (5 / 680) * (100vw - 320px));    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.5rem + 1.5vw);
+    z-index: 100;
+    padding-top: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
+    padding-bottom: clamp(0px, calc(0px + calc((15 - 0) / (1024 - 320)) * (100vw - 0px)), 15px);
+    padding-left: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
+    padding-right: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
+    position: fixed;
+    opacity: 0.9;
+    .header-left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header-name{
+            font-size: $H1-font-size;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    }
+    .header-right{
+        width: 100%;
+        position: fixed;
+        transform: translateY(-200%);
+        opacity: 0;
+        top: clamp(50px, calc(50px + calc((55 - 50) / (730 - 320)) * (100vw - 50px)), 55px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 20px ;
+        animation: MenuClose 0.8s ease-in forwards;
+        font-weight: 400;
+        font-size: 1.2rem;
+        &.open{
+            animation: MenuOpen 0.5s ease-out forwards;
+
+        }
+        .header-list{
+            width: 100%;
+            font-size: 20px;
+            display: flex;
+            padding: 10px 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .header-liste-li{
+                padding: 5px 0px;
+            }
+                .header-link{
+                    padding: 2px 0px;
+
+                    &.accueil{
+                        padding: 3px 10px;
+                        border-radius: 25px;
+
+                    }
+
+                }
+        }
+        .header-buttons-container{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-left: 50px;
+            &>a{
+                margin-right: 20px;
+            }
+            &>span>i{
+                color: white;
+                font-size: 30px;
+                transform: scale(1);
+                transition: all 0.3s ease-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+.header-barre{
+    height: 1px;
+    width: 40%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.header-wrapper{
+    &.light{
+        background-color: $HEADER-color-light;
+        .header-right{
+            background-color: $HEADER-color-light;
+        }
+        .header-name>a{
+            color: $HEADER-color-dark;
+            &:hover{
+                color: orange;
+            }
+        }
+        .menu-toggle-bar{
+            background-color: $HEADER-color-dark;
+        }
+        .header-link{
+            color: $HEADER-color-dark;
+            &:hover{
+                color: rgb(113, 110, 108);
+            }
+            &.active.accueil{
+                color: $HEADER-color-dark;
+                background-color: orange;;
+            }
+            &.active{
+                color: orange;
+            }
+        }
+        .header-buttons-container{
+            .header-button{
+                color: $HEADER-color-light;
+                background-color: $HEADER-color-dark;
+                &:hover,&:focus,&:active{
+                    border-color: orange;
+                    color: orange;
+                }
+
+            }
+            .fa-sun{
+                color: $HEADER-color-dark;
+            }
+        }
+        .header-barre{
+            border-color: $HEADER-color-dark;
+        }
+    }
+    &.dark{
+        background-color: $HEADER-color-dark;
+        .header-right{
+            background-color: $HEADER-color-dark;
+        }
+        .header-name>a{
+            color: $HEADER-color-light;
+            &:hover{
+                color: orange;
+            }
+        }
+        .menu-toggle-bar{
+            background-color: $HEADER-color-light;
+        }
+        .header-link{
+            color: $HEADER-color-light;
+            &:hover{
+                color: rgb(173, 170, 166);
+            }
+            &.accueil.active{
+                color: $HEADER-color-light;
+                background-color: orange;;
+            }
+            &.active{
+                color: orange;
+            }
+        }
+        .header-barre{
+            border-color: $HEADER-color-light;
+        }
+        .header-buttons-container{
+            .header-button{
+                color: $HEADER-color-dark;
+                background-color: $HEADER-color-light;
+                &:hover,&:focus,&:active{
+                    border-color: orange;
+                    color: orange;
+                }
+            }
+            .fa-moon{
+                color: $HEADER-color-light;
+            
+            }
+        }
+    }
+}

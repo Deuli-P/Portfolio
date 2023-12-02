@@ -3,6 +3,8 @@
 // eslint-disable-next-line
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
+import "./Form.scss";
+
 
 const Form = ({theme}) => {
 
@@ -12,6 +14,7 @@ const Form = ({theme}) => {
         document.querySelectorAll('input').forEach( input => input.value = "")
         document.querySelectorAll('textarea').forEach( input => input.value = "")
     }
+    
     const onSubmit = (data) => {
         const date = new Date();
         const time = date.getHours() + ":" + date.getMinutes();
@@ -19,22 +22,21 @@ const Form = ({theme}) => {
         data.time = time;
         console.log("[FORM]data est:",data)
         try{
-        emailjs
-        .send("service_wvheinq", "template_bv3q5z9", data, "v5gGgV-UHFvG-QHCE")
-        .then(
-            (result) => {
-            console.log("[EMAILJS] Succes",result.text);
-            },
-            (error) => {
-            console.log("[EMAILJS] Fail",error.text);
-            }
-        );
+            emailjs
+            .send("service_wvheinq", "template_bv3q5z9", data, "v5gGgV-UHFvG-QHCE")
+            .then(
+                (result) => {
+                console.log("[EMAILJS] Succes",result.text);
+                },
+                (error) => {
+                console.log("[EMAILJS] Fail",error.text);
+                }
+            );
         }catch(errors){
             console.log("[FORM] Form non envoyé",errors)
         }
     reset();
     }
-
    
     return (
         <form className={`contact_form-form ${theme === "dark" ? "contact_form_light": "contact_form_dark"} `} 

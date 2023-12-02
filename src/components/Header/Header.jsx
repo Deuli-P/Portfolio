@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect, useContext} from "react";
 import { Link,  animateScroll as scroll } from 'react-scroll';
 import ThemeContext from "../../Context/ThemeContext";
+import Burger from "./Burger/Burger";
 
 // Le header est toujours visible apres avoir passé le presentation.
 
@@ -16,13 +17,11 @@ const Header = () => {
 
     const { toggleTheme, theme } = useContext(ThemeContext);
 
-
-
     const handleThemeChange = () => {
         toggleTheme();
     };
 
-const[isOpen, setIsOpen] = useState(false);
+const[isOpen, setIsOpen] = useState(true);
 
 const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -45,7 +44,6 @@ useEffect(() => {
 const HandleOpen = () => {
     const icon = document.querySelector(".fa-solid");
     icon.style.transform ="rotate(180deg)";
-    console.log("header est fermé :", isOpen);
     icon.style.filter ="blur(3px)";
     setIsOpen(!isOpen);
     {!isOpen? icon.classList.replace('fa-bars','fa-x'): icon.classList.replace("fa-x","fa-bars")}
@@ -59,7 +57,6 @@ const HandleOpen = () => {
 
  useEffect(() => {
     HandleOpen();
-
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[]);
 
@@ -67,7 +64,7 @@ const HandleOpen = () => {
 
       
     return (
-            <nav className={`header-wrapper ${theme === "dark"? "bg-header-light": "bg-header-dark"}`} id="home_header">
+            <nav className={`header-wrapper ${theme === "dark"? "light": "dark"}`} id="home_header">
                 <div className="header-left">
                     <div className={`header-name`}> 
                         <NavLink 
@@ -76,7 +73,7 @@ const HandleOpen = () => {
                                 scroll.scrollToTop();
                         
                             }}
-                            className={theme === "dark"? "h1-light-color": "h1-dark-color"}
+                            className={theme === "dark"? "light": "dark"}
 
                         >
                             Pierre
@@ -84,60 +81,58 @@ const HandleOpen = () => {
                     </div>
                         {windowWidth < 800? 
                         (
-                            <div className="header-icons">
-                                <i onClick={HandleOpen} className={` fa-solid fa-bars`}/> 
-                            </div>
+                            <Burger HandleOpen={HandleOpen} isOpen={isOpen}/>
                         )
                         : null}
                 </div>
-                <div className={`header-right ${isOpen? "open": ""} ${theme === "dark"? "bg-header-light": "bg-header-dark"}`}>
+                <div className={`header-right ${isOpen? "open": ""} `}>
                     <ul className="header-list">
-                            <li>
+                            <li className={`header-liste-li`} >
                                 <NavLink
-                                    className={`header-link ${theme === "dark"? "h2-light-color": "h2-dark-color"}`}
-                                    activeClass={`active ${theme === "dark"? "h2-light-color-active": "h2-dark-color-active"}`} 
-                                    path="/"
+                                    className={`header-link accueil`}
+                                    to={"/"}
+                                    onClick={()=> {
+                                        scroll.scrollToTop();
+                                
+                                    }}
                                 >
                                     Accueil
                                 </NavLink>
                             </li>
-                            <div className={`header-barre ${theme === "dark"? "barre-header-light": "barre-header-dark"}`}/>
-                            <li>
+                            <div className={`header-barre `}/>
+                            <li className={`header-liste-li`} >
                                 <Link
                                     activeClass="active"
-                                    activeStyle={{color:`rgb(226, 147, 43)`}}
                                     spy={true} 
                                     smooth={true} 
                                     to="home_expertise"
-                                    className={`header-link ${theme === "dark"? "h2-light-color": "h2-dark-color"}`}
+                                    className={`header-link`}
 
                                 >
                                     Expertise
                                 </Link>
                             </li>
-                            <div className={`header-barre ${theme === "dark"? "barre-header-light": "barre-header-dark"}`}/>
-                            <li>
+                            <div className={`header-barre `}/>
+                            <li className={`header-liste-li`} >
                                 <Link
                                     activeClass="active"
-                                    activeStyle={{color: 'rgb(226, 147, 43)'}}
                                     spy={true} 
                                     smooth={true} 
                                     to="home_projets"
-                                    className={`header-link ${theme === "dark"? "h2-light-color": "h2-dark-color"}`}
+                                    className={`header-link  `}
 
                                 >
                                     Projets
                                 </Link>
                             </li>
-                            <div className={`header-barre ${theme === "dark"? "barre-header-light": "barre-header-dark"}`}/>
-                            <li>
+                            <div className={`header-barre `}/>
+                            <li className={`header-liste-li`} >
                             <Link
                                     activeClass="active"
-                                    activeStyle={{color: 'rgb(226, 147, 43)'}}
                                     spy={true} 
                                     smooth={true} 
                                     to="home_experiences"
-                                    className={`header-link ${theme === "dark"? "h2-light-color": "h2-dark-color"}`}
+                                    className={`header-link  `}
 
                                 >
                                     Expériences
@@ -148,8 +143,8 @@ const HandleOpen = () => {
                             <Link 
                                 spy={true}
                                 smooth={true}
-                                to="home_contact"
-                                className={`button header-button ${theme === "dark"? "button-light": "button-dark"}`}
+                                to="contact_lien-form"
+                                className={`button header-button `}
                             >
                                 Me contacter
                             </Link>
