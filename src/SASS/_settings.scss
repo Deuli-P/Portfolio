@@ -1,7 +1,7 @@
 ///// MIXINS /////
 
 @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
-	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+	$factor:calc(1 / ($max-vw - $min-vw)) * ($max-value - $min-value);
 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
 
 	font-size: $min-value; // Fallback for older browsers
@@ -9,7 +9,7 @@
 }
 
 @mixin fluid-bottom($min-vw, $max-vw, $min-value, $max-value) {
-	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+	$factor: calc(1 / ($max-vw - $min-vw)) * ($max-value - $min-value);
 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
 
 	bottom: $min-value; // Fallback for older browsers

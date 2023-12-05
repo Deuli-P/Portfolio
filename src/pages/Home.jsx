@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
-
+// home.jsx
 import { useEffect, useState,useContext } from 'react';
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';

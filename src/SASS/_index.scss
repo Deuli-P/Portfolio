@@ -517,6 +517,85 @@
     }
  }
 
+/////////////////////////// CREDI ///////////////////////
+
+#credit-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 83.6vh;
+    padding: 70px 20px 0px;
+    text-align: center;
+    &>div{
+        width: 90%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &>a{
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            padding: 10px 0px;
+        }
+    }
+    &.dark{
+        background-color: $COLOR-LIGHT;
+        color: $COLOR-LIGHT;
+        &>h2{
+            color: $COLOR-DARK-DARK;
+        }
+        &>h1{
+            color: $COLOR-ACTIVE;
+        }
+        &>div{
+            &>h3{
+                color: $COLOR-DARK-DARK;
+            }
+            &>a{
+                color: $COLOR-DARK;
+                border-bottom-color: $COLOR-DARK-DARK;
+                &:visited{
+                    color: $COLOR-DARK;
+                    border-bottom-color: $COLOR-DARK-DARK;
+                }
+                &:hover{
+                    border-bottom-color: $COLOR-DARK-DARKEST;
+                    color: $COLOR-DARK-DARK;
+                }
+            }
+        }
+    }
+    &.light{
+        background-color: $COLOR-DARK;
+        color: $COLOR-LIGHT;
+        &>h1{
+            color: $COLOR-ACTIVE;
+        }
+        &>h2{
+            color: $COLOR-LIGHT-LIGHT;
+        }
+        &>div{
+            &>h3{
+                color: $COLOR-LIGHT-LIGHT;
+            }
+            &>a{
+                color: $COLOR-LIGHT;
+                border-bottom-color: $COLOR-LIGHT-LIGHT;
+                &:visited{
+                    color: $COLOR-LIGHT;
+                    border-bottom-color: $COLOR-LIGHT-LIGHT;
+                }
+                &:hover{
+                    border-bottom-color: $COLOR-LIGHT-LIGHTEST;
+                    color: $COLOR-LIGHT-LIGHT;
+                }
+            }
+        }
+    }
+}
 /////////////////////////// MEDIA ///////////////////////
 
 

@@ -19,18 +19,15 @@ const ProjectPage = () => {
     const handleHovered = () => {
         const icon = document.querySelector(".fa-arrow-right");
         icon.classList.add("hovered");
-        console.log("Hovered");
     }
     const handleLeave = () => {
         const icon = document.querySelector(".fa-arrow-right");
         icon.classList.remove("hovered");
-        console.log("Hovered");
     }
 
 
     
     useEffect(() => {
-        console.log("[PAGE]données du projet :",projetData);
         if(!projetData){
             setIsLoading(true);
         }
@@ -49,7 +46,7 @@ const ProjectPage = () => {
             <main id="main-projet" className={theme === "dark"? "light": "dark"}>
                 <section className="projectPage_title-container">
                     <div className="projetPage_title-backButton">
-                        <i className="fa-solid fa-arrow-left" onClick={history.back()}/>
+                        <i className="fa-solid fa-arrow-left" onClick={()=>history.back()}/>
                     </div>
                     <div className="projetPage_title-title">
                         <span>{`//`} {support}</span>
@@ -57,7 +54,9 @@ const ProjectPage = () => {
                     </div>
                 </section>
                 <section className="projetPage_chemin">
-                    <span onClick={()=> navigate("/")}>Home {'>'}</span>
+                    <span 
+                        onClick={()=> navigate("/")}
+                    >Home {'>'}</span>
                     <span>Portfolio {'>'} </span>
                     <span>{name}</span>
                 </section>
@@ -106,7 +105,7 @@ const ProjectPage = () => {
                             ))}
                     </div>
                     <div className="projetPage_media-content">
-                            <img src={pictures.presentation} alt={` projection de ${name}`} />
+                            <img src={pictures.presentation.image} alt={pictures.presentation.alt} />
                     </div>
                     {/* Pour chaque  */}
                         {pictures?.projet.map((item, idx) => (

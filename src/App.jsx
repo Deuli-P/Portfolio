@@ -1,3 +1,4 @@
+// App.jsx
 import './SASS/_index.scss';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import HomePage from './pages/Home';

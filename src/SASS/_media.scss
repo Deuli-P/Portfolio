@@ -35,6 +35,12 @@
         }
     
     }
+    #credit-main {
+        height: 90vh;
+        &>div{
+            width: 60%;
+        }
+    }
 }
 
 @media screen and (min-width: 800px) {

@@ -29,7 +29,7 @@
     ],
     "works":[
         {
-            "name":"Kasa Home",
+            "name":"Kasa",
             "cover":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
             "alt":"Photo d'un logement sur KAsa",
             "support":"Web Developpement",
@@ -68,7 +68,10 @@
                 }
             ],
             "pictures":{
-                "presentation":"/pictures/images/projets/Kasa/presentation.webp",
+                "presentation": {
+                    "image": "/pictures/images/projets/Kasa/presentation.webp",
+                    "alt": "Mock up du site  Kasa"
+                },
                 "projet": [
                     [
                         {
@@ -223,6 +226,280 @@
                 ]
             },
             "technologies":["JAVASCRIPT","CSS","HTML"]
+        },
+        {
+            "name":"Booki",
+            "cover":"/pictures/images/projets/Booki/Booki-01.webp",
+            "alt":"Booki",
+            "support":"Web Developpement",
+            "id":"3439D200T12",
+            "description":"Booki est un site qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+            "github":"https://github.com/Deuli-P/Booki",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Créer une page d'accueil responsive."
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Tout en HTML et CSS"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/Booki/presentation.webp",
+                    "alt": "Mock up du site Booki"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/Booki/Booki-01.webp",
+                            "alt":"page d'accueil du site Booki"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/Booki/Booki-02.webp",
+                            "alt":"page d'accueil du site Booki"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["CSS","HTML"]
+        },
+        {   
+            "name":"Ohmyfood",
+            "cover":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
+            "alt":"Ohmyfood",
+            "support":"Web Developpement",
+            "id":"3204TEDI6047",
+            "description":"Ohmyfood est un site qui repertorie les menus de restaurants gastronomiques.  En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant! Déjà présente à New-York, elle souhaite désormais faire sa place à Paris.",
+            "github":"https://github.com/Deuli-P/Booki",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Créer un site mobile-first et responsive."
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Tout en HTML et SASS"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/Booki/presentation.webp",
+                    "alt": "Mock up du site Ohmyfood"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
+                            "alt":"page d'accueil du site Ohmyfood"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/OhmyFood/Accueil-02.webp",
+                            "alt":"page d'accueil du site Ohmyfood"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Menu-01.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        },
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Menu-02.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/OhmyFood/Menu-03.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["SASS","HTML"]
+        },
+        {   
+            "name":"Nina Carducci",
+            "cover":"/pictures/images/projets/NinaCarducci/Portrait-Nina-Resize-400px.webp",
+            "alt":"Nina Carducci - Portfolio",
+            "support":"SEO",
+            "id":"70K3OKKF5435",
+            "description":"Nina Carduci est une photographe talentueuse pour vos évenement dans la région Bordelaise. Ceci est son portfolio.",
+            "github":"https://github.com/Deuli-P/projet9",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Optimiser le site grâce au technique de SEO."
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
+                    "alt": "Score SEO du site"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
+                            "alt":"page d'accueil du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        }
+                    ],
+                    [
+                        {
+                        "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
+                        "alt":"Rapport d'audit du site"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["HTML","JAVASCRIPT","CSS","SEO"]
+        },
+        {   
+            "name":"Gépalémo",
+            "cover":"/pictures/images/projets/gepalemo/5521112.png",
+            "alt":"Gépalémo ",
+            "support":"Mobile",
+            "id":"5460FI35503",
+            "description":"Application développé pour découvrir le monde du developpement mobile. C'est une application qui permet d'ouvrir des modals avec des icons ( 1 à 4) à l'intérieur pour permettre de communiquer avec une autre personne sans avoir de langue commune.",
+            "github":"https://github.com/Deuli-P/TestApp",
+            "designer":[
+
+                {
+                    "categorie":"Mission",
+                    "text":"Découvrir le developpement mobile."
+                },
+                {
+                    "categorie":"Stragégie",
+                    "text":"Apprendre React-native"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
+                    "alt": "Mock up de l'application"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
+                            "alt":"page d'accueil du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        }
+                    ],
+                    [
+                        {
+                        "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
+                        "alt":"Rapport d'audit du site"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["REACT-NATIVE","EXPO GO","REDUX"]
         }
     ],
     "entreprises":[
@@ -288,10 +565,6 @@
         {
             "name":"Web Developpement",
             "id":"1"
-        },
-        {
-            "name":"Gestion",
-            "id":"2"
         },
         {
             "name":"SEO",

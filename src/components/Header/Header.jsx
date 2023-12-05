@@ -29,21 +29,11 @@ useEffect(() => {
     } else {
       setIsOpen(false);
     }
-  }, [windowWidth]);
+  },[windowWidth]);
 
 // Permet d'ouvrir/fermer le menu responsive.
 const HandleOpen = () => {
-    const icon = document.querySelector(".fa-solid");
-    icon.style.transform ="rotate(180deg)";
-    icon.style.filter ="blur(3px)";
     setIsOpen(!isOpen);
-    {!isOpen? icon.classList.replace('fa-bars','fa-x'): icon.classList.replace("fa-x","fa-bars")}
-    setTimeout(() => {
-        icon.style.transform ="rotate(0deg)";
-    }, 200);
-    setTimeout(() => {
-        icon.style.filter ="blur(0px)";
-    }, 400);
 }
 
  useEffect(() => {
@@ -51,7 +41,6 @@ const HandleOpen = () => {
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[]);
 
-// Change le theme de la page.
 
       
     return (
@@ -79,16 +68,16 @@ const HandleOpen = () => {
                 <div className={`header-right ${isOpen? "open": ""} `}>
                     <ul className="header-list">
                             <li className={`header-liste-li`} >
-                                <ScrollLink
-                                    className={`header-link accueil`}
-                                    to={"/"}
+                                <NavLink
+                                    to="/"
+                                    className={`header-link accueil ${window.location.pathname === "/" ? "active" : ""}`}
                                     onClick={()=> {
                                         scroll.scrollToTop();
                                 
                                     }}
                                 >
                                     Accueil
-                                </ScrollLink>
+                                </NavLink>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
@@ -134,12 +123,20 @@ const HandleOpen = () => {
                             <ScrollLink
                                 spy={true}
                                 smooth={true}
-                                to="contact_lien-form"
+                                to="contact-lien"
                                 className={`button header-button `}
                             >
                                 Me contacter
                             </ScrollLink>
-                            <span onClick={handleThemeChange}>{theme === "dark" ? (<i className="fa-solid fa-sun"/>): (<i className="fa-solid fa-moon"/>)}</span>
+                            <span 
+                                onClick={handleThemeChange}>
+                                    <i
+                                        className={`
+                                        fa-solid 
+                                            ${theme === "dark" ? "fa-sun": "fa-moon"}
+                                        `}
+                                    />
+                                </span>
                         </div>
                 </div>
             </nav>
