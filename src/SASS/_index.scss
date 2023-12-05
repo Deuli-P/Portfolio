@@ -486,7 +486,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 30px;
+            width: 50px;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -495,7 +495,7 @@
             text-align: center;
             border-radius: 5px;
             .projetPage_media_RS-a{
-                padding: 10px 3px;
+                padding: 10px 10px;
                 @include fluid-type(320px, 1440px, 20px, 30px);
 
             }

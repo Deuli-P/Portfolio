@@ -5,7 +5,7 @@
 import { useEffect, useState,useContext } from 'react';
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
-import photo from '../../public/pictures/images/pierre-antoniutti-converti.webp';
+import photo from '/pictures/images/pierre-antoniutti-converti.webp';
 // import ScrollToUp from '../components/ChevronToUp/scrollToUp';
 import ThemeContext from '../Context/ThemeContext';
 import WorkCard from '../components/Work/workCard/workCard';
@@ -15,8 +15,7 @@ import Avis from '../components/Contact/Avis/Avis';
 import Form from '../components/Contact/Form/Form';
 import Personnal from '../components/Work/Personnal/Personnal';
 import Presentation from '../components/Presentation/Presentation';
-// import { Link } from 'react-router-dom';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const HomePage = ({data}) => {
     const { theme } = useContext(ThemeContext);
@@ -109,14 +108,15 @@ const HomePage = ({data}) => {
                     <div id="works_projets_list_container">
                             {filteredWork?.map((item) => (
                                 <Link
-                                    key={`projet_${item.id}`} 
                                     id={item.id}
-                                    href={`/project/${item.id}`}
+                                    to={`/project/${item.id}`}
                                     className="work_projets-link"
+                                    key={`projet_${item.id}`} 
                                 >
                                     <WorkCard
                                         name={item.name}
-                                        image={item.image}
+                                        cover={item.cover}
+                                        alt={item.alt}
                                         supportDiffusion={item.support}
                                     />
                                 </Link>

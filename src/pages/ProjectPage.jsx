@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import ThemeContext from "../Context/ThemeContext";
 import data from "../data/expertise.json"
 
@@ -11,14 +11,10 @@ const ProjectPage = () => {
     const params = useParams();
     const id = params.id;
     const navigate = useNavigate();
-    
-    console.log("[PAGE] Type de data.works:", typeof(data.works));
-    console.log("[PAGE] data est data.works:",data.works);
-    console.log("[PAGE] Type de workData:", typeof(workData));
-    console.log("[PAGE] workData est:", workData);
+
+    const [isLoading, setIsLoading] = useState(true);
+
     const projetData = workData.find((item) => item.id === id);
-    console.log("[PAGE]projetPage id:",projetData.id);
-    
 
     const handleHovered = () => {
         const icon = document.querySelector(".fa-arrow-right");
@@ -30,18 +26,24 @@ const ProjectPage = () => {
         icon.classList.remove("hovered");
         console.log("Hovered");
     }
+
+
     
     useEffect(() => {
         console.log("[PAGE]données du projet :",projetData);
         if(!projetData){
-            navigate('*')
+            setIsLoading(true);
         }
-    },[projetData,navigate]);
+        else{
+            setIsLoading(false);
+        }
+    },[projetData]);
     
-    if(projetData){
+    const dataLoad = () => {
         // Utilisez la déstructuration pour obtenir les différentes informations du projet
         const { name, designer, description, reseau, pictures, support, github} = projetData;
-
+        
+        console.log("[PAGE]images :",pictures.projet);
 
         const renderView = (
             <main id="main-projet" className={theme === "dark"? "light": "dark"}>
@@ -106,12 +108,13 @@ const ProjectPage = () => {
                     <div className="projetPage_media-content">
                             <img src={pictures.presentation} alt={` projection de ${name}`} />
                     </div>
+                    {/* Pour chaque  */}
                         {pictures?.projet.map((item, idx) => (
                             <div className="projetPage_media-content" key={`item_img`+idx}>
                                 {item.map((image, idx) => (
                                     <img 
-                                        src={image} 
-                                        alt={`image ${idx}`}
+                                        src={image.image} 
+                                        alt={image.alt}
                                         key={`image_img`+idx}
                                     />
                                 ))}
@@ -126,6 +129,12 @@ const ProjectPage = () => {
             </>
         );
     }
+
+    return (
+        <>
+            {isLoading ? (<h1>Chargement...</h1>) : (dataLoad())}
+        </>
+        );
 };
 
 export default ProjectPage;

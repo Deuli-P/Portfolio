@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useContext} from "react";
-import { Link,  animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll';
 import ThemeContext from "../../Context/ThemeContext";
 import Burger from "./Burger/Burger";
 
@@ -79,7 +79,7 @@ const HandleOpen = () => {
                 <div className={`header-right ${isOpen? "open": ""} `}>
                     <ul className="header-list">
                             <li className={`header-liste-li`} >
-                                <NavLink
+                                <ScrollLink
                                     className={`header-link accueil`}
                                     to={"/"}
                                     onClick={()=> {
@@ -88,11 +88,11 @@ const HandleOpen = () => {
                                     }}
                                 >
                                     Accueil
-                                </NavLink>
+                                </ScrollLink>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                                <Link
+                                <ScrollLink
                                     activeClass="active"
                                     spy={true} 
                                     smooth={true} 
@@ -101,11 +101,11 @@ const HandleOpen = () => {
 
                                 >
                                     Expertise
-                                </Link>
+                                </ScrollLink>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                                <Link
+                                <ScrollLink
                                     activeClass="active"
                                     spy={true} 
                                     smooth={true} 
@@ -114,11 +114,11 @@ const HandleOpen = () => {
 
                                 >
                                     Projets
-                                </Link>
+                                </ScrollLink>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                            <Link
+                            <ScrollLink
                                     activeClass="active"
                                     spy={true} 
                                     smooth={true} 
@@ -127,18 +127,18 @@ const HandleOpen = () => {
 
                                 >
                                     Expériences
-                                </Link>
+                                </ScrollLink>
                             </li>
                         </ul>
                         <div className="header-buttons-container">
-                            <Link 
+                            <ScrollLink
                                 spy={true}
                                 smooth={true}
                                 to="contact_lien-form"
                                 className={`button header-button `}
                             >
                                 Me contacter
-                            </Link>
+                            </ScrollLink>
                             <span onClick={handleThemeChange}>{theme === "dark" ? (<i className="fa-solid fa-sun"/>): (<i className="fa-solid fa-moon"/>)}</span>
                         </div>
                 </div>

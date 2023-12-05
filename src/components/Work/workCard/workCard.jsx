@@ -4,7 +4,7 @@ import{ useState } from 'react';
 import "./WorkCard.scss";
 
 
-const WorkCard = ({image,name,supportDiffusion}) => {
+const WorkCard = ({cover,alt,name,supportDiffusion}) => {
 
     const [MouseIn, setMouseIn] = useState(false);
 
@@ -18,8 +18,8 @@ const WorkCard = ({image,name,supportDiffusion}) => {
             onMouseLeave={()=>setMouseIn(false)}
         >
             <div className={`workCard_image_container `}>
-                <img src={image} 
-                    alt="Project" 
+                <img src={cover} 
+                    alt={alt} 
                     className={
                             `workCard_image 
                             ${MouseIn ? 'hover' :''}`

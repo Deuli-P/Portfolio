@@ -4,7 +4,7 @@
             "title":"Frontend Developer,",
             "soustitle":"React, NodeJS, SASS",
             "id":"card-un",
-            "icon":"../../public/pictures/icons/site-internet-quote.png",
+            "icon":"/pictures/icons/site-internet-quote.png",
             "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement.",
             "color":"tifeut"
 
@@ -13,7 +13,7 @@
             "title":"SEO",
             "soustitle":"Website",
             "id":"card-deux",
-            "icon":"../../public/pictures/icons/seo-search-symbol.png",
+            "icon":"/pictures/icons/seo-search-symbol.png",
             "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel.",
             "color":"toto"
         },
@@ -21,7 +21,7 @@
             "title":"React Native, Expo Go,",
             "soustitle":"Android, IOS, Web",
             "id": "card-trois",
-            "icon":"../../public/pictures/icons/mobile.png",
+            "icon":"/pictures/icons/mobile.png",
             "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application.",
             "color":"arthur"
 
@@ -30,7 +30,8 @@
     "works":[
         {
             "name":"Kasa Home",
-            "image":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+            "cover":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+            "alt":"Photo d'un logement sur KAsa",
             "support":"Web Developpement",
             "id":"A7ZD72310AH55",
             "description":"Kasa est une entreprise de location de logement de bien d'exception.",
@@ -67,29 +68,71 @@
                 }
             ],
             "pictures":{
-                "presentation":"../../public/pictures/images/projets/Kasa/presentation.webp",
+                "presentation":"/pictures/images/projets/Kasa/presentation.webp",
                 "projet": [
                     [
-                        "../../public/pictures/images/projets/Kasa/pageAccueil-desktop-01.webp",
-                        "../../public/pictures/images/projets/Kasa/pageAccueil-desktop-02.webp",
-                        "../../public/pictures/images/projets/Kasa/pageAccueil-desktop-03.webp",
-                        "../../public/pictures/images/projets/Kasa/pageAccueil-desktop-04.webp"
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageAccueil-desktop-01.webp",
+                            "alt":"page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-02.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-03.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-04.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        }
                     ],
                     [
-                        "../../public/pictures/images/projets/Kasa/Header-desktop.webp",
-                        "../../public/pictures/images/projets/Kasa/pageAbout-desktop.webp",
-                        "../../public/pictures/images/projets/Kasa/footer-desktop.webp"
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/page404-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        }
                     ],
                     [
-                        "../../public/pictures/images/projets/Kasa/Header-desktop.webp",
-                        "../../public/pictures/images/projets/Kasa/page404-desktop.webp",
-                        "../../public/pictures/images/projets/Kasa/footer-desktop.webp"
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageAbout-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        }
                     ],
                     [
-                        "../../public/pictures/images/projets/Kasa/Header-desktop.webp",
-                        "../../public/pictures/images/projets/Kasa/pageLogement-desktop-01.webp",
-                        "../../public/pictures/images/projets/Kasa/pageLogement-desktop-02.webp",
-                        "../../public/pictures/images/projets/Kasa/footer-desktop.webp"
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageLogement-desktop-01.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageLogement-desktop-02.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        }
                     ]
                 ]
             },
@@ -97,7 +140,8 @@
         },
         {
             "name":"Sophie Bruel - Portfolio",
-            "image":"../../public/pictures/images/projets/Bruel/sophie-bluel.webp",
+            "cover":"/pictures/images/projets/Bruel/sophie-bluel.webp",
+            "alt":"Sophie Bruel",
             "support":"Web Developpement",
             "id":"24GRKT812A",
             "description":"Sophie Bruel est une architecte talentueuse qui design des intérieurs partout dans le monde.",
@@ -134,231 +178,51 @@
                 }
             ],
             "pictures": {
-                "presentation": "../../public/pictures/images/projets/Bruel/presentation.jpeg",
+                "presentation": {
+                    "image": "/pictures/images/projets/Bruel/presentation.webp",
+                    "alt": "Mock up du site de Sophie Bruel"
+                },
                 "projet": [
                     [
                         {
-                            "image":"../../public/pictures/images/projets/Bruel/accueil-01.webp",
+                            "image":"/pictures/images/projets/Bruel/accueil-01.webp",
                             "alt":"page d'accueil du site de Sophie Bruel top"
                         },
                         {
                             "image":
-                            "../../public/pictures/images/projets/Bruel/accueil-02.webp",
+                            "/pictures/images/projets/Bruel/accueil-02.webp",
                             "alt":"page d'accueil du site de Sophie Bruel milieu"
                         },
                         {
                             "image":
-                            "../../public/pictures/images/projets/Bruel/accueil-03.webp",
+                            "/pictures/images/projets/Bruel/accueil-03.webp",
                             "alt":"page d'accueil du site de Sophie Bruel milieu"
                         },
                         {
                             "image":
-                            "../../public/pictures/images/projets/Bruel/accueil-04.webp",
+                            "/pictures/images/projets/Bruel/accueil-04.webp",
                             "alt":"page d'accueil du site de Sophie Bruel bot"
                         }
                     ],
                     [
-                        "../../public/pictures/images/projets/Bruel/login-page.webp"
+                        {
+                            "image":"/pictures/images/projets/Bruel/login-page.webp",
+                            "alt":"page de login du site de Sophie Bruel top"
+                        }
                     ],
                     [
-                        "../../public/pictures/images/projets/Bruel/Modal-gallerie.webp",
-                        "../../public/pictures/images/projets/Bruel/Modal-Ajout.webp"
+                        {
+                            "image":"/pictures/images/projets/Bruel/Modal-gallerie.webp",
+                            "alt":"modal pour modifier la gallerie du site de Sophie Bruel top"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Bruel/Modal-Ajout.webp",
+                            "alt":"modal pour ajouter des projets aux site de Sophie Bruel milieu"
+                        }
                     ]
                 ]
             },
             "technologies":["JAVASCRIPT","CSS","HTML"]
-        },
-        {
-            "name":"Nina Carducci - Portfolio",
-            "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Web Developpement",
-            "id":"QL43177DKW5",
-            "description":"Nina Carducci est une photographe d'exception basé dans la région Bordelaise.",
-            "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-            "designer":[
-                {
-                    "categorie":"client",
-                    "text":"Openclassrooms"
-                },
-                {
-                    "categorie":"Mission",
-                    "text":"Optimiser le site pour le SEO"
-                },
-                {
-                    "categorie":"Strategie",
-                    "text":"Découvrir le SEO"
-                }
-            ],
-            "reseau":[
-                {
-                    "lien":"https://www.facebook.com/",
-                    "icon":"fa-facebook-f",
-                    "nom":"facebook"
-                },
-                {
-                    "lien":"https://www.twitter.com/",
-                    "icon":"fa-twitter",
-                    "nom":"twitter"
-                },
-                {
-                    "lien":"https://www.instagram.com/",
-                    "icon":"fa-instagram",
-                    "nom":"instagram"
-                }
-            ],
-            "pictures":{
-                "presentation":"../../public/pictures/images/image-attractive.jpg",
-                "projet":[
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg"
-                ]
-            },
-            "technologies":["JAVASCRIPT","HTML","CSS","SEO plugins"]
-        },
-        {
-            "name":"Booki",
-            "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Web Developpement",
-            "id":"A7ZD70AH55",
-            "description":"Kasa est une entreprise de location de logement de bien d'exception.",
-            "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-            "designer":[
-                {
-                    "categorie":"client",
-                    "text":"Openclassrooms"
-                },
-                {
-                    "categorie":"Mission",
-                    "text":"Créer un site de réservation de logement en ligne"
-                },
-                {
-                    "categorie":"Strategie",
-                    "text":"Créer un site en HTML/ CSS"
-                }
-            ],
-            "reseau":[
-                {
-                    "lien":"https://www.facebook.com/",
-                    "icon":"fa-facebook-f",
-                    "nom":"facebook"
-                },
-                {
-                    "lien":"https://www.twitter.com/",
-                    "icon":"fa-twitter",
-                    "nom":"twitter"
-                },
-                {
-                    "lien":"https://www.instagram.com/",
-                    "icon":"fa-instagram",
-                    "nom":"instagram"
-                }
-            ],
-            "pictures":{
-                "presentation":"../../public/pictures/images/image-attractive.jpg",
-                "projet":[
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg"
-                ]
-            },
-            "technologies":["CSS","HTML"]
-        },
-        {
-            "name":"Gépalémo",
-            "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Mobile",
-            "id":"D392DK10",
-            "description":"Kasa est une entreprise de location de logement de bien d'exception.",
-            "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-            "designer":[
-                {
-                    "categorie":"client",
-                    "text":"Personnel"
-                },
-                {
-                    "categorie":"Mission",
-                    "text":"Créer une application de communication a travers des icons"
-                },
-                {
-                    "categorie":"Strategie",
-                    "text":"Découvrir et apprendre le developpement et design d'application mobile"
-                }
-            ],
-            "reseau":[
-                {
-                    "lien":"https://www.facebook.com/",
-                    "icon":"fa-facebook-f",
-                    "nom":"facebook"
-                },
-                {
-                    "lien":"https://www.twitter.com/",
-                    "icon":"fa-twitter",
-                    "nom":"twitter"
-                },
-                {
-                    "lien":"https://www.instagram.com/",
-                    "icon":"fa-instagram",
-                    "nom":"instagram"
-                }
-            ],
-            "pictures":{
-                "presentation":"../../public/pictures/images/image-attractive.jpg",
-                "projet":[
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg"
-                ]
-            },
-            "technologies":["REACT NATIVE","EXPO GO APP"]
-        },
-        {
-            "name":"Menu Maker",
-            "image":"../../public/pictures/images/image-attractive.jpg",
-            "support":"Gestion",
-            "id":"AL5431QFK08",
-            "description":"Menu Maker est un site de création de menu de restaurant,pour physique, site web ou application de livraison.",
-            "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-            "designer":[
-                {
-                    "categorie":"client",
-                    "text":"Openclassrooms"
-                },
-                {
-                    "categorie":"Mission",
-                    "text":"Plannifier un projet de développement de site."
-                },
-                {
-                    "categorie":"Strategie",
-                    "text":"Découvrir la gestion de projet en tant que chef d'équipe."
-                }
-            ],
-            "reseau":[
-                {
-                    "lien":"https://www.facebook.com/",
-                    "icon":"fa-facebook-f",
-                    "nom":"facebook"
-                },
-                {
-                    "lien":"https://www.twitter.com/",
-                    "icon":"fa-twitter",
-                    "nom":"twitter"
-                },
-                {
-                    "lien":"https://www.instagram.com/",
-                    "icon":"fa-instagram",
-                    "nom":"instagram"
-                }
-            ],
-            "pictures":{
-                "presentation":"../../public/pictures/images/image-attractive.jpg",
-                "projet":[
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg",
-                    "../../public/pictures/images/image-attractive.jpg"
-                ]
-            },
-            "technologies":["NOTION","KEYNOTE"]
         }
     ],
     "entreprises":[
@@ -368,14 +232,14 @@
         "localisation":"Paris,75006",
         "website":"www.google.com",
         "description":"J'ai eu a faire de nombreuse tache au cours de cette aventure chez Samsung, entre reparer des bugs de site et application coté utilisateur, ou encore faire des taches de maintenance, j'ai aussi eu l'occasion de travailler sur des projets plus ambitieux comme la refonte d'un site web ou encore la création d'une application mobile.",
-        "logo":"../../public/pictures/icons/site-internet-quote.png",
+        "logo":"/pictures/icons/site-internet-quote.png",
         "id":"1",
         "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
         "avis":{
             "surname":"Eric",
             "name":"Lafitte",
             "job":"CEO",
-            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
+            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
             "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
             "BGColor":"#0067dc"
         }
@@ -387,14 +251,14 @@
         "localisation":"Paris,75008",
         "website":"www.free.fr",
         "description":"J'ai eu la chance de pouvoi travailler sur leur nouveau projet de serveur freebox pro, du front-end React-Native.",
-        "logo":"../../public/pictures/icons/site-internet-quote.png",
+        "logo":"/pictures/icons/site-internet-quote.png",
         "id":"3",
         "technologies":["JAVASCRIPT","REACT-NATIVE","EXPRESS"],
         "avis":{
             "surname":"Michel",
             "name":"Delacompta",
             "job":"Chef de projet",
-            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
+            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
             "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
             "BGColor":"#40AC75"
         }
@@ -406,14 +270,14 @@
         "localisation":"Angoulême,16000",
         "website":"www.twitch.tv",
         "description":"J'ai eu la chance de travailler sur le developmmenet de nouvelles fonctionnalitées pour l'entreprise, que ce soit pour de l'utilisation interne ou pour les utilisateurs finaux.",
-        "logo":"../../public/pictures/icons/guillemet.png",
+        "logo":"/pictures/icons/guillemet.png",
         "id":"2",
         "technologies":["REACT-NATIVE","EXPO GO"],
         "avis":{
             "surname":"John",
             "name":"Doe",
             "job":" Chef de projet",
-            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
+            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
             "comment":"Tamal is one of the best professionals that we have known in web development skills. Between his skills you can find good communication and accuracy with the planning in complex projects.",
             "BGColor": "#923fe6"
         }
@@ -438,5 +302,4 @@
             "id":"4"
         }
     ]
-
 }
