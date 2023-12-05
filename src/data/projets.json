@@ -1,0 +1,291 @@
+[
+    {
+        "name":"Kasa Home",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Web Developpement",
+        "id":"A7ZD70AH55",
+        "description":"Kasa est une entreprise de location de logement de bien d'exception.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"Client",
+                "text":"Openclassrooms"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Construire le site en React"
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Mobile first"
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["JAVASCRIPT","REACT","SASS","VITEJS"]
+    },
+
+    {
+        "name":"Sophie Bruel - Portfolio",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Web Developpement",
+        "id":"24GRKT812A",
+        "description":"Sophie Bruel est une architecte talentueuse qui design des intérieurs partout dans le monde.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"client",
+                "text":"Openclassrooms"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Creer une page d'accueil, modal pour ajouter/ supprimer des projets et une page de login"
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Tout en Javascript"
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["JAVASCRIPT","CSS","HTML"]
+    },
+    {
+        "name":"Nina Carducci - Portfolio",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Web Developpement",
+        "id":"QL43177DKW5",
+        "description":"Nina Carducci est une photographe d'exception basé dans la région Bordelaise.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"client",
+                "text":"Openclassrooms"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Optimiser le site pour le SEO"
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Découvrir le SEO"
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["JAVASCRIPT","HTML","CSS","SEO plugins"]
+    },
+    {
+        "name":"Booki",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Web Developpement",
+        "id":"A7ZD70AH55",
+        "description":"Kasa est une entreprise de location de logement de bien d'exception.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"client",
+                "text":"Openclassrooms"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Créer un site de réservation de logement en ligne"
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Créer un site en HTML/ CSS"
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["CSS","HTML"]
+    },
+    {
+        "name":"Gépalémo",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Mobile",
+        "id":"D392DK10",
+        "description":"Kasa est une entreprise de location de logement de bien d'exception.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"client",
+                "text":"Personnel"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Créer une application de communication a travers des icons"
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Découvrir et apprendre le developpement et design d'application mobile"
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["REACT NATIVE","EXPO GO APP"]
+    },
+    {
+        "name":"Menu Maker",
+        "image":"../../public/pictures/images/image-attractive.jpg",
+        "support":"Gestion",
+        "id":"AL5431QFK08",
+        "description":"Menu Maker est un site de création de menu de restaurant,pour physique, site web ou application de livraison.",
+        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+        "designer":[
+            {
+                "categorie":"client",
+                "text":"Openclassrooms"
+            },
+            {
+                "categorie":"Mission",
+                "text":"Plannifier un projet de développement de site."
+            },
+            {
+                "categorie":"Strategie",
+                "text":"Découvrir la gestion de projet en tant que chef d'équipe."
+            }
+        ],
+        "reseau":[
+            {
+                "lien":"https://www.facebook.com/",
+                "icon":"fa-facebook-f",
+                "nom":"facebook"
+            },
+            {
+                "lien":"https://www.twitter.com/",
+                "icon":"fa-twitter",
+                "nom":"twitter"
+            },
+            {
+                "lien":"https://www.instagram.com/",
+                "icon":"fa-instagram-f",
+                "nom":"instagram"
+            }
+        ],
+        "pictures":{
+            "presentation":"../../public/pictures/images/image-attractive.jpg",
+            "projet":[
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg",
+                "../../public/pictures/images/image-attractive.jpg"
+            ]
+        },
+        "technologies":["NOTION","KEYNOTE"]
+    }
+]

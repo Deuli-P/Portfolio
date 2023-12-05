@@ -7,8 +7,38 @@
         padding-right: clamp(5vw, 10vw, 10%);;
     }
 
+    .work_projet-link{
+        max-width: 380px;
+    
+    }
+
+
 }
+
+
+@media screen and (min-width: 740px) {
+    .work_projets-link{
+        margin: 20px auto;
+    }
+    #main-projet{
+        .projectPage_title-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 0px;
+            .projetPage_title-backButton{
+                text-align: center;
+                width: 10%;
+                display: flex;
+            }
+        }
+    
+    }
+}
+
 @media screen and (min-width: 800px) {
+
 
 //////////////////////// HEADER ////////////////////////
 
@@ -72,7 +102,6 @@
 
 
 ///////////////////////////// HOME /////////////////////////////
-
 //////////////////////////// PRESENTATION ////////////////////////
 
     #home_presentation{
@@ -84,11 +113,6 @@
         }
         img{
             margin: 20px;
-        }
-        .deco_presentation{
-            width: 1200px;
-            height: 200px;
-            transform: rotate3d(1, -0.58, 0.5, 93deg);
         }
     }
 
@@ -111,45 +135,9 @@
         }
     }
 
-//////////////////////// EXPERTISE CARD ///////////////////////
 
-    .expertise_card-card{
-        width: 100%;
-        height: 300px;
-        box-sizing: border-box;
-        padding: 5%;
-        justify-content: space-between;
-        &#card-un{
-            border-width: 3px 1.5px 3px 3px;
-        }
-        &#card-deux{
-            border-width: 3px 1.5px;
-        }
-        &#card-trois{
-            border-width: 3px  3px 3px 1.5px;
-        }
-        .expertise_card_top_container{
-            padding: 0px;
-            .expertise_card_icon{
-                margin-right: 30px;
-                width: 50px;
-                height: 50px;
-            }
-            .expertise_card_title_container{
-                white-space: nowrap;
-                .expertise_card_title_h{
-                    font-family: $font-logo-nom;
-                }
-            }
-        }
-        .expertise_card_bottom_container{
-            height: auto;
-            .expertise_card_decoration_container{
-                margin:5px;
-            }
 
-        }
-    }
+  
 
 //////////////////////////// WORKS ////////////////////////
 
@@ -163,37 +151,19 @@
 
     }
 
-//////////////////////// PROJET PERSO /////////////////////
-
 
 /////////////////////////// PROJETS ///////////////////////
-    #works_projets_fitler-container{
+
+    #works_projets_list_container{
         flex-direction: row;
-        padding: 30px 20px ;
-        .work_projets_filter_title-container{
-            text-align: center;
-            width: 20%;
-            .works_projets_filter-text{
-                padding-right: 10px;
-                border-right: 3px;
-                border-right-style: solid;
-                border-bottom: none;
-                font-size: 20px;
-            }
-        }
-        .work_projets_filter_button-container{
-            padding: 10px 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-start;
-
-        }
-
     }
-
-    .workCard_article_container{
-        width: 30%;
+    #works_projets_list_container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .work_projets-link{
+            justify-content: space-between;
+            align-items: space-between;
+        }
     }
 
 /////////////////////////// COLLAPSE ///////////////////////
@@ -202,102 +172,131 @@
         width: 100%;
         padding: 30px 20px;
     }
-/////////////////////////// GAUCHE ///////////////////////
 
-
-
-/////////////////////////// DROITE ///////////////////////
-
-
-
-///////////////////////// SCROLL BOUTON /////////////////////////
 
 }
 
 @media screen and (min-width: 1024px) {
-    
-//////////////////////// HEADER ////////////////////////
+
+    header{
+        width: 100%;
+    }
 
 
-///////////////////////// SCROLL BOUTON /////////////////////////
-
-
-///////////////////////////// HOME /////////////////////////////
-
-//////////////////////////// PRESENTATION ////////////////////////
-
-
-//////////////////////////// EXPERTISE ////////////////////////
-
-#home_expertise{
-    flex-wrap: nowrap;
-    padding: 15px 3% 150px;
-    width: 100%;
-    height: 100%;
-    .expertise_card_container{
+    #home_expertise{
+        flex-wrap: nowrap;
+        padding: 15px 3% 150px;
         width: 100%;
         height: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding: auto 0px;
+        .expertise_card_container{
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: auto 0px;
+        }
     }
-}
-
 //////////////////////// EXPERTISE CARD ///////////////////////
 
-.expertise_card-article{
-    width: 100%;
-    min-height: 200px;
-    padding: 15px;
-    &#card-un{
-        border-width: 3px 1.5px 3px 3px;
+    .expertise_card-article{
+        width: 100%;
+        min-height: 200px;
+        padding: 15px;
+        &#card-un{
+            border-width: 3px 1.5px 3px 3px;
+        }
+        &#card-deux{
+            border-width: 3px 1.5px;
+        }
+        &#card-trois{
+            border-width: 3px  3px 3px 1.5px;
+        }
     }
-    &#card-deux{
-        border-width: 3px 1.5px;
-    }
-    &#card-trois{
-        border-width: 3px  3px 3px 1.5px;
-    }
-}
 
 //////////////////////////// WORKS ////////////////////////
-
-
 //////////////////////// PROJET PERSO /////////////////////
 
-#works_personnal_container{
-    flex-direction: row;
-    align-items: start;
-    #works_personnal_text_container{
-        padding-left: 0px;
-        height: 100%;
-        #works_personnal_text_title{
-            @include fluid-type(1024px, 1440px, 70px, 80px);
-            padding: 0px 2% ;
-            text-align: start;
+    #works_personnal_container{
+        flex-direction: row;
+        align-items: start;
+        #works_personnal_text_container{
+            padding-left: 0px;
+            height: 100%;
+            #works_personnal_text_title{
+                @include fluid-type(1024px, 1440px, 70px, 80px);
+                padding: 15% 2%  5%;
+                text-align: start;
+            }
+            #works_personnal_text_p{
+                padding: 30px 0px;
+                text-align: start;
+                @include fluid-type(1024px, 1440px, 20px, 26px);
+            }
         }
-        #works_personnal_text_p{
-            padding: 30px 0px;
-            text-align: start;
-            @include fluid-type(1024px, 1440px, 20px, 26px);
+        #works_personnal_content{
+            padding: 40px 0px 60px ;
+            .work_personnal_content_text{
+                margin: 0px 0px 140px -60px;
+            
+            }
+        
         }
     }
-    #works_personnal_content{
-        padding: 40px 0px 60px ;
-        .work_personnal_content_text{
-            margin: 0px 0px 140px -60px;
-           
-        }
-       
-    }
+
+/////////////////////////// PROJETS ///////////////////////
+
+
+.work_projets-link{
+    width: clamp(500px, calc(500px + calc((600 - 500) / (1440 - 1024)) * (100vw - 500px)), 600px);
+    margin: 20px 5px;
 }
 
 
+///////////////////////// CONTACT /////////////////////////
 
+    #home_contact{
+        flex-direction: row;
+        padding-bottom: 0px;
+        #contact-tile{
+            padding-top: 50px;
+        }
+        #contact_lien-form{
+            padding-top: 30px;
+        }
 
-///////////////////////// SCROLL BOUTON /////////////////////////
+    }    
 
-
-
-
+    #main-projet{
+        padding-left: 8%;
+        padding-right: 8%;
+        .projetPage_description-container{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            .projetPage_description-text{
+                width: 50%;
+                &>p{
+                    padding-right:  50px;
+                }
+            }
+            .projetPage_description-designer{
+                width: 50%;
+                @include fluid-type(1024px, 1440px, 40px, 50px);
+                flex-wrap: wrap;
+                .projetPage_description_designer_fiche-container{
+                    margin-top: 0px;
+                    .projetPage_description_designer-fiche{
+                        min-width: 210px;
+                    }
+                }
+            }
+        }
+        .projetPage_media-container{
+            .projetPage_media-content{
+                margin-top: 40px;
+            }
+        }
+    }
+    
 }

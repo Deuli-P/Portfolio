@@ -8,7 +8,7 @@ $EXPERIENCE-BG-OPEN-TOP: #740cdc;
 /////// BOT ///////
 $EXPERIENCE-BG-BOT:  #241d41;
 /////// TECHNOLOGY ///////
-$EXPERIENCE-BG-TECHNO: #2c3599;
+$EXPERIENCE-BG-TECHNO: #A5ABF3;
 ////// TEXT ///////
 $TEXT-COLOR:white;
 
@@ -29,15 +29,15 @@ $TEXT-COLOR:white;
     }
     &.light{
         &>h3{
-            color: $H3-color-light;
+            color: $COLOR-LIGHT;
         }
-        background-color: $BG2-color-light;
+        background-color: $BG2-LIGHT;
     }
     &.dark{
         &>h3{
-            color: $H3-color-dark;
+            color: $COLOR-DARK;
         }
-        background-color: $BG2-color-dark;
+        background-color: $BG2-DARK;
     }
 }
 
@@ -49,7 +49,7 @@ $TEXT-COLOR:white;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: $TEXT-COLOR;
+    color: $COLOR-DARK;
     .experience_collapse_top-container{
         border-radius: 5px;
         margin-bottom: 10px;
@@ -136,6 +136,7 @@ $TEXT-COLOR:white;
                         margin: 4px;
                         border-radius: 20px;
                         background-color: $EXPERIENCE-BG-TECHNO;
+                        color: $COLOR-LIGHT;
                     }
                 }
             }

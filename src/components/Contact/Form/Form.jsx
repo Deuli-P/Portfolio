@@ -20,7 +20,6 @@ const Form = ({theme}) => {
         const time = date.getHours() + ":" + date.getMinutes();
         data.date = date.toLocaleDateString();
         data.time = time;
-        console.log("[FORM]data est:",data)
         try{
             emailjs
             .send("service_wvheinq", "template_bv3q5z9", data, "v5gGgV-UHFvG-QHCE")
@@ -39,59 +38,65 @@ const Form = ({theme}) => {
     }
    
     return (
-        <form className={`contact_form-form ${theme === "dark" ? "contact_form_light": "contact_form_dark"} `} 
+        <form className={`contact_form-form `} 
             onSubmit={handleSubmit(onSubmit)}>
             <label 
-                htmlFor="name"
-                className={`contact_form-label ${theme === "dark"? "p1-light-color": "p1-dark-color"} `}
-            >Name</label>
-            <input 
-                type="text" 
-                name="name" 
-                id="nom" 
-                {...register("name", { required: true })}
-                placeholder="Votre nom" 
-                className={`contact_form-input ${theme === "dark"? "input-light-color": "input-dark-color"} `}
-            />
-            <label 
-                htmlFor="email"
-                className={`contact_form-label ${theme === "dark"? "p1-light-color": "p1-dark-color"} `}
-            >Email</label>
-            <input 
-                type="email" 
-                name="email" 
-                id="email" 
-                placeholder="Votre email"
-                {...register("email", { required: true })}
-                required
-                className={`contact_form-input ${theme === "dark"? "input-light-color": "input-dark-color"} `}
-            />
-            <label 
-                htmlFor="entreprise"
-                className={`contact_form-label ${theme === "dark"? "p1-light-color": "p1-dark-color"} `}
-            >Entreprise</label>
-            <input 
-                type="text" 
-                name="entreprise" 
-                id="entreprise" 
-                placeholder="Votre entreprise" 
-                {...register("entreprise",)}
-                className={`contact_form-input ${theme === "dark"? "input-light-color": "input-dark-color"} `}
-            />
-            <label 
-                htmlFor="message"
-                className={`contact_form-label ${theme === "dark"? "p1-light-color": "p1-dark-color"} `}
-            >Message</label>
-            <textarea 
-                name="message" 
-                id="message" 
-                placeholder="Votre message"
-                {...register("message", { required: true })}
-                className={`contact_form-input ${theme === "dark"? "input-light-color": "input-dark-color"} `}
+                className={`contact_form-label `}
+                >
+                Name
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="nom" 
+                    autoComplete='on'
+                    {...register("name", { required: true })}
+                    placeholder="Votre nom" 
+                    className={`contact_form-input form_input-height`}
                 />
+            </label>
+            <label 
+                className={`contact_form-label `}
+            >
+                Email
+                <input 
+                    autoComplete='on'
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Votre email"
+                    {...register("email", { required: true })}
+                    required
+                    className={`contact_form-input form_input-height`}
+                    />
+            </label>
+            <label 
+                className={`contact_form-label `}
+            >
+                Entreprise
+                <input 
+                    type="text" 
+                    name="entreprise" 
+                    id="entreprise" 
+                    placeholder="Votre entreprise" 
+                    {...register("entreprise",)}
+                    className={`contact_form-input form_input-height`}
+                />
+            </label>
+            <label 
+                className={`contact_form-label  `}
+            >
+                Message
+                <textarea 
+                    name="message" 
+                    id="message" 
+                    placeholder="Votre message"
+                    {...register("message", { required: true })}
+                    className={`contact_form-input `}
+                />
+            </label>
             <button
                 type="submit"
-                className={`contact_form-button button ${theme === "dark"? "input-light-color": "input-dark-color"} `}
+                className={`contact_form-button button `}
             >Submit</button>
         </form>
     );

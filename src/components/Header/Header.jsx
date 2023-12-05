@@ -4,15 +4,6 @@ import { Link,  animateScroll as scroll } from 'react-scroll';
 import ThemeContext from "../../Context/ThemeContext";
 import Burger from "./Burger/Burger";
 
-// Le header est toujours visible apres avoir passé le presentation.
-
-// si la page n'est plus en haut alors un bouton apparait pour remonter en haut de page.
-// DONE
-// Lorsque l'on clique une lien d'une section cela active le lien correspondant.
-// DONE
-// Icon burger pour le menu responsive. 
-// DONE
-
 const Header = () => {
 
     const { toggleTheme, theme } = useContext(ThemeContext);

@@ -1,44 +1,34 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
+
 import { useEffect, useState,useContext } from 'react';
-// EXPERTTISE
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
-// PRESENTATION
 import photo from '../../public/pictures/images/pierre-antoniutti-converti.webp';
-// DATA
-import jsonData from '../data/expertise.json';
-// SCROLL TO UP BOUTON
 // import ScrollToUp from '../components/ChevronToUp/scrollToUp';
-// DARK/LIGHT MODE
 import ThemeContext from '../Context/ThemeContext';
-//  WORKS
 import WorkCard from '../components/Work/workCard/workCard';
 import Filter from '../components/Work/Filter/Filter';
-// EXPERIENCE
 import ExperienceCollapse from '../components/Experience/ExperienceCollapse/ExperienceCollapse';
-// CONTACT
 import Avis from '../components/Contact/Avis/Avis';
 import Form from '../components/Contact/Form/Form';
 import Personnal from '../components/Work/Personnal/Personnal';
 import Presentation from '../components/Presentation/Presentation';
+// import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
-
-
-
-
-
-const HomePage = () => {
+const HomePage = ({data}) => {
     const { theme } = useContext(ThemeContext);
-    const expertiseData = jsonData.expertise;
-    const entreprisesData = jsonData.entreprises;
+    const expertiseData = data.expertise;
+    const entreprisesData = data.entreprises;
+    const worksData =data.works;
 
 
-    // eslint-disable-next-line no-unused-vars
-    const [worksData, setObjects] = useState(jsonData.works); // Liste de tous les objets
+
     const [filteredWork, setFilteredWork] = useState([]); // Liste filtrée
     const [selectedType, setSelectedType] = useState("");
-  const [isOpenCollapse, setIsOpenCollapse] = useState(null);
+    const [isOpenCollapse, setIsOpenCollapse] = useState(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -73,9 +63,10 @@ const HomePage = () => {
         setIsOpenCollapse(id === isOpenCollapse ? null : id);
     }
 
+
     return (
-        <>
-            <section id='home_presentation' className={theme === "dark" ? "dark": "light"}>
+        <main id='main-home'>
+            <section id='home_presentation' className={theme === "dark" ? "light": "dark"}>
                <Presentation photo={photo}/>
             </section>
             <section id='home_expertise' className={theme === "dark" ? "light": "dark"}>
@@ -116,13 +107,19 @@ const HomePage = () => {
                         FilterChange={FilterChange} 
                         />
                     <div id="works_projets_list_container">
-                            {filteredWork?.map((item, idx) => (
-                                <WorkCard
-                                name={item.name}
-                                image={item.image}
-                                key={idx}
-                                supportDiffusion={item.support}
-                                />
+                            {filteredWork?.map((item) => (
+                                <Link
+                                    key={`projet_${item.id}`} 
+                                    id={item.id}
+                                    href={`/project/${item.id}`}
+                                    className="work_projets-link"
+                                >
+                                    <WorkCard
+                                        name={item.name}
+                                        image={item.image}
+                                        supportDiffusion={item.support}
+                                    />
+                                </Link>
                             ))}
                     </div>
                 </div>
@@ -151,18 +148,16 @@ const HomePage = () => {
             <section id="home_contact" className={theme === "dark" ? "light": "dark"}>
                         <div id="contact-zone">
                             <div id="contact-title">
-                                <h5 className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Disponible pour projet professionnel.</h5>
+                                <h5 >Disponible pour projet professionnel.</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequatur id dolores minus perferendis esse, eos necessitatibus similique et. Minima, voluptates nihil eius officiis doloribus repudiandae nostrum inventore mollitia rerum!</p>
                             </div>
                             <div id='contact-lien'>
                                 <div className="contact_lien-container">
                                     <a 
                                         href="https://www.linkedin.com/in/pierre-antoniutti-a05b15111/"
-                                        className={`button ${theme === "dark" ? "dark": "light"}`}
                                     >LinkedIn</a>
                                     <a 
                                         href="https://github.com/Deuli-P"
-                                        className={`button ${theme === "dark" ? "dark": "light"}`}
                                     >Github</a>
                                 </div>
                                 <div id="contact_lien-form">
@@ -174,7 +169,8 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div id="contact-avis">
-                            {entreprisesData.map((item, idx) => (
+
+                                {entreprisesData.map((item, idx) => (
                                 <Avis 
                                     key={idx}
                                     entreprise={item.name}
@@ -187,9 +183,11 @@ const HomePage = () => {
                                     bgColor={item.avis.BGColor}
                                 />
                                 ))}
+
+                            
                         </div>
             </section>
-        </>
+        </main>
     );
 };
 

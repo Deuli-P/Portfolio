@@ -1,5 +1,11 @@
 @import '../../SASS/settings';
 
+////////// COLORS /////////
+$COLOR-LIGHT: #141E26;
+$COLOR-DARK: #D7D7D9;
+$COLOR-ACTIVE: orange;
+
+
 .header-wrapper{
     width: 100%;
     height: calc(59px + (5 / 680) * (100vw - 320px));    display: flex;
@@ -97,93 +103,95 @@
     border-width: 1px;
 }
 
+////////////////// DARK / LIGHT ///////////////////////
+
 .header-wrapper{
     &.light{
-        background-color: $HEADER-color-light;
+        background-color: $COLOR-LIGHT;
         .header-right{
-            background-color: $HEADER-color-light;
+            background-color: $COLOR-LIGHT;
         }
         .header-name>a{
-            color: $HEADER-color-dark;
+            color: $COLOR-DARK;
             &:hover{
-                color: orange;
+                color: $COLOR-ACTIVE;
             }
         }
         .menu-toggle-bar{
-            background-color: $HEADER-color-dark;
+            background-color: $COLOR-DARK;
         }
         .header-link{
-            color: $HEADER-color-dark;
+            color: $COLOR-DARK;
             &:hover{
                 color: rgb(113, 110, 108);
             }
             &.active.accueil{
-                color: $HEADER-color-dark;
-                background-color: orange;;
+                color: $COLOR-DARK;
+                background-color: $COLOR-ACTIVE;
             }
             &.active{
-                color: orange;
+                color: $COLOR-ACTIVE;
             }
         }
         .header-buttons-container{
             .header-button{
-                color: $HEADER-color-light;
-                background-color: $HEADER-color-dark;
+                color: $COLOR-LIGHT;
+                background-color: $COLOR-DARK;
                 &:hover,&:focus,&:active{
-                    border-color: orange;
-                    color: orange;
+                    border-color: $COLOR-ACTIVE;
+                    color:$COLOR-ACTIVE;
                 }
 
             }
             .fa-sun{
-                color: $HEADER-color-dark;
+                color: $COLOR-DARK;
             }
         }
         .header-barre{
-            border-color: $HEADER-color-dark;
+            border-color: $COLOR-DARK;
         }
     }
     &.dark{
-        background-color: $HEADER-color-dark;
+        background-color: $COLOR-DARK;
         .header-right{
-            background-color: $HEADER-color-dark;
+            background-color: $COLOR-DARK;
         }
         .header-name>a{
-            color: $HEADER-color-light;
+            color:$COLOR-LIGHT;
             &:hover{
-                color: orange;
+                color:$COLOR-ACTIVE;
             }
         }
         .menu-toggle-bar{
-            background-color: $HEADER-color-light;
+            background-color: $COLOR-LIGHT;
         }
         .header-link{
-            color: $HEADER-color-light;
+            color: $COLOR-LIGHT;
             &:hover{
                 color: rgb(173, 170, 166);
             }
             &.accueil.active{
-                color: $HEADER-color-light;
-                background-color: orange;;
+                color: $COLOR-LIGHT;
+                background-color: $COLOR-ACTIVE;
             }
             &.active{
-                color: orange;
+                color: $COLOR-ACTIVE;
             }
         }
         .header-barre{
-            border-color: $HEADER-color-light;
+            border-color: $COLOR-LIGHT;
         }
         .header-buttons-container{
             .header-button{
-                color: $HEADER-color-dark;
-                background-color: $HEADER-color-light;
+                color: $COLOR-DARK;
+                background-color: $COLOR-LIGHT;
                 &:hover,&:focus,&:active{
-                    border-color: orange;
-                    color: orange;
+                    border-color: $COLOR-ACTIVE;
+                    color: $COLOR-ACTIVE;
                 }
             }
             .fa-moon{
-                color: $HEADER-color-light;
+                color: $COLOR-LIGHT;
             
             }
         }

@@ -3,15 +3,16 @@
 #home_presentation{
     width: 100%;
     height: 100vh;
+    min-height: clamp(300px, calc(300px + calc((1000 - 300) / (1440 - 320)) * (100vw - 300px)), 1000px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding-bottom: clamp(20px, calc(20px + calc((30 - 20) / (1440 - 320)) * (100vw - 20px)), 30px);
-    padding-top: clamp(70px, calc(70px + calc((120 - 70) / (1440 - 320)) * (100vw - 70px)), 120px);
+    padding-top: clamp(70px, calc(70px + calc((100 - 70) / (1440 - 320)) * (100vw - 70px)), 100px);
     img{
-        width: clamp(150px, calc(150px + calc((600 - 150) / (1440 - 320)) * (100vw - 150px)), 600px);
-        height: clamp(150px, calc(150px + calc((600 - 150) / (1440 - 320)) * (100vw - 150px)), 600px);
+        width: clamp(150px, calc(150px + calc((400 - 150) / (1440 - 320)) * (100vw - 150px)), 400px);
+        height: clamp(150px, calc(150px + calc((400 - 150) / (1440 - 320)) * (100vw - 150px)), 400px);
         border-radius: 50%;
         margin-bottom: 20px;
         border-style: solid ;
@@ -39,6 +40,54 @@
                 height: 50px;
                 border-radius: 50%;
                 transform: rotate3d(1, -0.62, 0.5, 90deg);
+            }
+        }
+        &>div{
+            margin-top: 30px;
+            width: 90%;
+            height: 30px;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+    }
+}
+
+////////////////// DARK / LIGHT //////////
+
+#home_presentation{
+    &.light{
+        background-color: $BG1-LIGHT;
+        img{
+            border-color: $COLOR-LIGHT;
+        }
+        .home-title-container{
+            h1{
+                color: $COLOR-ACTIVE;
+                ;
+            }
+            h2{
+                color: $COLOR-LIGHT;
+            }
+            &>div{
+                background-color: $COLOR-LIGHT-LIGHTEST;
+            }
+        }
+    }
+    &.dark{
+        background-color: $BG1-DARK;
+        img{
+            border-color: $COLOR-DARK;
+        }
+        .home-title-container{
+            h1{
+                color: $COLOR-ACTIVE;
+                ;
+            }
+            h2{
+                color: $COLOR-DARK;
+            }
+            &>div{
+                background-color: $COLOR-DARK-DARKEST;
             }
         }
     }

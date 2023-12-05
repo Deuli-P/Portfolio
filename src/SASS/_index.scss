@@ -1,7 +1,6 @@
 @import "_settings.scss";
 
 
-
 /////////////////////////// Header ///////////////////////
 
 @import "../components/Header/Header.scss";
@@ -10,6 +9,17 @@
 
 @import "../components/Expertise/expertise.scss";
 
+
+/////////////////////////// Bouton to Top ///////////////////////
+
+@import "../components/ChevronToUp/BoutonToUp.scss";
+
+/////////////////////////// FOOTER ///////////////////////
+
+@import "../components/Footer/Footer.scss";
+
+
+/////////////////////////// HOME ///////////////////////
 /////////////////////////// Presentation ///////////////////////
 
 @import "../components/Presentation/Presentation.scss";
@@ -57,25 +67,12 @@
 
 @import "../components/Work/workCard/workCard.scss";
 
-/////////////////////////// Avis ///////////////////////
-
-@import "../components/Contact/Avis/Avis.scss";
-
-/////////////////////////// Form ///////////////////////
-
-@import "../components/Contact/Form/Form.scss";
-
-/////////////////////////// Bouton to Top ///////////////////////
-
-@import "../components/ChevronToUp/BoutonToUp.scss";
-
-
 /////////////////////////// CONTACT ///////////////////////
 
 #home_contact{
     display: flex;
     flex-direction:column-reverse;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     #contact-zone{
         padding: 20px ;
     }
@@ -125,6 +122,403 @@
     }
 }
 
-/////////////////////////// AVIS ///////////////////////
+
+/////////////////////////// DARK/ / LIGHT ///////////////////////
+
+
+
+
+#home_contact{
+    &.light{
+        background-color: $BG2-LIGHT;
+        color: #141E26;
+        #contact-title{
+            color: #141E26;
+        }
+        .contact_lien-container{
+            &>a{
+                background-color: #141E26;
+                color: #D7D7D9;
+            }
+        }
+    }
+    &.dark{
+        background-color: $BG2-DARK;
+        color: #ffa540;
+        #contact-title{
+            color: #D7D7D9;
+        }
+        .contact_lien-container{
+            &>a{
+                color: #141E26;
+                background-color: #D7D7D9;
+            }
+        }
+    }
+
+}
+/////////////////////////// Avis ///////////////////////
+
+@import "../components/Contact/Avis/Avis.scss";
+
+/////////////////////////// Form ///////////////////////
+
+@import "../components/Contact/Form/Form.scss";
+
+//////////////////////// ERROR PAGE ///////////////////
+
+#errorPage_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 83.6vh;
+    padding: 20px;
+    text-align: center;
+    &.light{
+        background-color: $BG2-LIGHT;
+        color: $COLOR-LIGHT;
+        &>a{
+            background-color: $COLOR-LIGHT;
+            color: $COLOR-DARK;
+        }
+    }
+    &.dark{
+        background-color: $BG2-DARK;
+        color: $COLOR-DARK;
+        &>a{
+            background-color: $COLOR-DARK;
+            color: $COLOR-LIGHT;
+        }
+    }
+    &>h1{
+        @include fluid-type(320px, 1440px, 50px, 130px);
+        padding-bottom: 20px;
+        color: $COLOR-ACTIVE;
+    }
+    &>span{
+        @include fluid-type(320px, 1440px, 20px, 30px);
+    }
+    &>a{
+        width:clamp(250px, calc(250px + calc((500 - 250) / (1440 - 320)) * (100vw - 250px)), 400px);
+        margin-top: 30px;
+        @include fluid-type(320px, 1440px, 25px, 55px);
+        padding: 10px 20px;
+        border-radius: 20px;
+        border-width:1px;
+        border-style: solid; 
+        border-color: $COLOR-ACTIVE;
+        transform: scale(1);
+        transition: 0.3s ease-out;
+        &:hover{
+            border-width: 2px;
+            border-style: solid;
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+/////////////////////////// PROJET PAGE ///////////////////////
+
+ #main-projet{
+    padding: 70px 3% 20px;
+    height: auto;
+    &.light{
+        background-color: $BG2-LIGHT;
+        color: $COLOR-LIGHT;
+        .projectPage_title-container{
+            .projetPage_title-backButton{
+                &>i{
+                    color: $COLOR-DARK;
+                    background-color: $COLOR-LIGHT;
+                }
+            }
+            .projetPage_title-title{
+                &>span{
+                    color: $COLOR-LIGHT-LIGHT;
+                }
+                &>h1{
+                    color: $COLOR-ACTIVE;
+                }
+            
+            }
+        }
+        .projetPage_chemin{
+            &>span{
+                color: $COLOR-LIGHT-LIGHT;
+                &:hover{
+                    color: $COLOR-LIGHT-LIGHTEST;
+                }
+            }
+        }
+        .projetPage_media-container{
+            .projetPage_media_RS{
+                background-color: $COLOR-DARK;
+                &>a{
+                    color: $COLOR-LIGHT;
+                    &:visited{
+                        color: $COLOR-LIGHT;
+                    }
+                    &:hover{
+                        color: $COLOR-LIGHT-LIGHT;
+                    }
+                }
+            }
+        }
+        .projetPage_description-container{
+            .projetPage_description-text{
+                &>p{
+                    color: $COLOR-LIGHT-LIGHTEST;
+                    &>span{
+                        color: $COLOR-LIGHT;
+                    }
+                    &>p{
+                        color: $COLOR-LIGHT-LIGHT;
+                    }
+                }
+            }
+            .projetPage_description_designer-openProjet{
+                .projetPage_description_designer_openProjet-a{
+                    background-color: $COLOR-LIGHT;
+                    color: $COLOR-DARK;
+                    &:visited{
+                        color: $COLOR-DARK;
+                    }
+                    &:hover{
+                        background-color: $COLOR-LIGHT-LIGHTEST;
+                        color: $COLOR-DARK;
+                    }
+                }
+            }
+        }
+    }
+    &.dark{
+        background-color: $BG2-DARK;
+        color: $COLOR-DARK;
+        .projectPage_title-container{
+            .projetPage_title-backButton{
+                &>i{
+                    color: $COLOR-LIGHT;
+                    background-color: $COLOR-DARK;
+                }
+            }
+            .projetPage_title-title{
+                &>span{
+                    color: $COLOR-DARK-DARK;
+                }
+                &>h1{
+                    color: $COLOR-ACTIVE;
+                }
+            
+            }
+        }
+        .projetPage_chemin{
+            &>span{
+                color: $COLOR-DARK-DARK;
+                &:hover{
+                    color: $COLOR-DARK-DARKEST;
+                }
+            }
+        }
+        .projetPage_media-container{
+            .projetPage_media_RS{
+                background-color: $COLOR-DARK;
+                &>a{
+                    color: $COLOR-LIGHT;
+                    &:visited{
+                        color: $COLOR-LIGHT;
+                    }
+                    &:hover{
+                        color: $COLOR-LIGHT-LIGHT;
+                    }
+                }
+            }
+        }
+        .projetPage_description-container{
+            .projetPage_description-text{
+                &>p{
+                    color: $COLOR-DARK-DARK;
+                }
+            }
+            .projetPage_description-designer{
+                .projetPage_description_designer-fiche{
+                    border-top-color: $COLOR-DARK-DARKEST;
+                    &>span{
+                        color: $COLOR-DARK;
+                    }
+                    &>p{
+                        color: $COLOR-DARK-DARK;
+                    }
+                }
+            }
+            .projetPage_description_designer-openProjet{
+                .projetPage_description_designer_openProjet-a{
+                    background-color: $COLOR-DARK;
+                    color: $COLOR-LIGHT;
+                    &:visited{
+                        color: $COLOR-LIGHT;
+                    }
+                    &:hover{
+                        background-color: $COLOR-DARK-DARKEST;
+                        color: $COLOR-LIGHT;
+                    }
+                }
+            }
+        }
+    }
+    .projectPage_title-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 0px;
+        .projetPage_title-backButton{
+            width: 10%;
+            display: none;
+            &>i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+                font-size: 30px;
+            }
+        }
+        .projetPage_title-title{
+            &>span{
+                @include fluid-type(320px, 1440px, 16px, 24px);
+            }
+            &>h1{
+                margin: 10px 0px;
+                @include fluid-type(320px, 1440px, 40px, 60px);
+                color: $COLOR-ACTIVE;
+            }
+        }
+    }
+    .projetPage_chemin{
+        padding: 20px 0px;
+        flex-wrap: wrap;
+        &>span{
+            cursor:pointer;
+            padding: 0px 1%;
+            @include fluid-type(320px, 1440px, 16px, 24px);
+        }
+    }
+    .projetPage_description-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .projetPage_description-text{
+            &>p{
+                @include fluid-type(320px, 1440px, 16px, 24px);
+                line-height: 28px;
+            }
+        }
+        .projetPage_description-designer{
+            display: flex;
+            flex-direction: column;
+            .projetPage_description_designer_fiche-container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin-top: 20px;
+                .projetPage_description_designer-fiche{
+                    margin: 0px 20px 20px 0px;
+                    width: 130px;
+                    height: auto;
+                    padding: 5px 0px;
+                    .projetPage_description_designer_fiche-content{
+                        border-top-style: solid;
+                        border-top-width: 2px;
+                        text-align: left;
+                        padding-top: 15px;
+                        &>span{
+                            margin: 10px 0px;
+                            font-weight: 800;
+                            @include fluid-type(320px, 1024px, 16px, 24px);
+                            line-height: 21px;
+                        }
+                        &>p{
+                            @include fluid-type(320px, 1024px, 14px, 20px);
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        .projetPage_description_designer-openProjet{
+            white-space: nowrap;
+            margin: 0px;
+            .projetPage_description_designer_openProjet-a{
+                text-align: center;
+                padding: 5px 10px;
+                border-radius: 20px;
+                transform: scale(1);
+                @include fluid-type(320px, 1440px, 20px, 30px);
+                transition: all 0.3s ease-out;
+                &:hover{
+                    transition: all  0.3s ease-out;
+                    transform: scale(1.1);
+                }
+                &>i{
+                    transition: all  0.3s ease-out;
+                    transform: translateX(0px);
+                    width: 10%;
+                    &.hovered{
+                        transition: all  0.3s ease-out;
+                        transform: translateX(15px);
+                    }
+                }
+            }
+        }
+    }
+    .projetPage_media-container{
+        margin-top: 35px;
+        position: relative;
+        .projetPage_media_RS{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+            .projetPage_media_RS-a{
+                padding: 10px 3px;
+                @include fluid-type(320px, 1440px, 20px, 30px);
+
+            }
+
+        }
+        .projetPage_media-content{
+            width: 100%;
+            height: 100%;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            
+            &>img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+ }
+
+/////////////////////////// MEDIA ///////////////////////
+
+
 
 @import "./media.scss";

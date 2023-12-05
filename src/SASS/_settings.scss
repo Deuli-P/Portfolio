@@ -21,87 +21,58 @@
 /////// H1 ///////
 
 $H1-font-size: clamp(2.5rem, calc(2.5rem + calc((3 - 2.5) / (1440 - 320)) * (100vw - 2.5rem)), 3rem);
-$H1-color-light: #194391;
-$H1-color-dark: #fb8500;
-
-
 /////// H2 ///////
 
 $H2-font-size: clamp(1.7rem, calc(1.7rem + calc((2 - 1.7) / (1440 - 320)) * (100vw - 1.7rem)),2rem);
-$H2-color-light: #074C7B;
-$H2-color-dark: #EEEBF2;
-$H2-color-light-active:#FFB703;
-$H2-color-dark-active:#FFB703;
-
-
 /////// H3 ///////
 
 $H3-font-size: 1.75rem;
-$H3-color-light: #141E26;
-$H3-color-dark: #ffa540;
-
-.h3-light-color{
-    color: $H3-color-light;
-}
-.h3-dark-color{
-    color: $H3-color-dark;
-}
-
 /////// H4 ///////
 
 $H4-font-size: 1.5rem;
-$H4-color-light: #FFB703;
-$H4-color-dark: #6e5209;
-
-
 /////// PARAGRAPHE OPTION 1 ///////
 
 $P-font-size: clamp(12px, calc(12px + calc((16 - 12) / (1440 - 320)) * (100vw - 12px)), 16px);
-$P1-color-light: black;
-$P1-color-dark: #EEF1F2;
-
-
 /////// PARAGRAPHE OPTION 2 ///////
 
 $P-font-size: clamp(12px, calc(12px + calc((16 - 12) / (1440 - 320)) * (100vw - 12px)), 16px);
-$P2-color-light: purple;
-$P2-color-dark: rgb(230, 225, 226);
-
-
 /////// SPAN ///////
-
 $SPAN-font-size: 1.5rem;
-$SPAN-color-light: black;
-$SPAN-color-dark: white;
-
 
 
 /////// BG ///////
 
-$BG1-color-light: #d3e2e5;
-$BG2-color-dark: #141E26;
-$BG2-color-light: #b6bdbe;
-$BG1-color-dark: #1A191D;
+$BG1-LIGHT: #d3e2e5;
+$BG1-DARK: #1A191D;
+$BG2-LIGHT: #b6bdbe;
+$BG2-DARK: #141E26;
 
-/////// BUTTON ///////
-/////// BUTTON NORMAL ///////
 
-$BUTTON-font-size: 1.5rem;
-$BUTTON-BG-light: rgba(49,15,98,1);
-$BUTTON-BG-dark: rgba(198,185,207,1);
-$BUTTON-color-light: white;
-$BUTTON-color-dark:	white;
-$BUTTON-BORDER-light: #e74c3c;
-$BUTTON-BORDER-dark: rgb(210, 80, 29);
 
-/////// BUTTON HOVER/ ACTIVE ///////
+/////// COLORS /////////
 
-$BUTTON-HOVER-color-light: white;
-$BUTTON-HOVER-color-dark: #2c2828;
-$BUTTON-HOVER-BG-light: rgb(0, 255, 68);
-$BUTTON-HOVER-BG-dark: #3d2b0e;
-$BUTTON-HOVER-BORDER-light: rgb(0, 89, 255);
-$BUTTON-HOVER-BORDER-dark: #f39c12;
+// DARK VARIATION
+$COLOR-DARK: #D7D7D9;
+$COLOR-DARK-DARK: #A3A3A7;
+$COLOR-DARK-DARKEST: #808086;
+
+
+// LIGHT VARIATION
+$COLOR-LIGHT: #141E26;
+$COLOR-LIGHT-LIGHT: #314A5E;
+$COLOR-LIGHT-LIGHTEST: #496D8A;
+
+
+// ACTIVE VARIATION
+$COLOR-ACTIVE: orange;
+$COLOR-ACTIVE-UNSELECTED: orange;
+
+/// PURPLE VARIATION /////
+$COLOR-PURPLE: #9b37ff;
+$COLOR-PURPLE-DARK: rgba(73, 12, 134, 0.8705882353);
+$COLOR-PURPLE-DARKEST: #241d41;
+
+
 
 
 .button{
@@ -122,56 +93,6 @@ $BUTTON-HOVER-BORDER-dark: #f39c12;
         }
 }
 
-.button-light{
-    background-color: $BUTTON-BG-light;
-    color: $BUTTON-color-light;
-    border-color: $BUTTON-BORDER-light;
-    &:hover{
-        background-color: $BUTTON-HOVER-BG-light;
-        color: $BUTTON-HOVER-color-light;
-        border-color: $BUTTON-BORDER-light;
-    }
-}
-.button-dark{
-    background-color: $BUTTON-BG-dark;
-    color: $BUTTON-color-dark;
-    border-color: $BUTTON-BORDER-dark;
-    &:hover{
-        background-color: $BUTTON-HOVER-BG-dark;
-        color: $BUTTON-HOVER-color-dark;
-        border-color: $BUTTON-HOVER-BORDER-dark;
-    }
-}
-
-
-
-
-
-
-/////// PROJETCARD ///////
-/////// BACKGROUND PROJETCARD ///////
-
-$PROJET-BG-light: aqua;
-$PROJET-BG-dark: #24222F;
-
-
-
-/////// BORDER PHOTO ///////
-
-$BORDER-PHOTO-color-light: orange;
-$BORDER-PHOTO-color-dark: #EEEBF2;
-
-
-/////// BACKGROUND HEADER ///////
-
-$HEADER-color-light: #141E26;
-$HEADER-color-dark: #D7D7D9;
-
-/////// LIEN HEADER ///////
-
-$HEADER-ACTIVE-light: #141E26;
-$HEADER-ACTIVE-dark: #D7D7D9;
-
 
 ///////////// TYPOGRAPHY /////////////
 $font-primary: 'Roboto', sans-serif;
@@ -190,25 +111,26 @@ $font-logo-dotdev: 'Abel', sans-serif;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
 }
+html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
-
+}
 body{
     min-width: 320px;
     min-height: 100vh;
-    width:clamp(320px, calc(320px + calc((1440 - 320) / (1440 - 320)) * (100vw - 320px)), 1440px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width:100%;
 }
+
+
 
 a{
     font-weight: 500;
     text-decoration: none;
 }
-
-
-
-
 
 /////////// ANIMATION ////
 

@@ -1,6 +1,7 @@
 @import "../../../SASS/_settings";
 /////////////////////////// FORMULAIRE ///////////////////////
 
+
 #contact_lien-form{
     display: flex;
     flex-direction: column;
@@ -21,16 +22,24 @@
             padding: 10px 0px;
         }
         .contact_form-input{
-            padding: 5px;
+            padding: 25px;
             border-radius: 5px;
-            border-style: dashed;
-            border-width: 1px;
-        }
-        &>textarea{
-            height: 100px;
-            margin-bottom: 15px;
+            border: none;
+            &.form_input-height{
+                height: 10px;
+            }
+            &:focus-visible{
+                outline-width: 2px;
+                outline-style: solid;
+                outline-color: $COLOR-ACTIVE;
+            }
+            &>textarea{
+                height: 100px;
+            }
+
         }
         .contact_form-button{
+            margin-top: 30px;
             width: 50%;
             height: 100%;
             border-style: solid;
@@ -39,3 +48,56 @@
     }
 }
 
+
+/////////////////////////// DARK / LIGHT ///////////////////////
+
+#home_contact{
+    &.light{
+        #contact_lien-form{
+            .contact_form-form{
+                color: $COLOR-LIGHT;
+                .contact_form-label{
+                    color: $COLOR-LIGHT;
+                }
+                .contact_form-input{
+                    background-color: white;
+                    color: $COLOR-LIGHT;
+                }
+                .contact_form-button{
+                    background-color: $COLOR-LIGHT;
+                    color: $COLOR-DARK;
+                    border-color: $COLOR-LIGHT;
+                    &:hover{
+                        background-color: $COLOR-LIGHT;
+                        color: $COLOR-DARK;
+                        border-color: $COLOR-LIGHT;
+                    }
+                }
+            }
+        }
+    }
+    &.dark{
+        #contact_lien-form{
+            .contact_form-form{
+                color: $COLOR-DARK;
+                .contact_form-label{
+                    color: $COLOR-DARK;
+                }
+                .contact_form-input{
+                    background-color: $COLOR-DARK;
+                    color: $COLOR-LIGHT;
+                }
+                .contact_form-button{
+                    background-color: $COLOR-DARK;
+                    color: $COLOR-LIGHT;
+                    border-color: $COLOR-DARK;
+                    &:hover{
+                        background-color: $COLOR-DARK;
+                        color: $COLOR-LIGHT;
+                        border-color: $COLOR-DARK;
+                    }
+                }
+            }
+        }
+    }
+}

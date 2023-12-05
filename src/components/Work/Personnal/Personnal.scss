@@ -9,8 +9,6 @@ $PERSONNAL-TITLE-DARK: #dcc513;
 /// TEXT ////
 $PERSONNAL-TEXT-LIGHT: #272729;
 $PERSONNAL-TEXT-DARK: #d5d6de;
-//// FLECHE ////
-$PERSONNAL-FLECHE-LIGHT: #9b37ff;
 
 #works_personnal_container{
     width: 100%;
@@ -27,7 +25,6 @@ $PERSONNAL-FLECHE-LIGHT: #9b37ff;
         padding: 20px;
         width: 100%;
         #works_personnal_text_title{
-            font-size: $H3-font-size;
             font-family: $font-title;
             padding: 10px 0px;
             text-align: center;
@@ -84,8 +81,7 @@ $PERSONNAL-FLECHE-LIGHT: #9b37ff;
                 width: 70%;
                 border-radius: 3px;
                 border: none;
-                background-color: $PERSONNAL-FLECHE-LIGHT;
-                color: $PERSONNAL-TEXT-DARK;
+                background-color: $COLOR-PURPLE;
                 @include fluid-type(320px, 1440px, 20px, 32px);
             }
         }
@@ -105,44 +101,50 @@ $PERSONNAL-FLECHE-LIGHT: #9b37ff;
 
 #home_projets{
     &.light{
-        background-color: $BG1-color-light;
+        background-color: $BG1-LIGHT;
         #works_personnal_text_container{
-            color:$PERSONNAL-TEXT-LIGHT;
+            color:$COLOR-LIGHT;
             #works_personnal_text_title{
-                color:$PERSONNAL-TITLE-LIGHT;
+                color:$COLOR-LIGHT;
             }
         }
         #works_personnal_content{
             .work_personnal_content_text{
                 &>strong, &>h5{
-                    color: $PERSONNAL-TEXT-LIGHT;
+                    color: $COLOR-LIGHT;
                 }
                 .work_personnal_content_fleche{
                     img{
                         filter: invert(0%);
                     }
+                }
+                &>button{
+                    color: $COLOR-LIGHT;
                 }
             }
 
         }
     }
     &.dark{
-        background-color: $BG1-color-dark;
+        background-color: $BG1-DARK;
         #works_personnal_text_container{
-            color:$PERSONNAL-TEXT-DARK;
+            color:$COLOR-DARK;
             #works_personnal_text_title{
-                color:$PERSONNAL-TITLE-DARK;
+                color:$COLOR-DARK;
             }
         }
         #works_personnal_content{
             .work_personnal_content_text{
                 &>strong, &>h5{
-                    color: $PERSONNAL-TEXT-DARK;
+                    color: $COLOR-DARK;
                 }
                 .work_personnal_content_fleche{
                     img{
                         filter: invert(0%);
                     }
+                }
+                &>button{
+                    color: $COLOR-DARK;
                 }
             }
         }
