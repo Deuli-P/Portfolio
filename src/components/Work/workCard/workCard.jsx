@@ -32,7 +32,7 @@ const WorkCard = ({cover,alt,name,supportDiffusion}) => {
                 <div className="work_text_show">
                     <span style={{"opacity":0}}>i</span>
                     <p className={`wordCard_text_title ${MouseIn ? "hover" : "" }`}>{supportDiffusion}</p> 
-                    <p className={`wordCard_text_title ${MouseIn ? "" : "hover" }`}>Show Project --</p> 
+                    <p className={`wordCard_text_title ${MouseIn ? "" : "hover" }`}>Afficher projet -</p> 
                 </div>
             </div>
         </article>

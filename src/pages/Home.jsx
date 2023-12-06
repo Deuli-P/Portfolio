@@ -149,7 +149,10 @@ const HomePage = ({data}) => {
                         <div id="contact-zone">
                             <div id="contact-title">
                                 <h5 >Disponible pour projet professionnel.</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequatur id dolores minus perferendis esse, eos necessitatibus similique et. Minima, voluptates nihil eius officiis doloribus repudiandae nostrum inventore mollitia rerum!</p>
+                                <p>
+                                    Vous avez un projet passionnant pour lequel vous avez besoin d'aide ?
+                                    <br/>
+                                    Envoyez-moi un email ou contactez-moi par message instantané!</p>
                             </div>
                             <div id='contact-lien'>
                                 <div className="contact_lien-container">
@@ -169,8 +172,7 @@ const HomePage = ({data}) => {
                             </div>
                         </div>
                         <div id="contact-avis">
-
-                                {entreprisesData.map((item, idx) => (
+                                 {entreprisesData.map((item, idx) => (
                                 <Avis 
                                     key={idx}
                                     entreprise={item.name}

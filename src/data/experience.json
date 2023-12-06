@@ -9,51 +9,12 @@
         "id":"1",
         "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
         "avis":{
-            "surname":"Eric",
-            "name":"Lafitte",
-            "job":"CEO",
+            "surname":"Jules",
+            "name":"Casar",
+            "job":"Empereur Romain",
             "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
+            "comment":"“L’expérience, voilà le maître en toutes choses.”",
             "BGColor":"#0067dc"
         }
-
-    },
-    {
-        "name":"Free",
-        "job":"Mobile Front-end",
-        "localisation":"Paris,75008",
-        "website":"www.free.fr",
-        "description":"J'ai eu la chance de pouvoi travailler sur leur nouveau projet de serveur freebox pro, du front-end React-Native.",
-        "logo":"../../public/pictures/icons/site-internet-quote.png",
-        "id":"3",
-        "technologies":["JAVASCRIPT","REACT-NATIVE","EXPRESS"],
-        "avis":{
-            "surname":"Michel",
-            "name":"Delacompta",
-            "job":"Chef de projet",
-            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
-            "BGColor":"#40AC75"
-        }
-
-    },
-    {
-        "name":"Twitch Inc",
-        "job":"Fullstack Developer",
-        "localisation":"Angoulême,16000",
-        "website":"www.twitch.tv",
-        "description":"J'ai eu la chance de travailler sur le developmmenet de nouvelles fonctionnalitées pour l'entreprise, que ce soit pour de l'utilisation interne ou pour les utilisateurs finaux.",
-        "logo":"../../public/pictures/icons/guillemet.png",
-        "id":"2",
-        "technologies":["REACT-NATIVE","EXPO GO"],
-        "avis":{
-            "surname":"John",
-            "name":"Doe",
-            "job":" Chef de projet",
-            "picture":"../../public/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is one of the best professionals that we have known in web development skills. Between his skills you can find good communication and accuracy with the planning in complex projects.",
-            "BGColor": "#923fe6"
-        }
-
     }
 ]

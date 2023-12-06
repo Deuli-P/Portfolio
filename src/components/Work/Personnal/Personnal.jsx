@@ -4,12 +4,12 @@ const Personnal = () => {
         <div id='works_personnal_container'>
         <div id='works_personnal_text_container'>
             <h3 id='works_personnal_text_title' >
-                My 
+                Mes 
                 {window.innerWidth >= 1024 ? <br/> : " "}
-                work
+                Projets
             </h3>
             <p id='works_personnal_text_p' >
-                Lorsque j'étais entrain de me former en developpeement web front-end j'ai voulu m'essayer au développement mobile à travers une petite application de dialogue à partir d'image.
+                Lorsque {`j'`}étais en train de me former en développement web front-end {`j'`}ai voulu {`m'`}essayer au développement mobile à travers une petite application de dialogue à partir {`d'`}images.
             </p>
         </div>
         <div id='works_personnal_content'>
@@ -17,12 +17,12 @@ const Personnal = () => {
                 <div className={`work_personnal_content_fleche `}>
                     <img src="../../public/pictures/images/fleche-dessin-main.png" alt="Flêche" />
                 </div>
-                <strong>Featured project</strong>
+                <strong>Projet Principal</strong>
                 <h5>Gépalémo</h5>
                 <button 
                     onClick={() => {console.log("click sur Mobile");}}
                 >
-                    View Project</button>
+                    Voir Projet</button>
             </div>
             <div className="video3D">
             </div>

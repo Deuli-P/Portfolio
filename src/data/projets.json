@@ -1,9 +1,10 @@
 [
     {
-        "name":"Kasa Home",
-        "image":"../../public/pictures/images/image-attractive.jpg",
+        "name":"Kasa",
+        "cover":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+        "alt":"Photo d'un logement sur KAsa",
         "support":"Web Developpement",
-        "id":"A7ZD70AH55",
+        "id":"A7ZD72310AH55",
         "description":"Kasa est une entreprise de location de logement de bien d'exception.",
         "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
         "designer":[
@@ -33,259 +34,82 @@
             },
             {
                 "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
+                "icon":"fa-instagram",
                 "nom":"instagram"
             }
         ],
         "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
+            "presentation": {
+                "image": "/pictures/images/projets/Kasa/presentation.webp",
+                "alt": "Mock up du site  Kasa"
+            },
+            "projet": [
+                [
+                    {
+                        "image":"/pictures/images/projets/Kasa/pageAccueil-desktop-01.webp",
+                        "alt":"page d'accueil du site Kasa"
+                    },
+                    {
+                        "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-02.webp",
+                        "alt": "page d'accueil du site Kasa"
+                    },
+                    {
+                        "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-03.webp",
+                        "alt": "page d'accueil du site Kasa"
+                    },
+                    {
+                        "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-04.webp",
+                        "alt": "page d'accueil du site Kasa"
+                    }
+                ],
+                [
+                    {
+                        "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                        "alt":"page 404 du site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/page404-desktop.webp",
+                        "alt":"page 404 du site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                        "alt":"page 404 du site Kasa"
+                    }
+                ],
+                [
+                    {
+                        "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                        "alt":"page About du site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/pageAbout-desktop.webp",
+                        "alt":"page About du site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                        "alt":"page About du site Kasa"
+                    }
+                ],
+                [
+                    {
+                        "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                        "alt":"page d'un logement proposé sur le site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/pageLogement-desktop-01.webp",
+                        "alt":"page d'un logement proposé sur le site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/pageLogement-desktop-02.webp",
+                        "alt":"page d'un logement proposé sur le site Kasa"
+                    },
+                    {
+                        "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                        "alt":"page d'un logement proposé sur le site Kasa"
+                    }
+                ]
             ]
         },
         "technologies":["JAVASCRIPT","REACT","SASS","VITEJS"]
-    },
-
-    {
-        "name":"Sophie Bruel - Portfolio",
-        "image":"../../public/pictures/images/image-attractive.jpg",
-        "support":"Web Developpement",
-        "id":"24GRKT812A",
-        "description":"Sophie Bruel est une architecte talentueuse qui design des intérieurs partout dans le monde.",
-        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-        "designer":[
-            {
-                "categorie":"client",
-                "text":"Openclassrooms"
-            },
-            {
-                "categorie":"Mission",
-                "text":"Creer une page d'accueil, modal pour ajouter/ supprimer des projets et une page de login"
-            },
-            {
-                "categorie":"Strategie",
-                "text":"Tout en Javascript"
-            }
-        ],
-        "reseau":[
-            {
-                "lien":"https://www.facebook.com/",
-                "icon":"fa-facebook-f",
-                "nom":"facebook"
-            },
-            {
-                "lien":"https://www.twitter.com/",
-                "icon":"fa-twitter",
-                "nom":"twitter"
-            },
-            {
-                "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
-                "nom":"instagram"
-            }
-        ],
-        "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
-            ]
-        },
-        "technologies":["JAVASCRIPT","CSS","HTML"]
-    },
-    {
-        "name":"Nina Carducci - Portfolio",
-        "image":"../../public/pictures/images/image-attractive.jpg",
-        "support":"Web Developpement",
-        "id":"QL43177DKW5",
-        "description":"Nina Carducci est une photographe d'exception basé dans la région Bordelaise.",
-        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-        "designer":[
-            {
-                "categorie":"client",
-                "text":"Openclassrooms"
-            },
-            {
-                "categorie":"Mission",
-                "text":"Optimiser le site pour le SEO"
-            },
-            {
-                "categorie":"Strategie",
-                "text":"Découvrir le SEO"
-            }
-        ],
-        "reseau":[
-            {
-                "lien":"https://www.facebook.com/",
-                "icon":"fa-facebook-f",
-                "nom":"facebook"
-            },
-            {
-                "lien":"https://www.twitter.com/",
-                "icon":"fa-twitter",
-                "nom":"twitter"
-            },
-            {
-                "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
-                "nom":"instagram"
-            }
-        ],
-        "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
-            ]
-        },
-        "technologies":["JAVASCRIPT","HTML","CSS","SEO plugins"]
-    },
-    {
-        "name":"Booki",
-        "image":"../../public/pictures/images/image-attractive.jpg",
-        "support":"Web Developpement",
-        "id":"A7ZD70AH55",
-        "description":"Kasa est une entreprise de location de logement de bien d'exception.",
-        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-        "designer":[
-            {
-                "categorie":"client",
-                "text":"Openclassrooms"
-            },
-            {
-                "categorie":"Mission",
-                "text":"Créer un site de réservation de logement en ligne"
-            },
-            {
-                "categorie":"Strategie",
-                "text":"Créer un site en HTML/ CSS"
-            }
-        ],
-        "reseau":[
-            {
-                "lien":"https://www.facebook.com/",
-                "icon":"fa-facebook-f",
-                "nom":"facebook"
-            },
-            {
-                "lien":"https://www.twitter.com/",
-                "icon":"fa-twitter",
-                "nom":"twitter"
-            },
-            {
-                "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
-                "nom":"instagram"
-            }
-        ],
-        "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
-            ]
-        },
-        "technologies":["CSS","HTML"]
-    },
-    {
-        "name":"Gépalémo",
-        "image":"../../public/pictures/images/image-attractive.jpg",
-        "support":"Mobile",
-        "id":"D392DK10",
-        "description":"Kasa est une entreprise de location de logement de bien d'exception.",
-        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-        "designer":[
-            {
-                "categorie":"client",
-                "text":"Personnel"
-            },
-            {
-                "categorie":"Mission",
-                "text":"Créer une application de communication a travers des icons"
-            },
-            {
-                "categorie":"Strategie",
-                "text":"Découvrir et apprendre le developpement et design d'application mobile"
-            }
-        ],
-        "reseau":[
-            {
-                "lien":"https://www.facebook.com/",
-                "icon":"fa-facebook-f",
-                "nom":"facebook"
-            },
-            {
-                "lien":"https://www.twitter.com/",
-                "icon":"fa-twitter",
-                "nom":"twitter"
-            },
-            {
-                "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
-                "nom":"instagram"
-            }
-        ],
-        "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
-            ]
-        },
-        "technologies":["REACT NATIVE","EXPO GO APP"]
-    },
-    {
-        "name":"Menu Maker",
-        "image":"../../public/pictures/images/image-attractive.jpg",
-        "support":"Gestion",
-        "id":"AL5431QFK08",
-        "description":"Menu Maker est un site de création de menu de restaurant,pour physique, site web ou application de livraison.",
-        "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
-        "designer":[
-            {
-                "categorie":"client",
-                "text":"Openclassrooms"
-            },
-            {
-                "categorie":"Mission",
-                "text":"Plannifier un projet de développement de site."
-            },
-            {
-                "categorie":"Strategie",
-                "text":"Découvrir la gestion de projet en tant que chef d'équipe."
-            }
-        ],
-        "reseau":[
-            {
-                "lien":"https://www.facebook.com/",
-                "icon":"fa-facebook-f",
-                "nom":"facebook"
-            },
-            {
-                "lien":"https://www.twitter.com/",
-                "icon":"fa-twitter",
-                "nom":"twitter"
-            },
-            {
-                "lien":"https://www.instagram.com/",
-                "icon":"fa-instagram-f",
-                "nom":"instagram"
-            }
-        ],
-        "pictures":{
-            "presentation":"../../public/pictures/images/image-attractive.jpg",
-            "projet":[
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg",
-                "../../public/pictures/images/image-attractive.jpg"
-            ]
-        },
-        "technologies":["NOTION","KEYNOTE"]
     }
 ]

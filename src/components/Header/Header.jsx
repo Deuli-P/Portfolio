@@ -36,10 +36,7 @@ const HandleOpen = () => {
     setIsOpen(!isOpen);
 }
 
- useEffect(() => {
-    HandleOpen();
- // eslint-disable-next-line react-hooks/exhaustive-deps
- },[]);
+
 
 
       
@@ -48,13 +45,11 @@ const HandleOpen = () => {
                 <div className="header-left">
                     <div className={`header-name`}> 
                         <NavLink 
-                            path="/" 
+                            to="/" 
                             onClick={()=> {
                                 scroll.scrollToTop();
-                        
-                            }}
-                            className={theme === "dark"? "light": "dark"}
 
+                            }}
                         >
                             Pierre
                         </NavLink>

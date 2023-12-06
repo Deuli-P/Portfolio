@@ -363,7 +363,7 @@
             "technologies":["SASS","HTML"]
         },
         {   
-            "name":"Nina Carducci",
+            "name":"Nina Carducci - Portfolio",
             "cover":"/pictures/images/projets/NinaCarducci/Portrait-Nina-Resize-400px.webp",
             "alt":"Nina Carducci - Portfolio",
             "support":"SEO",
@@ -504,61 +504,59 @@
     ],
     "entreprises":[
         {
-        "name":"Samsung",
-        "job":"Front-end Developer",
-        "localisation":"Paris,75006",
-        "website":"www.google.com",
-        "description":"J'ai eu a faire de nombreuse tache au cours de cette aventure chez Samsung, entre reparer des bugs de site et application coté utilisateur, ou encore faire des taches de maintenance, j'ai aussi eu l'occasion de travailler sur des projets plus ambitieux comme la refonte d'un site web ou encore la création d'une application mobile.",
-        "logo":"/pictures/icons/site-internet-quote.png",
+        "name":"Teamto",
+        "job":"Junior 3D Layout Artist",
+        "localisation":"Valence, 26000",
+        "website":"http://www.teamto.com/",
+        "description":"J'ai découvert à travers un stage de fin d'étude un nouveau métier, le Layout 3D( aussi appelé la Previs 3D). Cette expérience m'a ouvert de nouveau horizon. J'ai pus a travers un contrat de quelques mois travailler sur Skylanders Saison 03 approfondir mes connaissances et adorer mon nouveau métier.",
+        "logo":"/pictures/images/teamto-logo.png",
         "id":"1",
-        "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
+        "technologies":["Autodesk Maya"],
         "avis":{
-            "surname":"Eric",
-            "name":"Lafitte",
-            "job":"CEO",
-            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
+            "surname":"Jules",
+            "name":"Casar",
+            "job":"Empereur Romain",
+            "picture":"/pictures/images/Jules-Cesar_buste.jpeg",
+            "comment":"“L’expérience, voilà le maître en toutes choses.”",
             "BGColor":"#0067dc"
         }
 
     },
     {
-        "name":"Free",
-        "job":"Mobile Front-end",
-        "localisation":"Paris,75008",
-        "website":"www.free.fr",
-        "description":"J'ai eu la chance de pouvoi travailler sur leur nouveau projet de serveur freebox pro, du front-end React-Native.",
-        "logo":"/pictures/icons/site-internet-quote.png",
+        "name":"Ellipse Animation",
+        "job":"Junior 3D Animator",
+        "localisation":"Angoulême, 16000",
+        "website":"https://www.ellipseanimation.com/fr/",
+        "description":"Une mission parfaite pour demarrer dans le mode de l'animation 3D dont j'avais fait les études, mais cela ne c'est pas passé comme je voulais. Une expérience qui m'a appris énormement sur qui je suis et se que je voulais.",
+        "logo":"/pictures/images/ellipse-logo_dark.svg",
         "id":"3",
-        "technologies":["JAVASCRIPT","REACT-NATIVE","EXPRESS"],
+        "technologies":["Autodesk Maya"],
         "avis":{
-            "surname":"Michel",
-            "name":"Delacompta",
-            "job":"Chef de projet",
-            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is AMAZING! If you have any doubt about hiring him, ask me – I am really impressed by this guy!",
-            "BGColor":"#40AC75"
+            "surname":"Poête",
+            "name":"Scylla",
+            "job":"Rappeur Belge",
+            "picture":"/pictures/images/scylla.jpeg",
+            "comment":"“Ensuite ils suivront l'étoile, mais jamais ne vieilliront, Guidés par le son des astres, aux sirènes obéiront Veulent affontrer Léviathan puis défier Poséidon, Chanter dans les pires tempêtes, Aller là où personne n'a plus peur du temps” L'enfant et la mer - 2018",
+            "BGColor":"#0067dc"
         }
-
     },
 {
-        "name":"Twitch Inc",
-        "job":"Fullstack Developer",
-        "localisation":"Angoulême,16000",
-        "website":"www.twitch.tv",
-        "description":"J'ai eu la chance de travailler sur le developmmenet de nouvelles fonctionnalitées pour l'entreprise, que ce soit pour de l'utilisation interne ou pour les utilisateurs finaux.",
-        "logo":"/pictures/icons/guillemet.png",
+        "name":"Superprod",
+        "job":"Middle 3D Layout Artist",
+        "localisation":"Paris, 75011",
+        "website":"https://www.superprod.net/fr",
+        "description":" Pour le développement d'une série d'animation pour Netflix, j'ai travaillé en équipe sur le projet Spirit Ranger Saison 01 pendant 1 an et 3 mois.",
+        "logo":"/pictures/images/superprod-logo.svg",
         "id":"2",
-        "technologies":["REACT-NATIVE","EXPO GO"],
+        "technologies":["Autodesk Maya"],
         "avis":{
-            "surname":"John",
-            "name":"Doe",
-            "job":" Chef de projet",
-            "picture":"/pictures/images/pierre-antoniutti-converti.webp",
-            "comment":"Tamal is one of the best professionals that we have known in web development skills. Between his skills you can find good communication and accuracy with the planning in complex projects.",
-            "BGColor": "#923fe6"
+            "surname":"Lao",
+            "name":"Tseu",
+            "job":"Fondateur du Taoïsme",
+            "picture":"/pictures/images/Lao-Tseu_peinture.jpeg",
+            "comment":"“Un voyage de mille lieues commence toujours par un premier pas.”",
+            "BGColor":"#0067dc"
         }
-
     }
 ],
     "categories":[

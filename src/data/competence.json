@@ -7,22 +7,5 @@
         "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement.",
         "color":"tifeut"
 
-    },
-    {
-        "title":"SEO",
-        "soustitle":"Website",
-        "id":"card-deux",
-        "icon":"../../public/pictures/icons/seo-search-symbol.png",
-        "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel.",
-        "color":"toto"
-    },
-    {
-        "title":"React Native, Expo Go,",
-        "soustitle":"Android, IOS, Web",
-        "id": "card-trois",
-        "icon":"../../public/pictures/icons/mobile.png",
-        "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application.",
-        "color":"arthur"
-
     }
 ]
