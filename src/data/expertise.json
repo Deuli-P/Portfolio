@@ -518,7 +518,7 @@
             "job":"Empereur Romain",
             "picture":"/pictures/images/Jules-Cesar_buste.jpeg",
             "comment":"“L’expérience, voilà le maître en toutes choses.”",
-            "BGColor":"#0067dc"
+            "BGColor":"#923fe6"
         }
 
     },
@@ -555,7 +555,7 @@
             "job":"Fondateur du Taoïsme",
             "picture":"/pictures/images/Lao-Tseu_peinture.jpeg",
             "comment":"“Un voyage de mille lieues commence toujours par un premier pas.”",
-            "BGColor":"#0067dc"
+            "BGColor":"#bc60fb"
         }
     }
 ],
