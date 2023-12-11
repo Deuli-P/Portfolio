@@ -1,6 +1,6 @@
 import './SASS/_index.scss';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
-import HomePage from './pages/home';
+import HomePage from './pages/Home';
 import ProjectPage from './pages/ProjectPage';
 import Header from './components/Header/Header';
 import { ThemeProvider } from './Context/ThemeContext';
