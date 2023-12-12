@@ -1,0 +1,32 @@
+@import '../../SASS/settings';
+
+.buttonToTop{
+    scroll-behavior: smooth;
+    position: fixed;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 25px;
+    color: white;
+    border-radius: 25%;
+    border: none;
+    font-size: 30px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    &.active{
+        opacity: 1;
+        cursor: pointer;
+    
+    }
+    &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+        color: white;
+    }
+}

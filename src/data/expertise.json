@@ -4,76 +4,573 @@
             "title":"Frontend Developer,",
             "soustitle":"React, NodeJS, SASS",
             "id":"card-un",
-            "icon":"../../public/pictures/icons/site-internet-quote.png",
-            "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement."
-        },
-        {
-            "title":"React Native, Expo Go,",
-            "soustitle":"Android, IOS, Web",
-            "id": "card-deux",
-            "icon":"../../public/pictures/icons/mobile.png",
-            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application."
+            "icon":"/pictures/icons/Web-Dev-Icon.png",
+            "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement.",
+            "color":"tifeut"
+
         },
         {
             "title":"SEO",
             "soustitle":"Website",
-            "id":"card-trois",
-            "icon":"../../public/pictures/icons/mobile.png",
-            "paragraph":" Avoir un beau site c'est bien, avori de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel."
+            "id":"card-deux",
+            "icon":"/pictures/icons/SEO-Icon.png",
+            "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel.",
+            "color":"toto"
+        },
+        {
+            "title":"React Native, Expo Go,",
+            "soustitle":"Android, IOS, Web",
+            "id": "card-trois",
+            "icon":"/pictures/icons/Mobile-Icon.png",
+            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application.",
+            "color":"arthur"
+
         }
-        
     ],
     "works":[
         {
             "name":"Kasa",
-            "image":"../../public/pictures/images/image-attractive.jpg",
+            "cover":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+            "alt":"Photo d'un logement sur KAsa",
             "support":"Web Developpement",
-            "id":"1"
+            "id":"A7ZD72310AH55",
+            "description":"Kasa est une entreprise de location de logement de bien d'exception.",
+            "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Construire le site en React"
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Mobile first"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures":{
+                "presentation": {
+                    "image": "/pictures/images/projets/Kasa/presentation.webp",
+                    "alt": "Mock up du site  Kasa"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageAccueil-desktop-01.webp",
+                            "alt":"page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-02.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-03.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        },
+                        {
+                            "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-04.webp",
+                            "alt": "page d'accueil du site Kasa"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/page404-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page 404 du site Kasa"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageAbout-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page About du site Kasa"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageLogement-desktop-01.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/pageLogement-desktop-02.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
+                            "alt":"page d'un logement proposé sur le site Kasa"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["JAVASCRIPT","REACT","SASS","VITEJS"]
         },
         {
             "name":"Sophie Bruel - Portfolio",
-            "image":"../../public/pictures/images/Landscape-Color.jpg",
+            "cover":"/pictures/images/projets/Bruel/sophie-bluel.webp",
+            "alt":"Sophie Bruel",
             "support":"Web Developpement",
-            "id":"2"
+            "id":"24GRKT812A",
+            "description":"Sophie Bruel est une architecte talentueuse qui design des intérieurs partout dans le monde.",
+            "github":"https://github.com/Deuli-P/Portfolio-architecte-sophie-bluel",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Créer une page d'accueil, modal pour ajouter/ supprimer des projets et une page de login"
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Tout en Javascript"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/Bruel/presentation.webp",
+                    "alt": "Mock up du site de Sophie Bruel"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/Bruel/accueil-01.webp",
+                            "alt":"page d'accueil du site de Sophie Bruel top"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/Bruel/accueil-02.webp",
+                            "alt":"page d'accueil du site de Sophie Bruel milieu"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/Bruel/accueil-03.webp",
+                            "alt":"page d'accueil du site de Sophie Bruel milieu"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/Bruel/accueil-04.webp",
+                            "alt":"page d'accueil du site de Sophie Bruel bot"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/Bruel/login-page.webp",
+                            "alt":"page de login du site de Sophie Bruel top"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/Bruel/Modal-gallerie.webp",
+                            "alt":"modal pour modifier la gallerie du site de Sophie Bruel top"
+                        },
+                        {
+                            "image":"/pictures/images/projets/Bruel/Modal-Ajout.webp",
+                            "alt":"modal pour ajouter des projets aux site de Sophie Bruel milieu"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["JAVASCRIPT","CSS","HTML"]
         },
         {
-            "name":"Kasa",
-            "image":"../../public/pictures/images/image-attractive.jpg",
+            "name":"Booki",
+            "cover":"/pictures/images/projets/Booki/Booki-01.webp",
+            "alt":"Booki",
             "support":"Web Developpement",
-            "id":"3"
+            "id":"3439D200T12",
+            "description":"Booki est un site qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+            "github":"https://github.com/Deuli-P/Booki",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Créer une page d'accueil responsive."
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Tout en HTML et CSS"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/Booki/presentation.webp",
+                    "alt": "Mock up du site Booki"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/Booki/Booki-01.webp",
+                            "alt":"page d'accueil du site Booki"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/Booki/Booki-02.webp",
+                            "alt":"page d'accueil du site Booki"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["CSS","HTML"]
+        },
+        {   
+            "name":"Ohmyfood",
+            "cover":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
+            "alt":"Ohmyfood",
+            "support":"Web Developpement",
+            "id":"3204TEDI6047",
+            "description":"Ohmyfood est un site qui repertorie les menus de restaurants gastronomiques.  En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant! Déjà présente à New-York, elle souhaite désormais faire sa place à Paris.",
+            "github":"https://github.com/Deuli-P/Booki",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Créer un site mobile-first et responsive."
+                },
+                {
+                    "categorie":"Strategie",
+                    "text":"Tout en HTML et SASS"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/Booki/presentation.webp",
+                    "alt": "Mock up du site Ohmyfood"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
+                            "alt":"page d'accueil du site Ohmyfood"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/OhmyFood/Accueil-02.webp",
+                            "alt":"page d'accueil du site Ohmyfood"
+                        }
+                    ],
+                    [
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Menu-01.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        },
+                        {
+                            "image":"/pictures/images/projets/OhmyFood/Menu-02.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        },
+                        {
+                            "image":
+                            "/pictures/images/projets/OhmyFood/Menu-03.webp",
+                            "alt":"page menu restaurant du site Ohmyfood"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["SASS","HTML"]
+        },
+        {   
+            "name":"Nina Carducci - Portfolio",
+            "cover":"/pictures/images/projets/NinaCarducci/Portrait-Nina-Resize-400px.webp",
+            "alt":"Nina Carducci - Portfolio",
+            "support":"SEO",
+            "id":"70K3OKKF5435",
+            "description":"Nina Carduci est une photographe talentueuse pour vos évenement dans la région Bordelaise. Ceci est son portfolio.",
+            "github":"https://github.com/Deuli-P/projet9",
+            "designer":[
+                {
+                    "categorie":"Client",
+                    "text":"Openclassrooms"
+                },
+                {
+                    "categorie":"Mission",
+                    "text":"Optimiser le site grâce au technique de SEO."
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
+                    "alt": "Score SEO du site"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
+                            "alt":"page d'accueil du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        }
+                    ],
+                    [
+                        {
+                        "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
+                        "alt":"Rapport d'audit du site"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["HTML","JAVASCRIPT","CSS","SEO"]
+        },
+        {   
+            "name":"Gépalémo",
+            "cover":"/pictures/images/projets/gepalemo/5521112.png",
+            "alt":"Gépalémo ",
+            "support":"Mobile",
+            "id":"5460FI35503",
+            "description":"Application développé pour découvrir le monde du developpement mobile. C'est une application qui permet d'ouvrir des modals avec des icons ( 1 à 4) à l'intérieur pour permettre de communiquer avec une autre personne sans avoir de langue commune.",
+            "github":"https://github.com/Deuli-P/TestApp",
+            "designer":[
+
+                {
+                    "categorie":"Mission",
+                    "text":"Découvrir le developpement mobile."
+                },
+                {
+                    "categorie":"Stragégie",
+                    "text":"Apprendre React-native"
+                }
+            ],
+            "reseau":[
+                {
+                    "lien":"https://www.facebook.com/",
+                    "icon":"fa-facebook-f",
+                    "nom":"facebook"
+                },
+                {
+                    "lien":"https://www.twitter.com/",
+                    "icon":"fa-twitter",
+                    "nom":"twitter"
+                },
+                {
+                    "lien":"https://www.instagram.com/",
+                    "icon":"fa-instagram",
+                    "nom":"instagram"
+                }
+            ],
+            "pictures": {
+                "presentation": {
+                    "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
+                    "alt": "Mock up de l'application"
+                },
+                "projet": [
+                    [
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
+                            "alt":"page d'accueil du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        },
+                        {
+                            "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
+                            "alt":"page menu restaurant du site de Nina Carducci"
+                        }
+                    ],
+                    [
+                        {
+                        "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
+                        "alt":"Rapport d'audit du site"
+                        }
+                    ]
+                ]
+            },
+            "technologies":["REACT-NATIVE","EXPO GO","REDUX"]
         }
     ],
-    "entreprises":[{
-        "name":"entreprise 1",
-        "job":"poste 1",
-        "localisation":"Paris,75006",
-        "website":"www.google.com",
-        "logo":"../../public/pictures/images/react-native.png",
+    "entreprises":[
+        {
+        "name":"Teamto",
+        "job":"Junior 3D Layout Artist",
+        "localisation":"Valence, 26000",
+        "website":"http://www.teamto.com/",
+        "description":"J'ai découvert à travers un stage de fin d'étude un nouveau métier, le Layout 3D( aussi appelé la Previs 3D). Cette expérience m'a ouvert de nouveau horizon. J'ai pus a travers un contrat de quelques mois travailler sur Skylanders Saison 03 approfondir mes connaissances et adorer mon nouveau métier.",
+        "logo":"/pictures/images/teamto-logo.png",
         "id":"1",
-        "technologies":["JAVASCRIPT","REACT","SASS","BUN"],
-        "avis":[{
-            "surname":"nom1",
-            "name":"prenom1",
-            "picture":"../../public/pictures/images/react-native.png",
-            "comment":"lorem*20"
-        }]
+        "technologies":["Autodesk Maya"],
+        "avis":{
+            "surname":"Jules",
+            "name":"Casar",
+            "job":"Empereur Romain",
+            "picture":"/pictures/images/Jules-Cesar_buste.jpeg",
+            "comment":"“L’expérience, voilà le maître en toutes choses.”",
+            "BGColor":"#923fe6"
+        }
 
     },
+    {
+        "name":"Ellipse Animation",
+        "job":"Junior 3D Animator",
+        "localisation":"Angoulême, 16000",
+        "website":"https://www.ellipseanimation.com/fr/",
+        "description":"Une mission parfaite pour demarrer dans le mode de l'animation 3D dont j'avais fait les études, mais cela ne c'est pas passé comme je voulais. Une expérience qui m'a appris énormement sur qui je suis et se que je voulais.",
+        "logo":"/pictures/images/ellipse-logo_dark.svg",
+        "id":"3",
+        "technologies":["Autodesk Maya"],
+        "avis":{
+            "surname":"Poête",
+            "name":"Scylla",
+            "job":"Rappeur Belge",
+            "picture":"/pictures/images/scylla.jpeg",
+            "comment":"“Ensuite ils suivront l'étoile, mais jamais ne vieilliront, Guidés par le son des astres, aux sirènes obéiront Veulent affontrer Léviathan puis défier Poséidon, Chanter dans les pires tempêtes, Aller là où personne n'a plus peur du temps” L'enfant et la mer - 2018",
+            "BGColor":"#0067dc"
+        }
+    },
 {
-        "name":"entreprise 2",
-        "job":"poste 2",
-        "localisation":"Paris,75015",
-        "website":"www.twitch.tv",
-        "logo":"../assets/images/react-native.png",
+        "name":"Superprod",
+        "job":"Middle 3D Layout Artist",
+        "localisation":"Paris, 75011",
+        "website":"https://www.superprod.net/fr",
+        "description":" Pour le développement d'une série d'animation pour Netflix, j'ai travaillé en équipe sur le projet Spirit Ranger Saison 01 pendant 1 an et 3 mois.",
+        "logo":"/pictures/images/superprod-logo.svg",
         "id":"2",
-        "technologies":["REACT-NATIVE","EXPO GO"],
-        "avis":[{
-            "surname":"nom2",
-            "name":"prenom2",
-            "picture":"../assets/images/react-native.png",
-            "comment":"lorem*20"
-        }]
-
+        "technologies":["Autodesk Maya"],
+        "avis":{
+            "surname":"Lao",
+            "name":"Tseu",
+            "job":"Fondateur du Taoïsme",
+            "picture":"/pictures/images/Lao-Tseu_peinture.jpeg",
+            "comment":"“Un voyage de mille lieues commence toujours par un premier pas.”",
+            "BGColor":"#bc60fb"
+        }
     }
-]
+],
+    "categories":[
+        {
+            "name":"Web Developpement",
+            "id":"1"
+        },
+        {
+            "name":"SEO",
+            "id":"3"
+        },
+        {
+            "name":"Mobile",
+            "id":"4"
+        }
+    ]
 }

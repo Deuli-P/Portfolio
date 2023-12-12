@@ -1,20 +1,33 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
+// home.jsx
 import { useEffect, useState,useContext } from 'react';
-import ExpertiseCard from '../components/ExpertiseCard/ExpertiseCard';
-import photo from '../../public/pictures/images/pierre-antoniutti-converti.webp';
-import WorkCard from '../components/workCard/workCard';
-import jsonData from '../data/expertise.json';
-import ScrollToUp from '../components/ChevronToUp/scrollToUp';
-import ExpertiseCollapse from '../components/ExpertiseCollapse/ExpertiseCollapse';
+import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
+import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
+import photo from '/pictures/images/pierre-antoniutti-converti.webp';
+// import ScrollToUp from '../components/ChevronToUp/scrollToUp';
 import ThemeContext from '../Context/ThemeContext';
+import WorkCard from '../components/Work/workCard/workCard';
+import Filter from '../components/Work/Filter/Filter';
+import ExperienceCollapse from '../components/Experience/ExperienceCollapse/ExperienceCollapse';
+import Avis from '../components/Contact/Avis/Avis';
+import Form from '../components/Contact/Form/Form';
+import Personnal from '../components/Work/Personnal/Personnal';
+import Presentation from '../components/Presentation/Presentation';
+import { Link } from 'react-router-dom';
 
-const HomePage = () => {
+const HomePage = ({data}) => {
     const { theme } = useContext(ThemeContext);
-    const expertiseData = jsonData.expertise;
+    const expertiseData = data.expertise;
+    const entreprisesData = data.entreprises;
+    const worksData =data.works;
 
-    const worksData = jsonData.works;
 
+
+    const [filteredWork, setFilteredWork] = useState([]); // Liste filtrée
+    const [selectedType, setSelectedType] = useState("");
+    const [isOpenCollapse, setIsOpenCollapse] = useState(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -26,33 +39,40 @@ const HomePage = () => {
 
     }, [windowWidth]);
 
- //   const entrepriseData = jsonData.entreprises;
+    const FilterChange = (e) => {
+        setSelectedType(e);
+    }
 
-    // const [commentaireData, setCommentaireData] = useState([]);
+    useEffect(() => {
+        const firstfilteredWork = worksData.filter((item) => item.support === selectedType);
+        if(firstfilteredWork.length === 0){
+            setFilteredWork(null);
+        }
+        if (selectedType === "") {
+            setFilteredWork(worksData);
+        }
+        else{
+            setFilteredWork(worksData.filter((item) => item.support === selectedType));
+        }
 
-    // useEffect(() => {
-    //     const allCommentaires = entrepriseData.flatMap(item => item.avis);
-    //     setCommentaireData(allCommentaires);
-    // }, [entrepriseData]);
+    }
+    ,[selectedType,worksData]);
 
+    const handleCollapseOpen = (id) => {
+        setIsOpenCollapse(id === isOpenCollapse ? null : id);
+    }
 
 
     return (
-        <>
-            <section id='home_presentation' className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
-                <img src={photo} alt="Pierre Antoniutti" />
-                <div className={`home-title-container`}>
-                    <h1 className={theme ==='dark'? "h1-light-color":"h1-dark-color"}>Pierre Antoniutti</h1>
-                    <h2 className={theme ==='dark'? "h2-light-color":"h2-dark-color"}>Frontend & mobile developper
-                    <div className={`deco_presentation ${theme ==='dark'? "deco-light":"deco-dark"}`}></div>
-                    </h2>
-                </div>
+        <main id='main-home'>
+            <section id='home_presentation' className={theme === "dark" ? "light": "dark"}>
+               <Presentation photo={photo}/>
             </section>
-            <section id='home_expertise' className={theme === "dark" ? "bg-alt-light-color": "bg-alt-dark-color"}>
-                <h3 id='expertise_title' className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Expertise</h3>
-                <div id='expertiseCard_container'>
+            <section id='home_expertise' className={theme === "dark" ? "light": "dark"}>
+                <h3 id='expertise_title'>Expertise</h3>
+                <div className="expertise_card_container">
                     {expertiseData.map((item, idx) => (
-                        windowWidth >800 ? 
+                        windowWidth >= 800 ? 
                             (
                                 <ExpertiseCard
                                 icons={item.icon}
@@ -61,6 +81,7 @@ const HomePage = () => {
                                 soustitle={item.soustitle}
                                 key={idx}
                                 id={item.id} 
+                                color={item.color}
                                 />
                             )
                             :
@@ -78,80 +99,97 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
-            <section id='home_projets' className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
-                <div id='works_personnal_container'>
-                    <div id='works_personnal_text_container'>
-                        <h3 id='works_personnal_text_title' className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>My work</h3>
-                        <p id='works_personnal_text_p'>
-                            Lorsque j'etais entrain de me former en developpeement web front-end j'ai voulu m'essayer au développement mobile a travers une petite application de dialogue a partir d'image.
-                        </p>
-                    </div>
-                    <div id='works_personnal_content'>
-                        {/* Projet perso Gépalémo */}
-                        <div className="work_personnal_content_text">
-                            <h6>Featured project</h6>
-                            <button>View Project</button>
-                        </div>
-                        <div className="video3D">
-
-                        </div>
-                        
-                    </div>
-                </div>
+            <section id='home_projets' className={theme === "dark" ? "light": "dark"}>
+                <Personnal/>
                 <div id='works_projets_container'>
-                    <div id="works_projets_fitler-container">
-                        {/* Filtre des type de projet ( Web dev , Mobile, Gestion) */}
-                        <span> Filtrer par </span>
-
-                    </div>
+                    <Filter
+                        FilterChange={FilterChange} 
+                        />
                     <div id="works_projets_list_container">
-                    {worksData.map((item, idx) => (
-                            <WorkCard
-                                name={item.name}
-                                image={item.image}
-                                key={idx}
-                                supportDiffusion={item.support}
-                            />
-                        ))}
-                        {/* Liste des projets fait */}
+                            {filteredWork?.map((item) => (
+                                <Link
+                                    id={item.id}
+                                    to={`/project/${item.id}`}
+                                    className="work_projets-link"
+                                    key={`projet_${item.id}`} 
+                                >
+                                    <WorkCard
+                                        name={item.name}
+                                        cover={item.cover}
+                                        alt={item.alt}
+                                        supportDiffusion={item.support}
+                                    />
+                                </Link>
+                            ))}
                     </div>
                 </div>
             </section>
-            <section id='home_experiences' className={theme === "dark" ? "bg-alt-light-color": "bg-alt-dark-color"}>
-                <h3 className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Professionnal Expérience</h3>
-                {/* Components Collpase avec taf */}
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, <br/> porro dolorem repellendus ullam culpa ipsa quam ea, non ut odio officia quo ratione voluptatum  illo eos! <br/>  Ab, fugiat? Pariatur, magni!
-                Vero ea numquam optio et reiciendis expedita autem rerum? Quo  <br/> voluptas minima impedit perspiciatis excepturi suscipit labore, error cumque praesentium,  <br/> consequuntur vitae soluta fugit? Assumenda nostrum explicabo inventore amet unde.
+            <section id='home_experiences' className={theme === "dark" ? "light": "dark"}>
+                <h3>Professionnal Expérience</h3>
+                {entreprisesData.map((item, idx) => (
+                    <ExperienceCollapse 
+                        isOpen={isOpenCollapse === item.id}
+                        key={idx}
+                        theme={theme}
+                        onToggle={()=>handleCollapseOpen(item.id)}
+                        description={item.description}
+                        name={item.name}
+                        job={item.job}
+                        location={item.localisation}
+                        startDate={item.startDate}
+                        endDate={item.endDate}
+                        url={item.website}
+                        logo={item.logo}
+                        id={item.id}
+                        technologies={item.technologies}
+                    />
+                    ))}
             </section>
-            <section id="home_contact" className={theme === "dark" ? "bg-light-color": "bg-dark-color"}>
+            <section id="home_contact" className={theme === "dark" ? "light": "dark"}>
                         <div id="contact-zone">
                             <div id="contact-title">
-                            <h5 className={theme === "dark" ? "h3-light-color": "h3-dark-color"}>Disponible pour projet professionnel.</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequatur id dolores minus perferendis esse, eos necessitatibus similique et. Minima, voluptates nihil eius officiis doloribus repudiandae nostrum inventore mollitia rerum!</p>
+                                <h5 >Disponible pour projet professionnel.</h5>
+                                <p>
+                                    Vous avez un projet passionnant pour lequel vous avez besoin d'aide ?
+                                    <br/>
+                                    Envoyez-moi un email ou contactez-moi par message instantané!</p>
                             </div>
                             <div id='contact-lien'>
-                                {/* Email, numéro, LinkedIn, lien Freelance profile, Github */}
-                                <a id='contact-email' href='mailto:pierre.antoniutti@gmail.com'>pierre.antoniutti@gmail.com</a>
-                                <a href="https://www.linkedin.com/in/pierre-antoniutti-a05b15111/">LinkedIn</a>
-                                <a href="https://github.com/Deuli-P">Github</a>
+                                <div className="contact_lien-container">
+                                    <a 
+                                        href="https://www.linkedin.com/in/pierre-antoniutti-a05b15111/"
+                                    >LinkedIn</a>
+                                    <a 
+                                        href="https://github.com/Deuli-P"
+                                    >Github</a>
+                                </div>
+                                <div id="contact_lien-form">
+                                    <h4 
+                                        className={`contact-lien_form-title ${theme === "dark" ? "dark": "light"}`}
+                                    >Contactez moi</h4>
+                                < Form theme={theme}/>
+                                </div>
                             </div>
                         </div>
                         <div id="contact-avis">
-                                {/* Avis d'ancien client ou chef*/}
+                                 {entreprisesData.map((item, idx) => (
+                                <Avis 
+                                    key={idx}
+                                    entreprise={item.name}
+                                    nom={item.avis.name}
+                                    prenom={item.avis.surname}
+                                    commentaire={item.avis.comment}
+                                    job={item.avis.job}
+                                    photo={item.avis.picture}
+                                    theme={theme}
+                                    bgColor={item.avis.BGColor}
+                                />
+                                ))}
+
+                            
                         </div>
             </section>
-            <ScrollToUp />
-        </>
+        </main>
     );
 };
 

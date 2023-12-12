@@ -1,0 +1,53 @@
+@import "../../SASS/settings";
+
+footer{
+    width: 100%;
+
+    #footer_container{
+        padding: 20px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include fluid-type(320px, 1440px, 16px, 22px);
+        font-family: $font-primary;
+        text-align: center;
+        &>a{
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            transform: scale(1);
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all 0.3s ease-in;
+            }
+        }
+        &>span{
+            color: $COLOR-ACTIVE;
+        }
+    }
+}
+
+footer{
+    &.light{
+        background-color: $COLOR-LIGHT;
+        #footer_container{
+            &>a,
+            &:visited{
+                color: $COLOR-DARK;
+                
+            }
+        }
+    }
+    &.dark{
+        background-color: $COLOR-DARK;
+        #footer_container{
+            &>a,
+            &:visited{
+                color: $COLOR-LIGHT;
+            }
+        }
+    }
+}
