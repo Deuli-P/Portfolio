@@ -5,8 +5,7 @@
 import { useEffect, useState,useContext } from 'react';
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
-import photo from '/pictures/images/pierre-antoniutti-converti.webp';
-// import ScrollToUp from '../components/ChevronToUp/scrollToUp';
+import photo from '/pictures/images/pierre-antoniutti-crete.webp';
 import ThemeContext from '../Context/ThemeContext';
 import WorkCard from '../components/Work/workCard/workCard';
 import Filter from '../components/Work/Filter/Filter';
