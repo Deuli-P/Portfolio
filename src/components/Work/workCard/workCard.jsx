@@ -24,11 +24,11 @@ const WorkCard = ({cover,alt,name,supportDiffusion}) => {
                             `workCard_image 
                             ${MouseIn ? 'hover' :''}`
                             }
-                        
+                    loading='lazy'
                 />
             </div>
             <div className={`workCard_text_container`}>
-                <h6 className={`wordCard_text_title`}>{name}</h6>
+                <h5 className={`wordCard_text_title`}>{name}</h5>
                 <div className="work_text_show">
                     <span style={{"opacity":0}}>i</span>
                     <p className={`wordCard_text_title ${MouseIn ? "hover" : "" }`}>{supportDiffusion}</p> 

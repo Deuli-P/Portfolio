@@ -56,13 +56,12 @@
 
 #home_presentation{
     &.light{
-        background-color: $BG1-LIGHT;
         img{
             border-color: $COLOR-LIGHT;
         }
         .home-title-container{
             h1{
-                color: $COLOR-ACTIVE;
+                color: $COLOR-ACTIVE-LIGHT;
                 ;
             }
             h2{
@@ -74,13 +73,12 @@
         }
     }
     &.dark{
-        background-color: $BG1-DARK;
         img{
             border-color: $COLOR-DARK;
         }
         .home-title-container{
             h1{
-                color: $COLOR-ACTIVE;
+                color: $COLOR-ACTIVE-DARK;
                 ;
             }
             h2{

@@ -82,7 +82,7 @@ const HandleOpen = () => {
                                     smooth={true} 
                                     to="home_expertise"
                                     className={`header-link`}
-
+                                    href="#home_expertise"
                                 >
                                     Expertise
                                 </ScrollLink>
@@ -95,7 +95,7 @@ const HandleOpen = () => {
                                     smooth={true} 
                                     to="home_projets"
                                     className={`header-link  `}
-
+                                    href="#home_projets"
                                 >
                                     Projets
                                 </ScrollLink>
@@ -108,7 +108,7 @@ const HandleOpen = () => {
                                     smooth={true} 
                                     to="home_experiences"
                                     className={`header-link  `}
-
+                                    href="#home_experiences"
                                 >
                                     Expériences
                                 </ScrollLink>
@@ -120,6 +120,7 @@ const HandleOpen = () => {
                                 smooth={true}
                                 to="contact-lien"
                                 className={`button header-button `}
+                                href="#contact-lien"
                             >
                                 Me contacter
                             </ScrollLink>

@@ -23,7 +23,6 @@ const HomePage = ({data}) => {
     const worksData =data.works;
 
 
-
     const [filteredWork, setFilteredWork] = useState([]); // Liste filtrée
     const [selectedType, setSelectedType] = useState("");
     const [isOpenCollapse, setIsOpenCollapse] = useState(null);
@@ -63,7 +62,7 @@ const HomePage = ({data}) => {
 
 
     return (
-        <main id='main-home'>
+        <main id='main-home' className={theme === "dark" ? "light": "dark"}>
             <section id='home_presentation' className={theme === "dark" ? "light": "dark"}>
                <Presentation photo={photo}/>
             </section>
@@ -81,6 +80,7 @@ const HomePage = ({data}) => {
                                 key={idx}
                                 id={item.id} 
                                 color={item.color}
+                                alt={item.alt}
                                 />
                             )
                             :
@@ -92,6 +92,7 @@ const HomePage = ({data}) => {
                                 soustitle={item.soustitle}
                                 key={idx}
                                 id={item.id} 
+                                alt={item.alt}
                                 />
                             )
                         

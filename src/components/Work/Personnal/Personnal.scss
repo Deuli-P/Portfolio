@@ -2,13 +2,6 @@
 
 
 /////////////////////// PERSONNAL ///////////////////////
-///////// TEXT //////////
-/// TITLE ///
-$PERSONNAL-TITLE-LIGHT: #242425;
-$PERSONNAL-TITLE-DARK: #dcc513;
-/// TEXT ////
-$PERSONNAL-TEXT-LIGHT: #272729;
-$PERSONNAL-TEXT-DARK: #d5d6de;
 
 #works_personnal_container{
     width: 100%;
@@ -36,60 +29,66 @@ $PERSONNAL-TEXT-DARK: #d5d6de;
             text-align: center;
         }
     }
-    #works_personnal_content{
+    .works_personnal_content-container{
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
-        position: relative;
-        padding: 40px 10px 60px 60px;
-        .work_personnal_content_text{
-            width: 100%;
-            height: 100px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: 0px 0px 120px 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            &>strong{
-                @include fluid-type(320px, 1440px, 16px, 16px);
-                white-space: nowrap;
-                margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 40px 0px 60px 0px;
+        .works_personnal-content{
+            position: relative;
+            height: 60vh;
+            .video3D{
+                width: 100%;
+                height: 100%;
+                padding-left: 20%;
+                object-fit: cover;
             }
-            &>h5{
-                @include fluid-type(320px, 1440px, 20px, 32px);
-                white-space: nowrap;
-                margin-bottom: 15px;
-            }
-            .work_personnal_content_fleche{
-                padding: 10px 0px 20px 20px;
-                width: 70px;
-                transform: scaleY(-1);
+            .work_personnal_content_text-container{
+                width: auto;
+                position: absolute;
+                bottom: -12%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    width: 50px;
-                    height: 50px;
-                    object-fit: cover;
-
+                flex-direction: column;
+                justify-content: space-between;
+                .work_personnal_content-text{
+                    padding-left: 10px;
+                    &>strong{
+                        @include fluid-type(320px, 1440px, 16px, 16px);
+                        white-space: nowrap;
+                        margin-bottom: 15px;
+                    }
+                    &>h4{
+                        @include fluid-type(320px, 1440px, 20px, 32px);
+                        white-space: nowrap;
+                        margin-bottom: 15px;
+                    }
+                    .work_personnal_content-fleche{
+                        width: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg{
+                            width: 100%;
+                            height: 40px;
+                            margin: 40% 0px 0px 10%;
+                            &>path{
+                                stroke-width: 2px;
+                                transform: scale(0.2);
+                            }
+                        }
+                    }
+                }
+                &>button{
+                    padding: 8px 24px;
+                    width: 200px;
+                    border-radius: 3px;
+                    border: none;
+                    background-color: $COLOR-PURPLE;
+                    @include fluid-type(320px, 1440px, 20px, 32px);
                 }
             }
-            &>button{
-                padding: 15px 24px;
-                width: 70%;
-                border-radius: 3px;
-                border: none;
-                background-color: $COLOR-PURPLE;
-                @include fluid-type(320px, 1440px, 20px, 32px);
-            }
-        }
-        .video3D{
-            background: url("../../public/pictures/gif/mobile-animation.gif") no-repeat center center ;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
         }
     }
 
@@ -101,51 +100,51 @@ $PERSONNAL-TEXT-DARK: #d5d6de;
 
 #home_projets{
     &.light{
-        background-color: $BG1-LIGHT;
         #works_personnal_text_container{
             color:$COLOR-LIGHT;
             #works_personnal_text_title{
                 color:$COLOR-LIGHT;
             }
         }
-        #works_personnal_content{
-            .work_personnal_content_text{
-                &>strong, &>h5{
+        .works_personnal-content{
+            .work_personnal_content-text{
+                &>strong, &>h4{
                     color: $COLOR-LIGHT;
                 }
-                .work_personnal_content_fleche{
-                    img{
-                        filter: invert(0%);
+                .work_personnal_content-fleche{
+                    svg{
+                        fill: $COLOR-LIGHT;
+                        stroke: $COLOR-LIGHT-LIGHT;
                     }
                 }
-                &>button{
-                    color: $COLOR-LIGHT;
-                }
+            }
+            &>button{
+                color: $COLOR-LIGHT;
             }
 
         }
     }
     &.dark{
-        background-color: $BG1-DARK;
         #works_personnal_text_container{
             color:$COLOR-DARK;
             #works_personnal_text_title{
                 color:$COLOR-DARK;
             }
         }
-        #works_personnal_content{
-            .work_personnal_content_text{
-                &>strong, &>h5{
+        .works_personnal-content{
+            .work_personnal_content-text{
+                &>strong, &>h4{
                     color: $COLOR-DARK;
                 }
-                .work_personnal_content_fleche{
-                    img{
-                        filter: invert(0%);
+                .work_personnal_content-fleche{
+                    svg{
+                        fill: $COLOR-DARK;
+                        stroke: $COLOR-DARK-DARK;
                     }
                 }
-                &>button{
-                    color: $COLOR-DARK;
-                }
+            }
+            &>button{
+                color: $COLOR-DARK;
             }
         }
     }

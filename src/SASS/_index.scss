@@ -20,6 +20,16 @@
 
 
 /////////////////////////// HOME ///////////////////////
+
+main{
+    &.light{
+        background-color: $BG1-LIGHT;
+    }
+    &.dark{
+        background-color: $BG1-DARK;
+    }
+}
+
 /////////////////////////// Presentation ///////////////////////
 
 @import "../components/Presentation/Presentation.scss";
@@ -135,7 +145,6 @@
 
 #home_contact{
     &.light{
-        background-color: $BG2-LIGHT;
         color: #141E26;
         #contact-title{
             color: #141E26;
@@ -148,7 +157,6 @@
         }
     }
     &.dark{
-        background-color: $BG2-DARK;
         color: #ffa540;
         #contact-title{
             color: #D7D7D9;
@@ -181,7 +189,7 @@
     padding: 20px;
     text-align: center;
     &.light{
-        background-color: $BG2-LIGHT;
+        background-color: $BG1-LIGHT;
         color: $COLOR-LIGHT;
         &>a{
             background-color: $COLOR-LIGHT;
@@ -189,7 +197,7 @@
         }
     }
     &.dark{
-        background-color: $BG2-DARK;
+        background-color: $BG1-DARK;
         color: $COLOR-DARK;
         &>a{
             background-color: $COLOR-DARK;
@@ -205,7 +213,7 @@
         @include fluid-type(320px, 1440px, 20px, 30px);
     }
     &>a{
-        width:clamp(250px, calc(250px + calc((500 - 250) / (1440 - 320)) * (100vw - 250px)), 400px);
+        width:clamp(250px, calc(250px + calc((500 - 250) / (1440 - 320)) * (100vw - 250px)), 500px);
         margin-top: 30px;
         @include fluid-type(320px, 1440px, 25px, 55px);
         padding: 10px 20px;
@@ -230,7 +238,7 @@
     padding: 70px 3% 20px;
     height: auto;
     &.light{
-        background-color: $BG2-LIGHT;
+        background-color: $BG1-LIGHT;
         color: $COLOR-LIGHT;
         .projectPage_title-container{
             .projetPage_title-backButton{
@@ -299,7 +307,7 @@
         }
     }
     &.dark{
-        background-color: $BG2-DARK;
+        background-color: $BG1-DARK;
         color: $COLOR-DARK;
         .projectPage_title-container{
             .projetPage_title-backButton{

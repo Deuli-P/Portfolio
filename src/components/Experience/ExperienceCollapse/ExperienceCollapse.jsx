@@ -1,4 +1,3 @@
-
 //eslint-disable-next-line
 const ExperienceCollapse = ({theme,name,job,url,description,startDate,endDate,location,onToggle,logo,id,technologies,isOpen}) => {
 
@@ -32,11 +31,12 @@ const ExperienceCollapse = ({theme,name,job,url,description,startDate,endDate,lo
             </div>
             {isOpen && (
                 <div className={`experience_collapse_bot-container `}>
-                    <img 
-                        className={`experience_collapse_bot-logo `} 
-                        alt={`Logo ${name}`}
-                        src={logo}/>
-                        <div className={`experience_collapse_logo-content `}></div>
+                    <div className={`experience_collapse_logo-content `}>
+                        <img 
+                            className={`experience_collapse_bot-logo `} 
+                            alt={`Logo ${name}`}
+                            src={logo}/>
+                    </div>
                     <div className={`experience_collapse_bot_content-container `}>
                         <div className={`experience_collapse_bot-url-location `}>
                             <div className={`experience_collapse_bot-location `}>
@@ -45,7 +45,13 @@ const ExperienceCollapse = ({theme,name,job,url,description,startDate,endDate,lo
                             </div>
                             <div className={`experience_collapse_bot-url`}>
                                 <i className={`fa-solid fa-square-arrow-up-right`}/>
-                                <span>{url}</span>
+                                <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {url}
+                                </a>
                             </div>
                         </div>
                         <div className={`experience_collapse_bot-text-techno `}>

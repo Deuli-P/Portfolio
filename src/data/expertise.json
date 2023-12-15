@@ -5,6 +5,7 @@
             "soustitle":"React, NodeJS, SASS",
             "id":"card-un",
             "icon":"/pictures/icons/Web-Dev-Icon.png",
+            "alt":"icon-web-dev",
             "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement.",
             "color":"tifeut"
 
@@ -13,6 +14,7 @@
             "title":"SEO",
             "soustitle":"Website",
             "id":"card-deux",
+            "alt":"icon-seo",
             "icon":"/pictures/icons/SEO-Icon.png",
             "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel.",
             "color":"toto"
@@ -21,6 +23,7 @@
             "title":"React Native, Expo Go,",
             "soustitle":"Android, IOS, Web",
             "id": "card-trois",
+            "alt":"icon-mobile",
             "icon":"/pictures/icons/Mobile-Icon.png",
             "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application.",
             "color":"arthur"
@@ -30,8 +33,8 @@
     "works":[
         {
             "name":"Kasa",
-            "cover":"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-            "alt":"Photo d'un logement sur KAsa",
+            "cover":"/pictures/images/projets/Kasa/Kasa-cover.webp",
+            "alt":"Photo d'un logement sur Kasa",
             "support":"Web Developpement",
             "id":"A7ZD72310AH55",
             "description":"Kasa est une entreprise de location de logement de bien d'exception.",
@@ -229,7 +232,7 @@
         },
         {
             "name":"Booki",
-            "cover":"/pictures/images/projets/Booki/Booki-01.webp",
+            "cover":"/pictures/images/projets/Booki/Booki-cover.webp",
             "alt":"Booki",
             "support":"Web Developpement",
             "id":"3439D200T12",
@@ -289,7 +292,7 @@
         },
         {   
             "name":"Ohmyfood",
-            "cover":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
+            "cover":"/pictures/images/projets/OhmyFood/Accueil-cover.webp",
             "alt":"Ohmyfood",
             "support":"Web Developpement",
             "id":"3204TEDI6047",
@@ -516,7 +519,7 @@
             "surname":"Jules",
             "name":"Casar",
             "job":"Empereur Romain",
-            "picture":"/pictures/images/Jules-Cesar_buste.jpeg",
+            "picture":"/pictures/images/Jules-Cesar_buste.webp",
             "comment":"“L’expérience, voilà le maître en toutes choses.”",
             "BGColor":"#923fe6"
         }
@@ -535,7 +538,7 @@
             "surname":"Poête",
             "name":"Scylla",
             "job":"Rappeur Belge",
-            "picture":"/pictures/images/scylla.jpeg",
+            "picture":"/pictures/images/scylla.webp",
             "comment":"“Ensuite ils suivront l'étoile, mais jamais ne vieilliront, Guidés par le son des astres, aux sirènes obéiront Veulent affontrer Léviathan puis défier Poséidon, Chanter dans les pires tempêtes, Aller là où personne n'a plus peur du temps” L'enfant et la mer - 2018",
             "BGColor":"#0067dc"
         }
@@ -553,9 +556,9 @@
             "surname":"Lao",
             "name":"Tseu",
             "job":"Fondateur du Taoïsme",
-            "picture":"/pictures/images/Lao-Tseu_peinture.jpeg",
+            "picture":"/pictures/images/Lao-Tseu_peinture.webp",
             "comment":"“Un voyage de mille lieues commence toujours par un premier pas.”",
-            "BGColor":"#bc60fb"
+            "BGColor":"#580691"
         }
     }
 ],

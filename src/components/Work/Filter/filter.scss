@@ -1,20 +1,6 @@
 @import '../../../SASS/_settings';
 
 /////////////////////////// FILTER ///////////////////////
-///////// TEXT //////////
-/// TITLE ///
-$FILTER-TEXT-LIGHT: #242425;
-$FILTER-TEXT-DARK: #eeecdf;
-/// UNSLECTED BORDER ////
-$FILTER-BORDER-UNSELECT-LIGHT: #737376;
-$FILTER-BORDER-UNSELECT-DARK: #d5d6de;
-//// SELECTED BORDER ////
-$FILTER-BORDER-SELECTED: orange;
-
-//// SELECTED BORDER ////
-$FILTER-BORDER-HOVER-LIGHT: rgb(221, 175, 90);
-$FILTER-BORDER-HOVER-DARK: rgb(165, 122, 42);
-
 
 #works_projets_fitler-container{
     width: 100%;
@@ -68,7 +54,7 @@ $FILTER-BORDER-HOVER-DARK: rgb(165, 122, 42);
         padding: 14px 20px  30px 20px;
         .work_projets_filter_title-container{
             text-align: center;
-            width: 10%;
+            width: 15%;
             .works_projets_filter-text{
                 padding-right: 10px;
                 border-right: 3px;
@@ -95,20 +81,20 @@ $FILTER-BORDER-HOVER-DARK: rgb(165, 122, 42);
         #works_projets_fitler-container{
             .work_projets_filter_title-container{
                 .works_projets_filter-text{
-                    color: $FILTER-TEXT-LIGHT;
-                    border-color: $FILTER-BORDER-SELECTED;
+                    color: $COLOR-LIGHT;
+                    border-color: $COLOR-ACTIVE-LIGHT;
                 }
             }
             .work_projets_filter_button-container{
-                color: $FILTER-TEXT-LIGHT;
+                color: $COLOR-LIGHT;
                 .work_projet_filter-button{
-                    border-color: $FILTER-BORDER-UNSELECT-LIGHT;
+                    border-color: $COLOR-LIGHT-LIGHT;
                     &:hover{
-                        border-color: $FILTER-BORDER-HOVER-LIGHT;
+                        border-color: $COLOR-LIGHT-LIGHT;
                     }
                     &.hovered{
-                        border-color: $FILTER-BORDER-SELECTED;
-                        color: $FILTER-BORDER-SELECTED;
+                        border-color: rgb(207, 157, 70);
+                        color: #820E0D;
                     }
         
                 }
@@ -120,20 +106,20 @@ $FILTER-BORDER-HOVER-DARK: rgb(165, 122, 42);
         #works_projets_fitler-container{
             .work_projets_filter_title-container{
                 .works_projets_filter-text{
-                    color: $FILTER-TEXT-DARK;
-                    border-color: $FILTER-BORDER-SELECTED;
+                    color: $COLOR-DARK;
+                    border-color: $COLOR-ACTIVE-DARK;
                 }
             }
             .work_projets_filter_button-container{
-                color: $FILTER-TEXT-DARK;
+                color: $COLOR-DARK;
                 .work_projet_filter-button{
-                    border-color: $FILTER-BORDER-UNSELECT-DARK;
+                    border-color: $COLOR-DARK-DARK;
                     &:hover{
-                        border-color: $FILTER-BORDER-HOVER-DARK;
+                        border-color: $COLOR-DARK-DARK;
                     }
                     &.hovered{
-                        border-color: $FILTER-BORDER-SELECTED;
-                        color: $FILTER-BORDER-SELECTED;
+                        border-color: $COLOR-ACTIVE-DARK;
+                        color: $COLOR-ACTIVE-DARK;
                     }
         
                 }

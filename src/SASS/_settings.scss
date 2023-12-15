@@ -44,10 +44,6 @@ $SPAN-font-size: 1.5rem;
 
 $BG1-LIGHT: #d3e2e5;
 $BG1-DARK: #1A191D;
-$BG2-LIGHT: #b6bdbe;
-$BG2-DARK: #141E26;
-
-
 
 /////// COLORS /////////
 
@@ -64,8 +60,10 @@ $COLOR-LIGHT-LIGHTEST: #496D8A;
 
 
 // ACTIVE VARIATION
-$COLOR-ACTIVE: orange;
+$COLOR-ACTIVE: #0F2E98;
 $COLOR-ACTIVE-UNSELECTED: orange;
+$COLOR-ACTIVE-LIGHT: #2C3F4F;
+$COLOR-ACTIVE-DARK: #A7BAF7;
 
 /// PURPLE VARIATION /////
 $COLOR-PURPLE: #9b37ff;
@@ -130,6 +128,18 @@ body{
 a{
     font-weight: 500;
     text-decoration: none;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main{
+    width: 100%;
 }
 
 /////////// ANIMATION ////

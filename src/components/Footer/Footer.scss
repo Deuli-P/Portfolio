@@ -24,9 +24,6 @@ footer{
                 transition: all 0.3s ease-in;
             }
         }
-        &>span{
-            color: $COLOR-ACTIVE;
-        }
     }
 }
 
@@ -34,6 +31,7 @@ footer{
     &.light{
         background-color: $COLOR-LIGHT;
         #footer_container{
+            color: $COLOR-DARK;
             &>a,
             &:visited{
                 color: $COLOR-DARK;
@@ -44,6 +42,7 @@ footer{
     &.dark{
         background-color: $COLOR-DARK;
         #footer_container{
+            color: $COLOR-LIGHT;
             &>a,
             &:visited{
                 color: $COLOR-LIGHT;

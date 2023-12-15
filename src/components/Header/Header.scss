@@ -1,9 +1,7 @@
 @import '../../SASS/settings';
 
 ////////// COLORS /////////
-$COLOR-LIGHT: #141E26;
-$COLOR-DARK: #D7D7D9;
-$COLOR-ACTIVE: orange;
+
 
 
 .header-wrapper{
@@ -19,7 +17,8 @@ $COLOR-ACTIVE: orange;
     padding-left: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
     padding-right: clamp(20px, calc(20px + calc((40 - 20) / (1440 - 320)) * (100vw - 320px)), 40px);
     position: fixed;
-    opacity: 0.9;
+    top: 0;
+    opacity: 0.8;
     .header-left{
         width: 100%;
         display: flex;
@@ -130,8 +129,8 @@ $COLOR-ACTIVE: orange;
                 color: rgb(113, 110, 108);
             }
             &.active.accueil{
-                color: $COLOR-DARK;
-                background-color: $COLOR-ACTIVE;
+                color: $COLOR-LIGHT;
+                background-color: $COLOR-ACTIVE-DARK;
             }
             &.active{
                 color: $COLOR-ACTIVE;
@@ -175,8 +174,8 @@ $COLOR-ACTIVE: orange;
                 color: rgb(173, 170, 166);
             }
             &.accueil.active{
-                color: $COLOR-LIGHT;
-                background-color: $COLOR-ACTIVE;
+                color: $COLOR-DARK;
+                background-color: $COLOR-ACTIVE-LIGHT;
             }
             &.active{
                 color: $COLOR-ACTIVE;
