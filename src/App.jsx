@@ -12,8 +12,6 @@ import ErrorPage from './pages/ErrorPage';
 
 function App() {
 
-  const works = jsonData.works;
-  console.log("[APP] works :", works);
 
 
   return (

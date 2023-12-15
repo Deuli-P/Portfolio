@@ -6,7 +6,7 @@ import ThemeContext from '../../../Context/ThemeContext';
 // Icon , titre , sous titre, paragraphe et decoration ::before/ ::after.
 // Mobile = collapse? 
 
-const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
+const ExpertiseCard = ({icons,title,soustitle,paragraph,id,alt}) => {
 
 
     const { theme } = useContext(ThemeContext);
@@ -17,7 +17,7 @@ const ExpertiseCard = ({icons,title,soustitle,paragraph,id}) => {
         <article className={`expertise_card-article expertise-card`} id={id}>
             <div className={`expertise_card_top_container `}>
                 <div className={`expertise_card_icon `}>
-                    <img src={icons} alt="Icon"/>
+                    <img src={icons} alt={alt}/>
                 </div>
                 <div className="expertise_card_title_container">
                         <h3 className={`expertise_card_title_h `}>

@@ -20,7 +20,57 @@
     .work_projets-link{
         margin: 20px auto;
     }
-    #main-projet{
+    #works_personnal_container{
+        width: 100%;
+        padding-top: clamp(50px, calc(50px + calc((80 - 50) / (1440 - 320)) * (100vw - 50px)), 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        #works_personnal_text_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            #works_personnal_text_title{
+                font-family: $font-title;
+                padding: 10px 0px;
+                text-align: center;
+            }
+            #works_personnal_text_p{
+                @include fluid-type(320px, 1024px, 14px, 20px);
+                font-family: $font-primary;
+                text-justify: distribute;
+                text-align: center;
+            }
+        }
+        .works_personnal_content-container{
+            height: 100vh;
+            .works_personnal-content{
+                height: 100%;
+                .video3D{
+                    height: 100%;
+                    padding-left: 15%;
+                }
+                .work_personnal_content_text-container {
+                    .work_personnal_content-text{
+                        padding-left: 15px;
+                        &>strong{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    button{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+    #main-projets{
+
         .projectPage_title-container{
             display: flex;
             flex-direction: row;
@@ -35,6 +85,7 @@
         }
     
     }
+
     #credit-main {
         height: 90vh;
         &>div{
@@ -222,9 +273,11 @@
     #works_personnal_container{
         flex-direction: row;
         align-items: start;
+        padding-right: 20px;
         #works_personnal_text_container{
             padding-left: 0px;
             height: 100%;
+            width: 50%;
             #works_personnal_text_title{
                 @include fluid-type(1024px, 1440px, 70px, 80px);
                 padding: 15% 2%  5%;
@@ -236,13 +289,20 @@
                 @include fluid-type(1024px, 1440px, 20px, 26px);
             }
         }
-        #works_personnal_content{
-            padding: 40px 0px 60px ;
-            .work_personnal_content_text{
-                margin: 0px 0px 140px -60px;
-            
+        .works_personnal_content-container{
+            .works_personnal-content{
+                height: 100vh;
+                .video3D{
+                    padding-left: 10%;
+                }
+                .work_personnal_content_text-container {
+                    width: 300px;
+                    bottom: -7%;
+                    .work_personnal_content-text{
+                        padding-left: 20px;
+                    }
+                }
             }
-        
         }
     }
 
@@ -302,5 +362,24 @@
             }
         }
     }
-    
+
 }
+
+///////////// MIN 1440PX
+
+
+@media screen and (min-width:1440px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-wrapper{
+        padding: 15px 25%;
+    }
+    section{
+        max-width: 1440px;
+    }
+}
+
+

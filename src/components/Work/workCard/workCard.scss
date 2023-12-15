@@ -47,8 +47,9 @@ $WORKCARD-TEXT-DARK: #e5e6ed;
         padding: 20px;
         width: 100%;
         
-        &>h6{
+        &>h5{
             margin-bottom: 5px;
+            @include fluid-type(320px, 1440px, 16px, 26px);
         }
         .work_text_show{
             position: relative;

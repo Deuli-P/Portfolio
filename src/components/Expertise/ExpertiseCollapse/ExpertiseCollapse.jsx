@@ -4,7 +4,7 @@ import {useEffect, useState, useContext} from 'react';
 import ThemeContext from '../../../Context/ThemeContext';
 
 
-const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id}) => {
+const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id,alt}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id}) => {
                 className={`expertise_card_top_container  ${isOpen ? "open" : ""}`} 
                 onClick={HandleOpen}>
                 <div className={`expertise_card_icon `}>
-                    <img src={icons} alt="Icon"/>
+                    <img src={icons} alt={alt}/>
                 </div>
                 <div className="expertise_card_title_container" >
                         <h3 className={`expertise_card_title_h `}>

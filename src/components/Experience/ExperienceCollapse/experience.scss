@@ -31,13 +31,11 @@ $TEXT-COLOR:white;
         &>h3{
             color: $COLOR-LIGHT;
         }
-        background-color: $BG2-LIGHT;
     }
     &.dark{
         &>h3{
             color: $COLOR-DARK;
         }
-        background-color: $BG2-DARK;
     }
 }
 
@@ -90,16 +88,14 @@ $TEXT-COLOR:white;
         padding: 10px;
         margin-bottom: 10px;
         background-color: $EXPERIENCE-BG-BOT;
-
-        .experience_collapse_bot-logo{
-            width: 90px;
-            height: 90px;
-            filter: invert(1);
-            .experience_collapse_logo-content{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                background-color: red
+        display: flex;
+        flex-direction: column;
+        .experience_collapse_logo-content{
+            object-fit: cover;
+            .experience_collapse_bot-logo{
+                width: auto;
+                height: 90px;
+                filter: invert(1);
             }
         }
         .experience_collapse_bot_content-container{
@@ -108,7 +104,9 @@ $TEXT-COLOR:white;
                 flex-direction: column;
                 padding: 5px 0px;
                 .fa-solid{
-                    width: 10%;
+                    width: auto;
+                    text-align: center;
+                    margin-right: 10px;
                     color:$EXPERIENCE-BG-OPEN-TOP;
                 }
                 .experience_collapse_bot-location,
@@ -116,7 +114,13 @@ $TEXT-COLOR:white;
                     padding: 3px 0px;
                     display: flex;
                     flex-direction: row;
-                    margin-right: 10px
+                    margin-right: 10px;
+                    a:hover{
+                        text-decoration: underline 2px $COLOR-DARK-DARK;                        
+                    }
+                    a:visited{
+                        color: $COLOR-DARK;
+                    }
                 }
             }
             .experience_collapse_bot-text-techno{
@@ -145,9 +149,6 @@ $TEXT-COLOR:white;
     }
 }
 
-
-
-
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
@@ -167,6 +168,37 @@ $TEXT-COLOR:white;
 @media screen and (min-width: 1024px) {
     .experience_collapse_article-container {
         width: 60%;
+    }
+
+    .experience_collapse_bot-container{
+        .experience_collapse_logo-content{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .experience_collapse_bot-logo{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .experience_collapse_bot_content-container{
+            width: 70%;
+            .experience_collapse_bot-url-location{
+                flex-direction: row;
+                .experience_collapse_bot-location,
+                .experience_collapse_bot-url {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+///////////////////// 1440PX ///////////////////////
+
+@media screen and (min-width: 1440px) {
+    .experience_collapse_article-container .experience_collapse_bot-container{
+        flex-direction: row-reverse;
     }
 }
 
