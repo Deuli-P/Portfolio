@@ -5,7 +5,6 @@
 import { useEffect, useState,useContext } from 'react';
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
-import photo from '/pictures/images/pierre-antoniutti-crete.webp';
 import ThemeContext from '../Context/ThemeContext';
 import WorkCard from '../components/Work/workCard/workCard';
 import Filter from '../components/Work/Filter/Filter';
@@ -64,7 +63,7 @@ const HomePage = ({data}) => {
     return (
         <main id='main-home' className={theme === "dark" ? "light": "dark"}>
             <section id='home_presentation' className={theme === "dark" ? "light": "dark"}>
-               <Presentation photo={photo}/>
+               <Presentation/>
             </section>
             <section id='home_expertise' className={theme === "dark" ? "light": "dark"}>
                 <h3 id='expertise_title'>Expertise</h3>

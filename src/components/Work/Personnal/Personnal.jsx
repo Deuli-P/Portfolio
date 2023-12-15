@@ -1,5 +1,10 @@
+import { useState } from 'react';
 
 const Personnal = () => {
+
+    // eslint-disable-next-line
+    const [isComplete, setIsComplete] = useState(false);
+
     return (
         <div id='works_personnal_container'>
         <div id='works_personnal_text_container'>
@@ -14,9 +19,20 @@ const Personnal = () => {
         </div>
         <div className='works_personnal_content-container'>
             <div className="works_personnal-content">
-                <video loop muted autoPlay className="video3D">
-                        <source src='/videos/gepalemo.mp4' type="video/mp4"/>
-                </video>
+                {isComplete? (
+                    <video loop muted autoPlay className="video3D">
+                            <source src='/videos/gepalemo.mp4' type="video/mp4"/>
+                    </video>
+                )
+                :
+                (
+                    <img 
+                        src="/pictures/gif/Travaux-en-cours.gif" 
+                        alt="travaux en cours" 
+                        className="video3D gif"
+                        loading="lazy"
+                    />
+                )}
                 <div className={`work_personnal_content_text-container `}>
                     <div className="work_personnal_content-text">
                     <div className={`work_personnal_content-fleche `}>

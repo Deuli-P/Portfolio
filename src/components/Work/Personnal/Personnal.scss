@@ -44,6 +44,9 @@
                 height: 100%;
                 padding-left: 20%;
                 object-fit: cover;
+                &.gif{
+                    object-fit: contain;
+                }
             }
             .work_personnal_content_text-container{
                 width: auto;
