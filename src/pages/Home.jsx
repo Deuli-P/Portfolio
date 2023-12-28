@@ -2,10 +2,10 @@
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
 // home.jsx
-import { useEffect, useState,useContext } from 'react';
+import { useEffect, useState } from 'react';
 import ExpertiseCard from '../components/Expertise/ExpertiseCard/ExpertiseCard';
 import ExpertiseCollapse from '../components/Expertise/ExpertiseCollapse/ExpertiseCollapse';
-import ThemeContext from '../Context/ThemeContext';
+import useTheme from '../Context/ThemeContext';
 import WorkCard from '../components/Work/workCard/workCard';
 import Filter from '../components/Work/Filter/Filter';
 import ExperienceCollapse from '../components/Experience/ExperienceCollapse/ExperienceCollapse';
@@ -16,7 +16,7 @@ import Presentation from '../components/Presentation/Presentation';
 import { Link } from 'react-router-dom';
 
 const HomePage = ({data}) => {
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useTheme();
     const expertiseData = data.expertise;
     const entreprisesData = data.entreprises;
     const worksData =data.works;
@@ -99,7 +99,7 @@ const HomePage = ({data}) => {
                 </div>
             </section>
             <section id='home_projets' className={theme === "dark" ? "light": "dark"}>
-                <Personnal/>
+                <Personnal />
                 <div id='works_projets_container'>
                     <Filter
                         FilterChange={FilterChange} 
@@ -124,7 +124,7 @@ const HomePage = ({data}) => {
                 </div>
             </section>
             <section id='home_experiences' className={theme === "dark" ? "light": "dark"}>
-                <h3>Professionnal Expérience</h3>
+                <h3>Professionnal Experience</h3>
                 {entreprisesData.map((item, idx) => (
                     <ExperienceCollapse 
                         isOpen={isOpenCollapse === item.id}
@@ -147,11 +147,11 @@ const HomePage = ({data}) => {
             <section id="home_contact" className={theme === "dark" ? "light": "dark"}>
                         <div id="contact-zone">
                             <div id="contact-title">
-                                <h5 >Disponible pour projet professionnel.</h5>
+                                <h5 >Available for opportunities.</h5>
                                 <p>
-                                    Vous avez un projet passionnant pour lequel vous avez besoin d'aide ?
+                                Do you have an exciting project you need help with?
                                     <br/>
-                                    Envoyez-moi un email ou contactez-moi par message instantané!</p>
+                                    Send me an email or contact me by instant message!</p>
                             </div>
                             <div id='contact-lien'>
                                 <div className="contact_lien-container">
@@ -165,7 +165,7 @@ const HomePage = ({data}) => {
                                 <div id="contact_lien-form">
                                     <h4 
                                         className={`contact-lien_form-title ${theme === "dark" ? "dark": "light"}`}
-                                    >Contactez moi</h4>
+                                    >Contact me</h4>
                                 < Form theme={theme}/>
                                 </div>
                             </div>
@@ -184,8 +184,6 @@ const HomePage = ({data}) => {
                                     bgColor={item.avis.BGColor}
                                 />
                                 ))}
-
-                            
                         </div>
             </section>
         </main>

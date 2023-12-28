@@ -1,15 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import {useEffect, useState, useContext} from 'react';
-import ThemeContext from '../../../Context/ThemeContext';
 
 
 const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id,alt}) => {
 
     const [isOpen, setIsOpen] = useState(false);
-
-    const { theme } = useContext(ThemeContext);
-
 
     const HandleOpen = () => {
         console.log("Collapse est fermé :", isOpen);
@@ -34,8 +30,6 @@ const ExpertiseCollapse = ({icons,title, soustitle, paragraph,id,alt}) => {
                             {soustitle}
                         </h3>
                 </div>
-                 {/* L'element s'affiche en haut a droite du top container quand c'est ouvert pour montrer que c'est ouvert
-                 Element en absolute et assez petit. */}
                  <span className={`expertise_card_collapse_chevron`}>{isOpen ? "-" : "+" }</span>
             </div>
             {isOpen && (

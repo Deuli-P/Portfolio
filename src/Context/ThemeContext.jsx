@@ -1,9 +1,10 @@
-import { createContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState('light'); // Vous pouvez utiliser une couleur au lieu de 'light'
+
+    const [theme, setTheme] = useState('light');
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -16,9 +17,9 @@ export const ThemeProvider = ({ children }) => {
     );
 };
 
-export const useToggleTheme = () => {
-    const { toggleTheme } = ThemeProvider();
-    return toggleTheme;
+export const useTheme = () => {
+    const context = useContext(ThemeContext);
+    return context
   };
 
-export default ThemeContext;
+export default useTheme;

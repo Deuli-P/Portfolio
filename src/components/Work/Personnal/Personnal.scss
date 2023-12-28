@@ -83,13 +83,27 @@
                         }
                     }
                 }
-                &>button{
+                &>a{
                     padding: 8px 24px;
                     width: 200px;
                     border-radius: 3px;
                     border: none;
                     background-color: $COLOR-PURPLE;
+                    color: $COLOR-DARK;
                     @include fluid-type(320px, 1440px, 20px, 32px);
+                    transform: scale(1);
+                    transition: all 0.2s ease-out;
+                    &:visited{
+                        color:$COLOR-DARK;
+                    };
+                    &:hover{
+                        opacity: 0.8;
+                        color:$COLOR-DARK;
+                    }
+                    &:focus{
+                        transform: scale(0.95);
+                        transition: all 0.2s ease-out;
+                    }
                 }
             }
         }

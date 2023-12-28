@@ -1,13 +1,13 @@
 {
     "expertise":[
         {
-            "title":"Frontend Developer,",
-            "soustitle":"React, NodeJS, SASS",
-            "id":"card-un",
-            "icon":"/pictures/icons/Web-Dev-Icon.png",
-            "alt":"icon-web-dev",
-            "paragraph":"Passionnée de développement web, je suis à la recherche de nouveau défi dans le front-end. J'ai suivi une formation Openclassrooms pour apprendre les bases du développement.",
-            "color":"tifeut"
+            "title":"Mobile Developer,",
+            "soustitle":"React Native, Expo Go",
+            "id": "card-trois",
+            "alt":"icon-mobile",
+            "icon":"/pictures/icons/Mobile-Icon.png",
+            "paragraph":"The future is mobile, which is why I'm interested in this sector. I taught myself the basics of mobile front-end with React Native by developing a small application.",
+            "color":"arthur"
 
         },
         {
@@ -16,28 +16,28 @@
             "id":"card-deux",
             "alt":"icon-seo",
             "icon":"/pictures/icons/SEO-Icon.png",
-            "paragraph":" Avoir un beau site c'est bien, avoir de la visilité c'est mieux, avec une expertise SEO, augmenté grandement votre visiblité auprès de client potentiel.",
+            "paragraph":" Having a beautiful site is good, but having visibility is even better. With SEO expertise, you can greatly increase your visibility with potential customers.",
             "color":"toto"
         },
         {
-            "title":"React Native, Expo Go,",
-            "soustitle":"Android, IOS, Web",
-            "id": "card-trois",
-            "alt":"icon-mobile",
-            "icon":"/pictures/icons/Mobile-Icon.png",
-            "paragraph":"L'avenir est le mobile, c'est pourquoi je m'intéresse à ce secteur. J'ai appris les bases du front-end mobile avec React Native en autodidacte en développant une petite application.",
-            "color":"arthur"
-
+            "title":"Frontend Developer,",
+            "soustitle":"React, NodeJS, SASS",
+            "id":"card-un",
+            "icon":"/pictures/icons/Web-Dev-Icon.png",
+            "alt":"icon-web-dev",
+            "paragraph":"Passionate about web development, I'm looking for a new challenge in front-end. I took an Openclassrooms course to learn the basics of development.",
+            "color":"tifeut"
+    
         }
     ],
     "works":[
         {
             "name":"Kasa",
             "cover":"/pictures/images/projets/Kasa/Kasa-cover.webp",
-            "alt":"Photo d'un logement sur Kasa",
+            "alt":"Logement available on Kasa",
             "support":"Web Developpement",
             "id":"A7ZD72310AH55",
-            "description":"Kasa est une entreprise de location de logement de bien d'exception.",
+            "description":"Kasa is an exceptional property rental company.",
             "github":"https://github.com/Deuli-P/Kasa-Qwenta-React",
             "designer":[
                 {
@@ -46,7 +46,7 @@
                 },
                 {
                     "categorie":"Mission",
-                    "text":"Construire le site en React"
+                    "text":"Build ReactJs website"
                 },
                 {
                     "categorie":"Strategie",
@@ -73,71 +73,71 @@
             "pictures":{
                 "presentation": {
                     "image": "/pictures/images/projets/Kasa/presentation.webp",
-                    "alt": "Mock up du site  Kasa"
+                    "alt": "Mock up website Kasa"
                 },
                 "projet": [
                     [
                         {
                             "image":"/pictures/images/projets/Kasa/pageAccueil-desktop-01.webp",
-                            "alt":"page d'accueil du site Kasa"
+                            "alt":"Kasa home page"
                         },
                         {
                             "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-02.webp",
-                            "alt": "page d'accueil du site Kasa"
+                            "alt": "Kasa home page"
                         },
                         {
                             "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-03.webp",
-                            "alt": "page d'accueil du site Kasa"
+                            "alt": "Kasa home page"
                         },
                         {
                             "image": "/pictures/images/projets/Kasa/pageAccueil-desktop-04.webp",
-                            "alt": "page d'accueil du site Kasa"
+                            "alt": "Kasa home page"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
-                            "alt":"page 404 du site Kasa"
+                            "alt":"Kasa error page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/page404-desktop.webp",
-                            "alt":"page 404 du site Kasa"
+                            "alt":"Kasa error page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
-                            "alt":"page 404 du site Kasa"
+                            "alt":"Kasa error page"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
-                            "alt":"page About du site Kasa"
+                            "alt":"Kasa about page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/pageAbout-desktop.webp",
-                            "alt":"page About du site Kasa"
+                            "alt":"Kasa about page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
-                            "alt":"page About du site Kasa"
+                            "alt":"Kasa about page"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/Kasa/Header-desktop.webp",
-                            "alt":"page d'un logement proposé sur le site Kasa"
+                            "alt":"Kasa logement page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/pageLogement-desktop-01.webp",
-                            "alt":"page d'un logement proposé sur le site Kasa"
+                            "alt":"Kasa logement page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/pageLogement-desktop-02.webp",
-                            "alt":"page d'un logement proposé sur le site Kasa"
+                            "alt":"Kasa logement page"
                         },
                         {
                             "image":"/pictures/images/projets/Kasa/footer-desktop.webp",
-                            "alt":"page d'un logement proposé sur le site Kasa"
+                            "alt":"Kasa logement page"
                         }
                     ]
                 ]
@@ -150,7 +150,7 @@
             "alt":"Sophie Bruel",
             "support":"Web Developpement",
             "id":"24GRKT812A",
-            "description":"Sophie Bruel est une architecte talentueuse qui design des intérieurs partout dans le monde.",
+            "description":"Sophie Bruel is a brillant architect who designs interiors all over the world.",
             "github":"https://github.com/Deuli-P/Portfolio-architecte-sophie-bluel",
             "designer":[
                 {
@@ -159,11 +159,11 @@
                 },
                 {
                     "categorie":"Mission",
-                    "text":"Créer une page d'accueil, modal pour ajouter/ supprimer des projets et une page de login"
+                    "text":"Build Homepage, modal to add/ remove projects and a login page in JS vanilla."
                 },
                 {
                     "categorie":"Strategie",
-                    "text":"Tout en Javascript"
+                    "text":"All in Javascript Vanilla"
                 }
             ],
             "reseau":[
@@ -186,44 +186,44 @@
             "pictures": {
                 "presentation": {
                     "image": "/pictures/images/projets/Bruel/presentation.webp",
-                    "alt": "Mock up du site de Sophie Bruel"
+                    "alt": "Mock up Sophie Bruel website"
                 },
                 "projet": [
                     [
                         {
                             "image":"/pictures/images/projets/Bruel/accueil-01.webp",
-                            "alt":"page d'accueil du site de Sophie Bruel top"
+                            "alt":"Sophie Bruel home page top"
                         },
                         {
                             "image":
                             "/pictures/images/projets/Bruel/accueil-02.webp",
-                            "alt":"page d'accueil du site de Sophie Bruel milieu"
+                            "alt":"Sophie Bruel home page milieu"
                         },
                         {
                             "image":
                             "/pictures/images/projets/Bruel/accueil-03.webp",
-                            "alt":"page d'accueil du site de Sophie Bruel milieu"
+                            "alt":"Sophie Bruel home page milieu"
                         },
                         {
                             "image":
                             "/pictures/images/projets/Bruel/accueil-04.webp",
-                            "alt":"page d'accueil du site de Sophie Bruel bot"
+                            "alt":"Sophie Bruel home page bot"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/Bruel/login-page.webp",
-                            "alt":"page de login du site de Sophie Bruel top"
+                            "alt":"Sophie Bruel login page top"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/Bruel/Modal-gallerie.webp",
-                            "alt":"modal pour modifier la gallerie du site de Sophie Bruel top"
+                            "alt":"Sophie Bruel modal to update gallery"
                         },
                         {
                             "image":"/pictures/images/projets/Bruel/Modal-Ajout.webp",
-                            "alt":"modal pour ajouter des projets aux site de Sophie Bruel milieu"
+                            "alt":"Sophie Bruel modal to add project on gallery"
                         }
                     ]
                 ]
@@ -236,7 +236,7 @@
             "alt":"Booki",
             "support":"Web Developpement",
             "id":"3439D200T12",
-            "description":"Booki est un site qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+            "description":"Booki is a website that enables users to find accommodation and activities in the city of their choice.",
             "github":"https://github.com/Deuli-P/Booki",
             "designer":[
                 {
@@ -245,11 +245,11 @@
                 },
                 {
                     "categorie":"Mission",
-                    "text":"Créer une page d'accueil responsive."
+                    "text":"Build responsive homepage."
                 },
                 {
                     "categorie":"Strategie",
-                    "text":"Tout en HTML et CSS"
+                    "text":"All in HTML/ CSS"
                 }
             ],
             "reseau":[
@@ -272,18 +272,18 @@
             "pictures": {
                 "presentation": {
                     "image": "/pictures/images/projets/Booki/presentation.webp",
-                    "alt": "Mock up du site Booki"
+                    "alt": "Mock up Booki website"
                 },
                 "projet": [
                     [
                         {
                             "image":"/pictures/images/projets/Booki/Booki-01.webp",
-                            "alt":"page d'accueil du site Booki"
+                            "alt":"Booki home page"
                         },
                         {
                             "image":
                             "/pictures/images/projets/Booki/Booki-02.webp",
-                            "alt":"page d'accueil du site Booki"
+                            "alt":"Booki home page"
                         }
                     ]
                 ]
@@ -296,7 +296,7 @@
             "alt":"Ohmyfood",
             "support":"Web Developpement",
             "id":"3204TEDI6047",
-            "description":"Ohmyfood est un site qui repertorie les menus de restaurants gastronomiques.  En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant! Déjà présente à New-York, elle souhaite désormais faire sa place à Paris.",
+            "description":"Ohmyfood is a website that lists the menus of gourmet restaurants.  In addition to traditional reservation systems, customers can compose their meal menu so that the dishes are ready when they arrive. No more waiting in restaurants! Already present in New York, the company is now looking to make its mark in Paris.",
             "github":"https://github.com/Deuli-P/Booki",
             "designer":[
                 {
@@ -305,11 +305,11 @@
                 },
                 {
                     "categorie":"Mission",
-                    "text":"Créer un site mobile-first et responsive."
+                    "text":"Build mobile first and response website."
                 },
                 {
                     "categorie":"Strategie",
-                    "text":"Tout en HTML et SASS"
+                    "text":"All in HTML/ SASS"
                 }
             ],
             "reseau":[
@@ -332,33 +332,33 @@
             "pictures": {
                 "presentation": {
                     "image": "/pictures/images/projets/Booki/presentation.webp",
-                    "alt": "Mock up du site Ohmyfood"
+                    "alt": "Mock up Ohmyfood website"
                 },
                 "projet": [
                     [
                         {
                             "image":"/pictures/images/projets/OhmyFood/Accueil-01.webp",
-                            "alt":"page d'accueil du site Ohmyfood"
+                            "alt":"Ohmyfood home page"
                         },
                         {
                             "image":
                             "/pictures/images/projets/OhmyFood/Accueil-02.webp",
-                            "alt":"page d'accueil du site Ohmyfood"
+                            "alt":"Ohmyfood home page"
                         }
                     ],
                     [
                         {
                             "image":"/pictures/images/projets/OhmyFood/Menu-01.webp",
-                            "alt":"page menu restaurant du site Ohmyfood"
+                            "alt":"Ohmyfood restaurante page"
                         },
                         {
                             "image":"/pictures/images/projets/OhmyFood/Menu-02.webp",
-                            "alt":"page menu restaurant du site Ohmyfood"
+                            "alt":"Ohmyfood restaurante page"
                         },
                         {
                             "image":
                             "/pictures/images/projets/OhmyFood/Menu-03.webp",
-                            "alt":"page menu restaurant du site Ohmyfood"
+                            "alt":"Ohmyfood restaurante page"
                         }
                     ]
                 ]
@@ -371,7 +371,7 @@
             "alt":"Nina Carducci - Portfolio",
             "support":"SEO",
             "id":"70K3OKKF5435",
-            "description":"Nina Carduci est une photographe talentueuse pour vos évenement dans la région Bordelaise. Ceci est son portfolio.",
+            "description":"Nina Carduci is a talented event photographer in the Bordeaux area. This is her portfolio.",
             "github":"https://github.com/Deuli-P/projet9",
             "designer":[
                 {
@@ -380,7 +380,7 @@
                 },
                 {
                     "categorie":"Mission",
-                    "text":"Optimiser le site grâce au technique de SEO."
+                    "text":"Optimize the site with SEO techniques."
                 }
             ],
             "reseau":[
@@ -403,31 +403,31 @@
             "pictures": {
                 "presentation": {
                     "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
-                    "alt": "Score SEO du site"
+                    "alt": "SEO website score"
                 },
                 "projet": [
                     [
                         {
                             "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
-                            "alt":"page d'accueil du site de Nina Carducci"
+                            "alt":"Nina Carducci home page"
                         },
                         {
                             "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
+                            "alt":"Nina Carducci home page"
                         },
                         {
                             "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
+                            "alt":"Nina Carducci home page"
                         },
                         {
                             "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
+                            "alt":"Nina Carducci home page"
                         }
                     ],
                     [
                         {
                         "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
-                        "alt":"Rapport d'audit du site"
+                        "alt":"Audit rapport"
                         }
                     ]
                 ]
@@ -435,22 +435,22 @@
             "technologies":["HTML","JAVASCRIPT","CSS","SEO"]
         },
         {   
-            "name":"Gépalémo",
-            "cover":"/pictures/images/projets/gepalemo/5521112.png",
-            "alt":"Gépalémo ",
+            "name":"PictoChat",
+            "cover":"/pictures/images/projets/PictoChat/PictoChat-presentation-01.webp",
+            "alt":"PictoChat ",
             "support":"Mobile",
             "id":"5460FI35503",
-            "description":"Application développé pour découvrir le monde du developpement mobile. C'est une application qui permet d'ouvrir des modals avec des icons ( 1 à 4) à l'intérieur pour permettre de communiquer avec une autre personne sans avoir de langue commune.",
-            "github":"https://github.com/Deuli-P/TestApp",
+            "description":"Application developed to discover the world of mobile development. It's an application that lets you open modals with icons ( 1 to 4) inside, to enable you to communicate with another person without having a common language.",
+            "github":"https://github.com/Deuli-P/PictoChat",
             "designer":[
 
                 {
                     "categorie":"Mission",
-                    "text":"Découvrir le developpement mobile."
+                    "text":"Discover Mobile Developpement."
                 },
                 {
                     "categorie":"Stragégie",
-                    "text":"Apprendre React-native"
+                    "text":"Learn React Native and this ecosystem."
                 }
             ],
             "reseau":[
@@ -472,37 +472,25 @@
             ],
             "pictures": {
                 "presentation": {
-                    "image": "/pictures/images/projets/NinaCarducci/Score_SEO.webp",
-                    "alt": "Mock up de l'application"
+                    "image": "/pictures/images/projets/PictoChat/PictoChat-mockup.webp",
+                    "alt": "Application mockup"
                 },
                 "projet": [
                     [
                         {
-                            "image":"/pictures/images/projets/NinaCarducci/Accueil-01.webp",
-                            "alt":"page d'accueil du site de Nina Carducci"
-                        },
-                        {
-                            "image":"/pictures/images/projets/NinaCarducci/Accueil-02.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
-                        },
-                        {
-                            "image":"/pictures/images/projets/NinaCarducci/Accueil-03.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
-                        },
-                        {
-                            "image":"/pictures/images/projets/NinaCarducci/Accueil-04.webp",
-                            "alt":"page menu restaurant du site de Nina Carducci"
+                            "image":"/pictures/images/projets/PictoChat/PictoChat-presentation-01.webp",
+                            "alt":"Application presentation"
                         }
                     ],
                     [
                         {
-                        "image":"/pictures/images/projets/NinaCarducci/Rapport_Audit.webp",
-                        "alt":"Rapport d'audit du site"
+                        "image":"/pictures/images/projets/PictoChat/PictoChat-presentation-02.webp",
+                        "alt":"Application presentation"
                         }
                     ]
                 ]
             },
-            "technologies":["REACT-NATIVE","EXPO GO","REDUX"]
+            "technologies":["REACT-NATIVE","EXPO GO","JAVASCRIPT","REACT BATIVE PAPER", "REACT NAIGATION", "BOTTOM SHEET"]
         }
     ],
     "entreprises":[
@@ -511,16 +499,16 @@
         "job":"Junior 3D Layout Artist",
         "localisation":"Valence, 26000",
         "website":"http://www.teamto.com/",
-        "description":"J'ai découvert à travers un stage de fin d'étude un nouveau métier, le Layout 3D( aussi appelé la Previs 3D). Cette expérience m'a ouvert de nouveau horizon. J'ai pus a travers un contrat de quelques mois travailler sur Skylanders Saison 03 approfondir mes connaissances et adorer mon nouveau métier.",
+        "description":"During an internship at the end of my studies, I discovered a new profession: 3D Layout (also known as Previs 3D). This experience opened up new horizons for me. I was able to work on Skylanders Season 03 for a few months, deepening my knowledge and loving my new job.",
         "logo":"/pictures/images/teamto-logo.png",
         "id":"1",
         "technologies":["Autodesk Maya"],
         "avis":{
             "surname":"Jules",
             "name":"Casar",
-            "job":"Empereur Romain",
+            "job":"Roman Emperor",
             "picture":"/pictures/images/Jules-Cesar_buste.webp",
-            "comment":"“L’expérience, voilà le maître en toutes choses.”",
+            "comment":"“Experience is the best teacher.”",
             "BGColor":"#923fe6"
         }
 
@@ -530,14 +518,14 @@
         "job":"Junior 3D Animator",
         "localisation":"Angoulême, 16000",
         "website":"https://www.ellipseanimation.com/fr/",
-        "description":"Une mission parfaite pour demarrer dans le mode de l'animation 3D dont j'avais fait les études, mais cela ne c'est pas passé comme je voulais. Une expérience qui m'a appris énormement sur qui je suis et se que je voulais.",
+        "description":"A perfect mission to get started in the 3D animation field I had studied for, but it didn't turn out the way I wanted. An experience that taught me a lot about who I am and what I want.",
         "logo":"/pictures/images/ellipse-logo_dark.svg",
         "id":"3",
         "technologies":["Autodesk Maya"],
         "avis":{
             "surname":"Poête",
             "name":"Scylla",
-            "job":"Rappeur Belge",
+            "job":"Belge Rappeur",
             "picture":"/pictures/images/scylla.webp",
             "comment":"“Ensuite ils suivront l'étoile, mais jamais ne vieilliront, Guidés par le son des astres, aux sirènes obéiront Veulent affontrer Léviathan puis défier Poséidon, Chanter dans les pires tempêtes, Aller là où personne n'a plus peur du temps” L'enfant et la mer - 2018",
             "BGColor":"#0067dc"
@@ -548,16 +536,16 @@
         "job":"Middle 3D Layout Artist",
         "localisation":"Paris, 75011",
         "website":"https://www.superprod.net/fr",
-        "description":" Pour le développement d'une série d'animation pour Netflix, j'ai travaillé en équipe sur le projet Spirit Ranger Saison 01 pendant 1 an et 3 mois.",
+        "description":" For the development of an animated series for Netflix, I worked as part of a team on the Spirit Ranger Season 01 project for 1 year and 3 months.",
         "logo":"/pictures/images/superprod-logo.svg",
         "id":"2",
         "technologies":["Autodesk Maya"],
         "avis":{
             "surname":"Lao",
             "name":"Tseu",
-            "job":"Fondateur du Taoïsme",
+            "job":"Taoist foundator",
             "picture":"/pictures/images/Lao-Tseu_peinture.webp",
-            "comment":"“Un voyage de mille lieues commence toujours par un premier pas.”",
+            "comment":"“A journey of a thousand leagues always begins with a first step.”",
             "BGColor":"#580691"
         }
     }

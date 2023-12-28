@@ -1,11 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from "react";
-import ThemeContext from "../Context/ThemeContext";
-import data from "../data/expertise.json"
+import { useEffect, useState } from "react";
+import  useTheme  from "../Context/ThemeContext";
+import data from "../data/expertise.json";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProjectPage = () => {
 
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useTheme();
 
     const workData = data.works;
     const params = useParams();
@@ -35,12 +36,26 @@ const ProjectPage = () => {
             setIsLoading(false);
         }
     },[projetData]);
-    
+
     const dataLoad = () => {
         // Utilisez la déstructuration pour obtenir les différentes informations du projet
         const { name, designer, description, reseau, pictures, support, github} = projetData;
-        
-        console.log("[PAGE]images :",pictures.projet);
+
+        // A utiliser quand il y aura des clients avec des réseaux sociaux.
+    const renderReseau =(
+        <>
+             <div className="projetPage_media_RS">
+                {reseau?.map((item, idx) => (
+                    <a  target={`_blank`}
+                        href={item.lien}
+                        className="projetPage_media_RS-a"
+                        key={`reseau_${idx}`}>
+                            <FontAwesomeIcon icon={`fa-brands ${item.icon}`} className={`projetPage_media_RS-i`} />
+                    </a>
+                ))}
+            </div>
+        </>
+    );
 
         const renderView = (
             <main id="main-projet" className={theme === "dark"? "light": "dark"}>
@@ -94,16 +109,7 @@ const ProjectPage = () => {
                     </div>
                 </section>
                 <section className="projetPage_media-container">
-                    <div className="projetPage_media_RS">
-                        {reseau?.map((item, idx) => (
-                        <a  target={`_blank`}
-                            href={item.lien}
-                            className="projetPage_media_RS-a"
-                            key={item.nom + idx}>
-                                <i  className={`fa-brands  projetPage_media_RS-i ${item.icon}`}/>
-                        </a>
-                            ))}
-                    </div>
+                    {/* {renderReseau}  */}
                     <div className="projetPage_media-content">
                             <img src={pictures.presentation.image} alt={pictures.presentation.alt} />
                     </div>

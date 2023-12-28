@@ -1,10 +1,9 @@
-import ThemeContext from "../Context/ThemeContext";
-import {useContext} from 'react';
+import useTheme from "../Context/ThemeContext";
 
 
 const CreditPage = () => {
 
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useTheme();
 
     return (
         <main id='credit-main' className={theme === "dark" ? "light" : "dark"}>

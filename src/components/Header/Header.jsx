@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect, useContext} from "react";
+import { useState, useEffect} from "react";
 import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll';
-import ThemeContext from "../../Context/ThemeContext";
+import useTheme from "../../Context/ThemeContext";
 import Burger from "./Burger/Burger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 
-    const { toggleTheme, theme } = useContext(ThemeContext);
+    const { toggleTheme, theme } = useTheme();
 
     const handleThemeChange = () => {
         toggleTheme();
@@ -71,7 +73,7 @@ const HandleOpen = () => {
                                 
                                     }}
                                 >
-                                    Accueil
+                                    Home
                                 </NavLink>
                             </li>
                             <div className={`header-barre `}/>
@@ -97,7 +99,7 @@ const HandleOpen = () => {
                                     className={`header-link  `}
                                     href="#home_projets"
                                 >
-                                    Projets
+                                    Projects
                                 </ScrollLink>
                             </li>
                             <div className={`header-barre `}/>
@@ -110,7 +112,7 @@ const HandleOpen = () => {
                                     className={`header-link  `}
                                     href="#home_experiences"
                                 >
-                                    Expériences
+                                    Experiences
                                 </ScrollLink>
                             </li>
                         </ul>
@@ -122,16 +124,15 @@ const HandleOpen = () => {
                                 className={`button header-button `}
                                 href="#contact-lien"
                             >
-                                Me contacter
+                                Contact me
                             </ScrollLink>
                             <span 
                                 onClick={handleThemeChange}>
-                                    <i
-                                        className={`
-                                        fa-solid 
-                                            ${theme === "dark" ? "fa-sun": "fa-moon"}
-                                        `}
-                                    />
+                                    {theme === "dark"? 
+                                        <FontAwesomeIcon icon={faSun} className="fa-sun fa-solid" />
+                                    :
+                                        <FontAwesomeIcon icon={faMoon} className="fa-moon fa-solid" />
+                                    }
                                 </span>
                         </div>
                 </div>

@@ -20,7 +20,12 @@ const Avis = ({theme, job, nom, prenom, commentaire, photo, entreprise, bgColor}
                 </p>
                 <span className={`contact_avis_bot-signature `}>
                     <h5>- {prenom} {nom}</h5>
-                    <p>{`${job} at ${entreprise}`}</p>
+                    <p>
+                        {/* {` */}
+                            {job}
+                      {/* at ${entreprise} */}
+                        {/* `} */}
+                     </p>
                 </span>
             </div>
         </article>

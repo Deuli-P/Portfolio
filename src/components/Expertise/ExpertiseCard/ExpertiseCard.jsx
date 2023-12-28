@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useContext} from "react";
-import ThemeContext from '../../../Context/ThemeContext';
 // Card de presentation de mes compétences.
 // Icon , titre , sous titre, paragraphe et decoration ::before/ ::after.
 // Mobile = collapse? 
@@ -9,7 +8,7 @@ import ThemeContext from '../../../Context/ThemeContext';
 const ExpertiseCard = ({icons,title,soustitle,paragraph,id,alt}) => {
 
 
-    const { theme } = useContext(ThemeContext);
+
 
 
 

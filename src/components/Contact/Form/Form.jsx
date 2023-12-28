@@ -50,7 +50,7 @@ const Form = ({theme}) => {
                     id="nom" 
                     autoComplete='on'
                     {...register("name", { required: true })}
-                    placeholder="Votre nom" 
+                    placeholder="Your name" 
                     className={`contact_form-input form_input-height`}
                 />
             </label>
@@ -63,7 +63,7 @@ const Form = ({theme}) => {
                     type="email" 
                     name="email" 
                     id="email" 
-                    placeholder="Votre email"
+                    placeholder="Your email"
                     {...register("email", { required: true })}
                     required
                     className={`contact_form-input form_input-height`}
@@ -77,7 +77,7 @@ const Form = ({theme}) => {
                     type="text" 
                     name="entreprise" 
                     id="entreprise" 
-                    placeholder="Votre entreprise" 
+                    placeholder="Your entreprise" 
                     {...register("entreprise",)}
                     className={`contact_form-input form_input-height`}
                 />
@@ -89,7 +89,7 @@ const Form = ({theme}) => {
                 <textarea 
                     name="message" 
                     id="message" 
-                    placeholder="Votre message"
+                    placeholder="Your message"
                     {...register("message", { required: true })}
                     className={`contact_form-input `}
                 />
