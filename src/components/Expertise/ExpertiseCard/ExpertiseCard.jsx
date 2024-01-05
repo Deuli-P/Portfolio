@@ -1,16 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useContext} from "react";
-// Card de presentation de mes compétences.
-// Icon , titre , sous titre, paragraphe et decoration ::before/ ::after.
-// Mobile = collapse? 
+ 
 
 const ExpertiseCard = ({icons,title,soustitle,paragraph,id,alt}) => {
-
-
-
-
-
 
     return (
         <article className={`expertise_card-article expertise-card`} id={id}>

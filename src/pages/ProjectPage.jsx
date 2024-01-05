@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import  useTheme  from "../Context/ThemeContext";
 import data from "../data/expertise.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectPage = () => {
 
@@ -14,16 +15,15 @@ const ProjectPage = () => {
     const navigate = useNavigate();
 
     const [isLoading, setIsLoading] = useState(true);
+    const [buttonHover, setButtonHover] = useState(false);
 
     const projetData = workData.find((item) => item.id === id);
 
     const handleHovered = () => {
-        const icon = document.querySelector(".fa-arrow-right");
-        icon.classList.add("hovered");
+        setButtonHover(true);
     }
     const handleLeave = () => {
-        const icon = document.querySelector(".fa-arrow-right");
-        icon.classList.remove("hovered");
+        setButtonHover(false);
     }
 
 
@@ -95,15 +95,18 @@ const ProjectPage = () => {
                                 </div>
                             ))}
                         </div>
+                            {/*  Quand hover fleche s'affiche et avance vers le droite */}
                         <div className="projetPage_description_designer-fiche projetPage_description_designer-openProjet">
-                            <a 
+                            <a
                                 href={github} 
                                 className="projetPage_description_designer_openProjet-a"
                                 onMouseEnter={handleHovered}
                                 onMouseLeave={handleLeave}
+                                target="_blank" 
+                                rel="noopener noreferrer"
                             >
                                 Ouvrir projet
-                                <i className={`fa-solid fa-arrow-right`}/>
+                                 <FontAwesomeIcon icon={faArrowRight} className={`${buttonHover? "show" : "hide"}`}/>
                             </a>
                         </div>
                     </div>

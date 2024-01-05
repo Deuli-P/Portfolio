@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { useState, useEffect} from "react";
+import { NavLink, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll';
 import useTheme from "../../Context/ThemeContext";
 import Burger from "./Burger/Burger";
@@ -8,11 +8,14 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 
+
     const { toggleTheme, theme } = useTheme();
 
     const handleThemeChange = () => {
         toggleTheme();
     };
+
+
 
 const[isOpen, setIsOpen] = useState(true);
 
@@ -39,14 +42,11 @@ const HandleOpen = () => {
 }
 
 
-
-
-      
     return (
             <nav className={`header-wrapper ${theme === "dark"? "light": "dark"}`} id="home_header">
                 <div className="header-left">
                     <div className={`header-name`}> 
-                        <NavLink 
+                        <Link 
                             to="/" 
                             onClick={()=> {
                                 scroll.scrollToTop();
@@ -54,7 +54,7 @@ const HandleOpen = () => {
                             }}
                         >
                             Pierre
-                        </NavLink>
+                        </Link>
                     </div>
                         {windowWidth < 800? 
                         (
@@ -67,7 +67,7 @@ const HandleOpen = () => {
                             <li className={`header-liste-li`} >
                                 <NavLink
                                     to="/"
-                                    className={`header-link accueil ${window.location.pathname === "/" ? "active" : ""}`}
+                                    className={`header-link accueil `}
                                     onClick={()=> {
                                         scroll.scrollToTop();
                                 
@@ -78,54 +78,39 @@ const HandleOpen = () => {
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                                <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_expertise"
-                                    className={`header-link`}
-                                    href="#home_expertise"
-                                >
-                                    Expertise
-                                </ScrollLink>
+                                <Link
+                                        to="/#home_expertise"
+                                        className={`header-link `}
+                                    >
+                                    Expertises
+                                </Link>
                             </li>
                             <div className={`header-barre `}/>
-                            <li className={`header-liste-li`} >
-                                <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_projets"
+                            <li className={`header-liste-li `} >
+                                <Link
+                                    to="/#home_projets"
                                     className={`header-link  `}
-                                    href="#home_projets"
                                 >
                                     Projects
-                                </ScrollLink>
+                                </Link>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                            <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_experiences"
-                                    className={`header-link  `}
-                                    href="#home_experiences"
-                                >
-                                    Experiences
-                                </ScrollLink>
+                                <Link
+                                        to="/#home_experiences"
+                                        className={`header-link `}
+                                    >
+                                        Experiences
+                                    </Link>
                             </li>
                         </ul>
                         <div className="header-buttons-container">
-                            <ScrollLink
-                                spy={true}
-                                smooth={true}
-                                to="contact-lien"
+                            <Link
+                                to="/#contact-lien"
                                 className={`button header-button `}
-                                href="#contact-lien"
                             >
                                 Contact me
-                            </ScrollLink>
+                            </Link>
                             <span 
                                 onClick={handleThemeChange}>
                                     {theme === "dark"? 

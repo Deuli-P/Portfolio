@@ -478,7 +478,7 @@ main{
             margin: 0px;
             .projetPage_description_designer_openProjet-a{
                 text-align: center;
-                padding: 5px 10px;
+                padding: 5px 12px;
                 border-radius: 20px;
                 transform: scale(1);
                 @include fluid-type(320px, 1440px, 20px, 30px);
@@ -495,6 +495,22 @@ main{
                         transition: all  0.3s ease-out;
                         transform: translateX(15px);
                     }
+                }
+            }
+            .fa-arrow-right{
+                transform: translateX(0px);
+                &.show{
+                    transform: translateX(10px);
+                    transition: all  0.5s ease-out ;
+                    opacity: 1;
+                    width: 5%;
+                    padding-right: 5px;
+                }
+                &.hide{
+                    transform: translateX(-10px);
+                    transition: all 0.5s ease-in;
+                    opacity: -0.4;
+                    width: 0%;
                 }
             }
         }

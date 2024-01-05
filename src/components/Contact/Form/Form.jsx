@@ -4,6 +4,7 @@
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
 import "./Form.scss";
+import { useState } from "react";
 
 
 const Form = ({theme}) => {
@@ -13,7 +14,18 @@ const Form = ({theme}) => {
     const reset = () => {
         document.querySelectorAll('input').forEach( input => input.value = "")
         document.querySelectorAll('textarea').forEach( input => input.value = "")
+        setTimeout(() => {
+            setShow(false)
+            setTimeout(() => {
+                setSend(false)
+            },300)
+        }, 3000);
     }
+
+    const message = 'your message is send.'
+
+    const [ send, setSend ] = useState(false);
+    const [ show, setShow ] = useState(false);
     
     const onSubmit = (data) => {
         const date = new Date();
@@ -31,6 +43,8 @@ const Form = ({theme}) => {
                 console.log("[EMAILJS] Fail",error.text);
                 }
             );
+         setSend(true);
+         setShow(true);
         }catch(errors){
             console.log("[FORM] Form non envoyé",errors)
         }
@@ -82,6 +96,7 @@ const Form = ({theme}) => {
                     className={`contact_form-input form_input-height`}
                 />
             </label>
+            {send && <p className={`contact_form-send ${show? "active": "hide"}`}>{message}</p>}
             <label 
                 className={`contact_form-label  `}
             >

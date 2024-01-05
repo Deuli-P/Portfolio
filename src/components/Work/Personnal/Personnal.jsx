@@ -53,7 +53,11 @@ const Personnal = () => {
                     <strong>Main project</strong>
                     <h4>PictoChat</h4>
                     </div>
-                        <a href="https://github.com/Deuli-P/PictoChat">
+                        <a 
+                            href="https://github.com/Deuli-P/PictoChat"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
                             Watch Project
                         </a>
                 </div>
