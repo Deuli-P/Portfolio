@@ -32,4 +32,4 @@ Build a React website  to showcase the following:
 
 You can see the result here: 
 
-<a href="https://.pierre-antoniutti.fr" target="_blank" rel="noopener noreferrer"> Website </a>
+<a href="https://pierre-antoniutti.fr" target="_blank" rel="noopener noreferrer"> Website </a>
