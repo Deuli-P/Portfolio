@@ -1,10 +1,9 @@
-import { useContext } from 'react';
 import { Link } from "react-router-dom";
-import ThemeContext from "../../Context/ThemeContext";
+import useTheme from "../../Context/ThemeContext";
 
 const Footer = () => {
     
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useTheme();
 
     return (
         <footer className={theme === "dark"? "light": "dark"}>

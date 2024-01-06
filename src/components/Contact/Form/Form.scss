@@ -1,6 +1,36 @@
 @import "../../../SASS/_settings";
 /////////////////////////// FORMULAIRE ///////////////////////
 
+@keyframes messageSpawn {
+    0%{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    85%{
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+@keyframes messageDespawn {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    15%{
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    
+}
 
 #contact_lien-form{
     display: flex;
@@ -17,6 +47,7 @@
         justify-content: center;
         align-items: center;
         width: 80%;
+        position: relative;
         .contact_form-label{
             @include fluid-type(320px, 1440px, 16px, 22px);
             padding: 10px 0px;
@@ -45,8 +76,26 @@
             border-style: solid;
             border-width: 1px;
         }
+        .contact_form-send{
+            position: absolute;
+            width: 250px;
+            height: auto;
+            bottom: 50%;
+            padding: 8px 16px;
+            border-radius: 5px;
+            border-width: 1px;
+            border-style: solid;
+            text-align: center;
+            &.hide{
+                animation: messageDespawn 0.3s forwards ease-out;
+            }
+            &.active{
+                animation: messageSpawn 0.3s forwards ease-out;
+            }
+        }
     }
 }
+
 
 
 /////////////////////////// DARK / LIGHT ///////////////////////
@@ -73,6 +122,11 @@
                         border-color: $COLOR-LIGHT;
                     }
                 }
+                .contact_form-send{
+                    background-color: $COLOR-DARK-DARK;
+                    color: $COLOR-LIGHT;
+                    border-color: $COLOR-DARK;
+                }
             }
         }
     }
@@ -96,6 +150,11 @@
                         color: $COLOR-LIGHT;
                         border-color: $COLOR-DARK;
                     }
+                }
+                .contact_form-send{
+                    background-color: $COLOR-LIGHT-LIGHT;
+                    color: $COLOR-DARK;
+                    border-color: $COLOR-LIGHT-LIGHT;
                 }
             }
         }

@@ -9,6 +9,7 @@ import { ThemeProvider } from './Context/ThemeContext';
 import Footer from './components/Footer/Footer';
 import jsonData from './data/expertise.json';
 import ErrorPage from './pages/ErrorPage';
+import { useRef } from 'react';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <Header/>
+        <Header />
           <Routes>
             <Route path="/" element={<HomePage data={jsonData}/>} />
             <Route path="/project/:id" element={<ProjectPage />} />

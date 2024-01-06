@@ -1,22 +1,40 @@
+import { useEffect, useState } from 'react';
+import useTheme from "../../../Context/ThemeContext";
+
 
 const Personnal = () => {
+
+    const { theme } = useTheme();
+
+
+    const [ isDark, setIsDark] = useState(false)
+
+    useEffect(()=> {
+        if(theme === "dark"){
+            setIsDark(true)
+        }
+        else{
+            setIsDark(false)
+        }
+    }, [theme])
+
     return (
         <div id='works_personnal_container'>
         <div id='works_personnal_text_container'>
             <h3 id='works_personnal_text_title' >
-                Mes 
+                My 
                 {window.innerWidth >= 1024 ? <br/> : " "}
-                Projets
+                Projects
             </h3>
             <p id='works_personnal_text_p' >
-                Lorsque {`j'`}étais en train de me former en développement web front-end {`j'`}ai voulu {`m'`}essayer au développement mobile à travers une petite application de dialogue à partir {`d'`}images.
+            When I was training in front-end web development, I wanted to try my hand at mobile development through a small image dialog application.
             </p>
         </div>
         <div className='works_personnal_content-container'>
             <div className="works_personnal-content">
-                <video loop muted autoPlay className="video3D">
-                        <source src='/videos/gepalemo.mp4' type="video/mp4"/>
-                </video>
+                        <video loop muted autoPlay key={isDark? 'dark': 'light'} className="video3D" preload='false' controlsList='nodownload'>
+                        <source src={isDark ? "/videos/PictoChat-Mockup-Light.mp4" : "/videos/PictoChat-Mockup-Dark.mp4"} type="video/mp4"/>
+                        </video>
                 <div className={`work_personnal_content_text-container `}>
                     <div className="work_personnal_content-text">
                     <div className={`work_personnal_content-fleche `}>
@@ -32,13 +50,16 @@ const Personnal = () => {
                             />
                         </svg>
                     </div>
-                    <strong>Projet Principal</strong>
-                    <h4>Gépalémo</h4>
+                    <strong>Main project</strong>
+                    <h4>PictoChat</h4>
                     </div>
-                    <button 
-                        onClick={() => {console.log("click sur Mobile");}}
-                    >
-                        Voir Projet</button>
+                        <a 
+                            href="https://github.com/Deuli-P/PictoChat"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            Watch Project
+                        </a>
                 </div>
             </div>
         </div>

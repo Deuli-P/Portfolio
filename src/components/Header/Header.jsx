@@ -1,16 +1,21 @@
-import { NavLink } from "react-router-dom";
-import { useState, useEffect, useContext} from "react";
+import { NavLink, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll';
-import ThemeContext from "../../Context/ThemeContext";
+import useTheme from "../../Context/ThemeContext";
 import Burger from "./Burger/Burger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 
-    const { toggleTheme, theme } = useContext(ThemeContext);
+
+    const { toggleTheme, theme } = useTheme();
 
     const handleThemeChange = () => {
         toggleTheme();
     };
+
+
 
 const[isOpen, setIsOpen] = useState(true);
 
@@ -37,14 +42,11 @@ const HandleOpen = () => {
 }
 
 
-
-
-      
     return (
             <nav className={`header-wrapper ${theme === "dark"? "light": "dark"}`} id="home_header">
                 <div className="header-left">
                     <div className={`header-name`}> 
-                        <NavLink 
+                        <Link 
                             to="/" 
                             onClick={()=> {
                                 scroll.scrollToTop();
@@ -52,7 +54,7 @@ const HandleOpen = () => {
                             }}
                         >
                             Pierre
-                        </NavLink>
+                        </Link>
                     </div>
                         {windowWidth < 800? 
                         (
@@ -65,73 +67,57 @@ const HandleOpen = () => {
                             <li className={`header-liste-li`} >
                                 <NavLink
                                     to="/"
-                                    className={`header-link accueil ${window.location.pathname === "/" ? "active" : ""}`}
+                                    className={`header-link accueil `}
                                     onClick={()=> {
                                         scroll.scrollToTop();
                                 
                                     }}
                                 >
-                                    Accueil
+                                    Home
                                 </NavLink>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                                <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_expertise"
-                                    className={`header-link`}
-                                    href="#home_expertise"
+                                <Link
+                                        to="/#home_expertise"
+                                        className={`header-link `}
+                                    >
+                                    Expertises
+                                </Link>
+                            </li>
+                            <div className={`header-barre `}/>
+                            <li className={`header-liste-li `} >
+                                <Link
+                                    to="/#home_projets"
+                                    className={`header-link  `}
                                 >
-                                    Expertise
-                                </ScrollLink>
+                                    Projects
+                                </Link>
                             </li>
                             <div className={`header-barre `}/>
                             <li className={`header-liste-li`} >
-                                <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_projets"
-                                    className={`header-link  `}
-                                    href="#home_projets"
-                                >
-                                    Projets
-                                </ScrollLink>
-                            </li>
-                            <div className={`header-barre `}/>
-                            <li className={`header-liste-li`} >
-                            <ScrollLink
-                                    activeClass="active"
-                                    spy={true} 
-                                    smooth={true} 
-                                    to="home_experiences"
-                                    className={`header-link  `}
-                                    href="#home_experiences"
-                                >
-                                    Expériences
-                                </ScrollLink>
+                                <Link
+                                        to="/#home_experiences"
+                                        className={`header-link `}
+                                    >
+                                        Experiences
+                                    </Link>
                             </li>
                         </ul>
                         <div className="header-buttons-container">
-                            <ScrollLink
-                                spy={true}
-                                smooth={true}
-                                to="contact-lien"
+                            <Link
+                                to="/#contact-lien"
                                 className={`button header-button `}
-                                href="#contact-lien"
                             >
-                                Me contacter
-                            </ScrollLink>
+                                Contact me
+                            </Link>
                             <span 
                                 onClick={handleThemeChange}>
-                                    <i
-                                        className={`
-                                        fa-solid 
-                                            ${theme === "dark" ? "fa-sun": "fa-moon"}
-                                        `}
-                                    />
+                                    {theme === "dark"? 
+                                        <FontAwesomeIcon icon={faSun} className="fa-sun fa-solid" />
+                                    :
+                                        <FontAwesomeIcon icon={faMoon} className="fa-moon fa-solid" />
+                                    }
                                 </span>
                         </div>
                 </div>

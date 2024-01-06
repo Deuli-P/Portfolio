@@ -1,10 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useContext } from 'react';
-import ThemeContext from '../Context/ThemeContext';
+import useTheme from '../Context/ThemeContext';
 
 const ErrorPage = () => {
 
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useTheme;
 
     return (
         <main id='errorPage_main' className={theme === "dark" ? "light" : "dark"}>

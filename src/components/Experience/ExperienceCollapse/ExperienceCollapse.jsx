@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareArrowUpRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+
 //eslint-disable-next-line
 const ExperienceCollapse = ({theme,name,job,url,description,startDate,endDate,location,onToggle,logo,id,technologies,isOpen}) => {
 
@@ -40,10 +43,11 @@ const ExperienceCollapse = ({theme,name,job,url,description,startDate,endDate,lo
                     <div className={`experience_collapse_bot_content-container `}>
                         <div className={`experience_collapse_bot-url-location `}>
                             <div className={`experience_collapse_bot-location `}>
-                                <i className={`fa-solid fa-location-dot `}></i>
+                                <FontAwesomeIcon icon={faLocationDot} className="fa-solid"/>
                                 <span>{location}</span>
                             </div>
                             <div className={`experience_collapse_bot-url`}>
+                                <FontAwesomeIcon icon={faSquareArrowUpRight} className="fa-solid"/>
                                 <i className={`fa-solid fa-square-arrow-up-right`}/>
                                 <a
                                     href={url}

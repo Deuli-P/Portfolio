@@ -4,6 +4,7 @@
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form"
 import "./Form.scss";
+import { useState } from "react";
 
 
 const Form = ({theme}) => {
@@ -13,7 +14,18 @@ const Form = ({theme}) => {
     const reset = () => {
         document.querySelectorAll('input').forEach( input => input.value = "")
         document.querySelectorAll('textarea').forEach( input => input.value = "")
+        setTimeout(() => {
+            setShow(false)
+            setTimeout(() => {
+                setSend(false)
+            },300)
+        }, 3000);
     }
+
+    const message = 'your message is send.'
+
+    const [ send, setSend ] = useState(false);
+    const [ show, setShow ] = useState(false);
     
     const onSubmit = (data) => {
         const date = new Date();
@@ -31,6 +43,8 @@ const Form = ({theme}) => {
                 console.log("[EMAILJS] Fail",error.text);
                 }
             );
+         setSend(true);
+         setShow(true);
         }catch(errors){
             console.log("[FORM] Form non envoyé",errors)
         }
@@ -50,7 +64,7 @@ const Form = ({theme}) => {
                     id="nom" 
                     autoComplete='on'
                     {...register("name", { required: true })}
-                    placeholder="Votre nom" 
+                    placeholder="Your name" 
                     className={`contact_form-input form_input-height`}
                 />
             </label>
@@ -63,7 +77,7 @@ const Form = ({theme}) => {
                     type="email" 
                     name="email" 
                     id="email" 
-                    placeholder="Votre email"
+                    placeholder="Your email"
                     {...register("email", { required: true })}
                     required
                     className={`contact_form-input form_input-height`}
@@ -77,11 +91,12 @@ const Form = ({theme}) => {
                     type="text" 
                     name="entreprise" 
                     id="entreprise" 
-                    placeholder="Votre entreprise" 
+                    placeholder="Your entreprise" 
                     {...register("entreprise",)}
                     className={`contact_form-input form_input-height`}
                 />
             </label>
+            {send && <p className={`contact_form-send ${show? "active": "hide"}`}>{message}</p>}
             <label 
                 className={`contact_form-label  `}
             >
@@ -89,7 +104,7 @@ const Form = ({theme}) => {
                 <textarea 
                     name="message" 
                     id="message" 
-                    placeholder="Votre message"
+                    placeholder="Your message"
                     {...register("message", { required: true })}
                     className={`contact_form-input `}
                 />
