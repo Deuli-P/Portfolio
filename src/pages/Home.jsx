@@ -120,8 +120,6 @@ const HomePage = ({data}) => {
                                     to={`/project/${item.id}`}
                                     className="work_projets-link"
                                     key={`projet_${item.id}`} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
                                 >
                                     <WorkCard
                                         name={item.name}
