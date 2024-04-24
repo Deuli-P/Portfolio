@@ -13,6 +13,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
+      colors:{
+        background: "rgb(249, 246, 244)",
+        accent:"#e86712",
+        primary: "#08172E",
+        secondary: "#e5e7eb",
+        
+      }
     },
   },
   plugins: [],
