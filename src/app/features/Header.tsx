@@ -7,7 +7,7 @@ import { links } from "./../../lib/data";
 import { useActiveSectionContext } from "./../../app/context/active-section-context";
 import Burger from "@/components/header/Burger";
 import type { SectionName } from "./../../lib/types";
-import CTA from "@/components/Buttons/CTA/CTA";
+import CTA from "@/components/CTA";
 
 const NavBar = () => {
 

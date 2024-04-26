@@ -193,4 +193,7 @@ html {
     }
   }
   
+  .article-height{
+    height: clamp(300px, 150rem, 452px);
+  }
 }

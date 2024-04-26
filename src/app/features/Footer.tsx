@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "../context/active-section-context";
 import emailjs from '@emailjs/browser';
 import { useForm } from "react-hook-form";
-import CTA from "@/components/Buttons/CTA/CTA";
+import CTA from "@/components/CTA";
 import { CircleLoader } from "@/components/Loader";
 import { motion } from 'framer-motion';
 // Formulaire de  contact 

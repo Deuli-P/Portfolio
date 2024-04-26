@@ -11,6 +11,7 @@ import { useActiveSectionContext } from "./context/active-section-context";
 import type { SectionName } from "./../lib/types";
 import { useSectionInView } from "@/lib/hooks";
 import Expériences from "./features/Experiences";
+import Project from "./features/Project";
 type SectionType ={
   children: string | JSX.Element | JSX.Element[]
   name: SectionName;
@@ -26,9 +27,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between md:px-32 px-8 overflow-hidden" id='home'>
         <Intro/>
         <Expertises />
-        <div className="h-screen bg-orange-500">
-          <h1>Projects</h1>
-        </div>
+        <Project />
         <Expériences />
     </main>
   );

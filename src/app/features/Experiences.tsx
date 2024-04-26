@@ -141,38 +141,16 @@ const Article: React.FC<ArticleProps> = ({ entreprise }) => {
                 animate={ isOpen ? "open" : "closed" }
                 variants={variant}
                 transition={{ duration: 0.4, type: "tween" }}
-                className={`bg-[#241d41] ${isOpen ? null: "hidden" } px-6 py-4 rounded-md flex flex-row-reverse md:flex-col md:gap-4 justify-between items-start overflow-hidden`}
+                className={`bg-[#241d41] ${isOpen ? null: "hidden" } px-6 py-4 rounded-md flex flex-col md:flex-col md:gap-4 justify-between items-start overflow-hidden`}
             >
-                <div className={` border-accent border-2 size-14 min-w-14 min-h-14 md:size-24 overflow-hidden`}>
-                    { logo? 
-                        (
-                        <Image 
-                            className=""
-                            alt={`Logo ${name}`}
-                            src={logo}
-                            width={128}
-                            height={128}
-                            quality={65}
-                            loading="lazy"
-                            objectFit="cover"
-                            />
-                        )
-                        :
-                        (
-                            <div>
-                                <span>Ici un logo</span>
-                            </div>
-                        )
-                    }
-                </div>
-                <div className={`experience_collapse_bot_content-container maw-w-2/3 `}>
-                    <div className={` flex flex-col gap-2 items-start min-h-14 `}>
-                        <div className={`flex  gap-2 -translate-x-[3px] whitespace-nowrap text-ellipsis`}>
+                <div className="flex flex-row w-full justify-between mb-2 ">
+                    <div className={` flex flex-col gap-2 items-start justify-between py-2`}>
+                        <div className={`flex  gap-2 -translate-x-[3px] whitespace-nowrap text-ellipsis md:text-lg`}>
                             <IoLocation  className="size-6 text-[#740cdc]"/>
                             <span>{localisation ? localisation : " 124 rue des Champs, Paris 75008"}</span>
                         </div>
                         <div className={`flex gap-[7px] `}>
-                            <FaExternalLinkAlt className="size-4 text-[#740cdc] whitespace-nowrap text-ellipsis"/>
+                            <FaExternalLinkAlt className="size-4 text-[#740cdc] whitespace-nowrap text-ellipsis md:text-lg"/>
                             <i className={`fa-solid fa-square-arrow-up-right`}/>
                             <a
                                 href={website}
@@ -184,6 +162,30 @@ const Article: React.FC<ArticleProps> = ({ entreprise }) => {
                             </a>
                         </div>
                     </div>
+                    <div className={` border-accent border-2 size-14 min-w-14 min-h-14 md:size-24 overflow-hidden`}>
+                        { logo? 
+                            (
+                            <Image 
+                                className=""
+                                alt={`Logo ${name}`}
+                                src={logo}
+                                width={128}
+                                height={128}
+                                quality={65}
+                                loading="lazy"
+                                objectFit="cover"
+                                />
+                            )
+                            :
+                            (
+                                <div>
+                                    <span>Ici un logo</span>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
+                <div className={`experience_collapse_bot_content-container maw-w-2/3 md:text-lg`}>
                     <div >
                         <p >{description ? description : "Description des missions effectués dans l'entreprise tout au long du contrat "}</p>
                         <div className={`w-full flex justify-start flex-wrap pb-4 mt-2`}>

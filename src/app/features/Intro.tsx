@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { FaLinkedin ,FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 import { IoMdHand } from "react-icons/io";
-import CTA from '@/components/Buttons/CTA/CTA';
+import CTA from '@/components/CTA';
 
 // image
 // Presentation
