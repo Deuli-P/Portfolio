@@ -44,6 +44,33 @@ app.get("/v01/project/:id", async(req, res) => {
     }
 })
 
+    //Recup dernier projet
+    // Not working
+
+app.get("/v01/project/last", async(req, res) => {
+    try{
+        const project = await Project.aggregate([
+            {
+                $sort: {createAt: -1}
+            },
+            {
+                $limit: 1
+            }
+        ]);
+
+        if(!project){
+            res.status(404).json({message:"Aucun projet trouvé"});
+        }
+        res.status(200).json(project);
+    }
+    catch(err){
+        console.log("Error",err);
+        res.status(500).json({message:"Erreur en récupérant le dernier projet"});
+    }
+})
+   // Not working
+
+
     // Recup tous les projets
 
 app.get("/v01/projects/all", async(req, res) => {

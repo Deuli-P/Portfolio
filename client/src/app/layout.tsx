@@ -1,10 +1,10 @@
+
+
 import type { Metadata } from "next";
-import { Inter, Koulen, Roboto } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
-import ActiveSectionContextProvider  from "./context/active-section-context";
-import NavBar from "./features/Header";
-import Contact from "./features/Footer";
-import { FilterProvider } from "./context/filter-projets-context";
+import Contact from "../components/footer/Footer";
+import Providers from "./../context/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,14 +37,11 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <body className={`${roboto.className} bg-background xl:max-w-full 2xl:w-full `}>
-        <ActiveSectionContextProvider>
-          <NavBar/>
-          <FilterProvider>
+      <body className={`${roboto.className} bg-background w-full flex flex-col items-center `}>
+        <Providers>
             {children}
-          </FilterProvider>
           <Contact />
-        </ActiveSectionContextProvider>
+        </Providers>
       </body>
     </html>
   );

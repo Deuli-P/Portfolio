@@ -39,34 +39,35 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    mockup:{
+        type:{
+            type: String,
+            required: true
+        },
+        url:{
+            type: String,
+            required: true
+        },
+        alt:{
+            type: String,
+            required: true
+        }
+    },
     pictures: [
         {
-           mockup:{
-                type:String,
+            images:{
+                type: Array,
                 required: true
-           } 
-        },
-        {
-            projet:[
-                {
-                    images:{
-                        type: Array,
-                        required: true
-                    },
-                    description:{
-                        type: String,
-                        required: true
-                    }
-                }
-            ]
+            },
+            alt:{
+                type: String,
+                required: true
+            }
         }
     ],
-    github: {
+    link: {
         type: String,
         required: true
-    },
-    url: {
-        type: String,
     },
     technologies: [
         {
@@ -91,6 +92,10 @@ const projectSchema = new mongoose.Schema({
             }
         }
     ],
+    createAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 

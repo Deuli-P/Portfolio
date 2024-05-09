@@ -14,13 +14,7 @@ const HeaderDesktop = () => {
               })}
             </ul>
         </div>
-        <div>
-            <CTA>
-                <a href='#contact' className='flex gap-2 items-center '>
-                    <span className='text-background'>Contact moi</span>
-                </a>
-            </CTA> 
-        </div>
+       
       </nav>
     )
   }

@@ -6,6 +6,7 @@ import Burger from "./Burger";
 import { links } from "../../../lib/data";
 import Element from './../Element';
 import CTA from "./../../CTA";
+import Image from "next/image";
 
 const HeaderMobile = () => {
 
@@ -16,25 +17,15 @@ const HeaderMobile = () => {
     }
   
       return ( 
-          <nav className={`w-full h-[60px] min-w-[320px] flex justify-end items-center relative md:hidden transition-all duration-300 `}>
-            <div className="absolute right-[80px]">
-              <CTA>
-                  <a href='#contact' className='flex gap-2 items-center '>
-                      <span className='text-background'>Contact moi</span>
-                  </a>
-              </CTA> 
-            </div>
-            <div className="flex flex-row gap-5 justify-beteween absolute items-center right-8 z-50">
-              <div className=" size-8 ">
-                <Burger HandleOpen={HandleOpen} isOpen={isOpen}/>
-              </div>
-            </div>
+          <nav className={`w-full  min-w-[320px] flex justify-between items-center relative md:hidden transition-all duration-300 `}>
             { isOpen ?
               (
                 <motion.div 
-                  className={`absolute top-[60px] right-1 border-[#e5e7eb] border-2 p-4 w-full bg-white rounded-lg`}
-                  initial={{ y: -100, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                className={`absolute z-30 top-[72px] right-1 border-[#e5e7eb] border-b-2 p-4 w-full bg-white rounded-b-lg`}
+                initial={{ y: -100, opacity: 0, scale: 0.2}}
+                animate={{ y: 0, opacity: 1, scale:1 }}
+                exit={{ y: -100, opacity: 0, scale: 0.2}}
+                transition={{ duration: 0.5, type: 'spring', bounce: 0.25 }}
                   >
                   <ul className="flex flex-col justify-between items-center w-full text-center">
                       {links.map((link, index) => {

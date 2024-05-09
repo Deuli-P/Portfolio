@@ -1,7 +1,15 @@
 import emailjs from '@emailjs/browser';
 
+type FormData = {
+        entreprise?: string;
+        email: string;
+        message: string;
+        name: string;
+        date: string;
+        time: string;
+}
+export default async function sendForm(data: FormData){
 
-export default async function sendForm(){
     const date = new Date();
     const time = date.getHours() + ":" + date.getMinutes();
     data.date = date.toLocaleDateString();
@@ -9,17 +17,10 @@ export default async function sendForm(){
 
 
     try{
-        emailjs
-        .send("service_wvheinq", "template_bv3q5z9", data, "v5gGgV-UHFvG-QHCE")
-        .then(
-            (result) => {
-            console.log("[EMAILJS] Succes",result.text);
-            },
-            (error) => {
-            console.log("[EMAILJS] Fail",error.text);
-            }
-        );
+        const response = emailjs.send("service_wvheinq", "template_bv3q5z9", data, "v5gGgV-UHFvG-QHCE")
+        return response;
     }catch(errors){
-        console.log("[FORM] Form non envoyé",errors)
+        console.log("[EMAILJS] Form non envoyé",errors)
+        throw errors;
     }
 }

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useActiveSectionContext } from "../../../app/context/active-section-context";
+import { useActiveSectionContext } from "../../../context/active-section-context";
 
 type BurgerType = {
     isOpen: boolean;
@@ -12,7 +12,7 @@ const Burger = ({isOpen, HandleOpen}: BurgerType) => {
 
     return (
         <button 
-            className={` bg-[#e5e7eb] relative top-[-0.5rem] rounded-full size-full flex flex-col justify-center shadow-lg items-center p-[1.5rem] z-50`}
+            className={` bg-[#e5e7eb] relative rounded-md size-full flex flex-col justify-center shadow-lg items-center p-[1.5rem] z-50`}
             onClick={()=>HandleOpen()}
         >
             {/*  .burger-menu-tabs => globals.css */}

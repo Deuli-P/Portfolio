@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  *{
+    box-sizing: border-box;
+    margin: 0;
+  }
   :root{
-    --background: rgb(249, 246, 244);
+    --background: #f9f6f4;
     --foreground: rgb(229, 231, 235);
     --primary: #08172E;
     --primary-foreground: ;
-    --secondary: #e86712;
+    --secondary: #FF6542;
     --secondary-foreground: #c55f1c;
     --accent: #3041da;
     --accent-foreground: #8199c8;
@@ -25,7 +29,8 @@ html {
   --line-color: #e5e7eb;
   display: flex;
   justify-content: center;
-  width:  100%;
+  max-width: 2440px;
+  
   background-color: var(--background);
 }
 

@@ -1,7 +1,7 @@
-'use client';
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { IoArrowForward } from "react-icons/io5";
+
 
 type CtaType = {
     children: React.ReactNode;
@@ -29,10 +29,11 @@ const CTA=({children}:CtaType)=> {
             initial="initial"
             variants={animationButton}
             custom={2}
-            className='bg-accent relative group py-4 px-6 overflow-hidden text-background shadow-lg cursor-pointer shaodw-neutral-50 rounded-full flex flex-row gap-5 items-center z-[1]'
+            whileHover={{ scale: 1.05 }}
+            className='bg-accent relative group py-4 px-6 overflow-hidden text-background shadow-lg shaodw-neutral-50 rounded-full flex flex-row gap-5 items-center z-[1]'
     >
         {/*  on peut pas faire avec le after l'animation */}
-        <span className='absolute top-0 left-0 w-full h-full rounded-md bg-foregroundAccent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out -z-10'/>
+        <span className='absolute top-0 left-0 w-full h-full rounded-md bg-[#3041da] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out -z-10'/>
             {children}
     </motion.div>
   )

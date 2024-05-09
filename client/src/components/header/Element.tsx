@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useActiveSectionContext } from "./../../app/context/active-section-context";
+import { useActiveSectionContext } from "../../context/active-section-context";
 import type { SectionName } from "./../../lib/types";
 
 
@@ -31,7 +31,7 @@ const Element = ({hash, name}: ElementProps) =>{
       else{
         setIsSelected(false)
       }
-    },[activeSection,name])
+    },[activeSection, name])
 
 
     return(
