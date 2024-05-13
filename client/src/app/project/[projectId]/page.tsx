@@ -1,119 +1,135 @@
 'use client'
-
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CTA from "@/components/CTA";
 import Image from "next/image";
-import Link from "next/link";
 import { CircleLoader } from "@/components/Loader";
 import getProject from "./ProjectData";
+import { useRouter } from 'next/navigation';
+import { BiArrowToLeft } from "react-icons/bi";
+import { ProjectType } from "@/lib/types";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 
-
-const Page = (params:string) => {
-
-    
-
-    const [ isLoading, setIsLoading ]= useState<boolean>(true)
-    const [ dataProject, setDataProject ] = useState([]);
-
-   
-    const dataGet = async() => {
-        const item = await getProject(id)
-        setDataProject(item)
-        setIsLoading(false)
+type paramsType = {
+    params: {
+        projectId: string
     }
 
-    useEffect(()=> {
-        console.log("[Project Page] id:",id);
-    },[id])
+}
 
-    useEffect(()=>{
-        console.log("[Project Page] dataProject:",dataProject);
-    },[dataProject])
 
-    useEffect(()=> {
-        if(isLoading){
-            dataGet()
-            if(dataProject){
-                setIsLoading(false)
-            }
-        }
-    },[isLoading, dataProject, dataGet])
+const Page = ({params}:paramsType ) => {
 
+    const  id = params.projectId;
+
+    const [ project, setProject ] = useState<ProjectType>()
+    const router = useRouter();
+
+    const handleBack = ()=> {
+        console.log("[PAGE] handleBack");
+        router.push('/')
+    }
+
+    useEffect(() => {
+        console.log("[PAGE] id:",id);
+        
+        const fetchProject = async () => {
+          if (id) {
+            const api = await getProject(id);
+            console.log("[PAGE] Api recup:",api);
+            
+            setProject(api);
+          }
+        };
+      
+        fetchProject();
+      }, [id]);
+
+      const renderTag = (tag: string,text:string) => (
+        <div 
+            className=" w-[210px]"
+        >
+            <div className="border-t-[2px] text-left pt-4 mr-4 mb-4" >
+                <span className=" font-extrabold ">{tag}</span>
+                <p className="pl-2">{text}</p>
+            </div>
+        </div>
+      )
+
+
+    const RenderReseau =(url, name)=>(
+            <div className="projetPage_media_RS">
+                <a  target={`_blank`}
+                    href={url}
+                    className="projetPage_media_RS-a"
+                >
+                        { 
+                            name === "instagram" ?
+                                <FaInstagram className={`projetPage_media_RS-i`} /> 
+                            : 
+                            name === "facebook" ?
+                                <FaFacebookF className={`projetPage_media_RS-i`} />
+                            :
+                            name === "linkedin" ?
+                                <FaLinkedinIn className={`projetPage_media_RS-i`} />
+                            :
+                                null
+                        }
+                </a>
+        </div>
+    );
+ 
     return(
         <>
-        {isLoading?
+            <nav className='w-full flex justify-between items-center p-4 md:p-6 md:fixed'>
+                <div 
+                    className='size-10 bg-secondary cursor-pointer shadow-md rounded-full flex items-center justify-center group  hover:bg-primary  transition-all duration-200'
+                    onClick={handleBack}
+                >
+                    <BiArrowToLeft className='size-6 text-primary group-hover:text-secondary transition-all duration-300 delay-50'/>
+                </div>
+                <CTA>
+                    <a href='#contact' className='flex gap-2 items-center '  >
+                        <span className='text-background'>Contact moi</span>
+                    </a>
+                </CTA> 
+            </nav>
+            { project ?
             (
-                <main id="main-projet" className=" w-screen h-screen flex justify-center items-center">
-                    <div className=' size-[250px] bg-primary flex justify-center items-center shadow-md rounded-md'>
-                        <CircleLoader />
-                    </div>
-                </main>
-            )
-            : !dataProject ?
-            (
-                <main id="main-projet-error" className=" w-screen h-screen flex justify-center items-center">
-                    <div className="text-4xl front-primary">
-                        <h2 className="font-bold">
-                            {`404, la page n'existe pas.`}
-                        </h2>
-                        <CTA>
-                            <Link href="/"> {`Retourner a l'accueil`}</Link>
-                        </CTA>
-                    </div>
-                </main>
-            )
-            :
-            (
-                <main id="main-projet" className="">
-                    <section className="">
-                        <div className="">
-                            <i className="fa-solid fa-arrow-left" onClick={()=>history.back()}/>
-                        </div>
-                        <div className="projetPage_title-title">
-                            <span>{`//`} { dataProject.support}</span>
-                            <h1>{ dataProject.name}</h1>
-                        </div>
+                <main id="main-projet" className=" bg-background text-primary w-full px-8 mb-12">
+                    <section className="flex flex-col justify-center items-star py-4 ">
+                        <span>{`//`} { project.support}</span>
+                        <h1 className="ml-2 font-black text-4xl text-foregroundAccent">{ project.name}</h1>
                     </section>
-                    <section className="projetPage_chemin">
+                    <section className="py-4 font-semibold text-lg">
                         <span 
-                            onClick={()=> router.back()}
+                            onClick={handleBack}
+                            className=" cursor-pointer hover:underline underline-offset-2"
                         >
-                            Home {'>'}
+                            Home 
                         </span>
+                            {' >'}
                         <span>Portfolio {'>'} </span>
-                        <span>{dataProject.name}</span>
+                        <span>{project.name}</span>
                     </section>
-                    <section className="projetPage_description-container">
-                        <div className="projetPage_description-text">
+                    <section className="flex flex-col gap-4 py-6">
+                        <div className="">
                             <p>
-                                <Suspense fallback={<div className=" bg-secondary rounded-sm w-full h-full "/>}>
-                                    {dataProject.description}
-                                </Suspense>
+                                {project.description}
                             </p>
                         </div>
-                        <div className="projetPage_description-designer">
-                            <div className="projetPage_description_designer_fiche-container">
-                                <Suspense fallback={<p>Loading tags...</p>}>
-                                    {/* {dataProject.tags.map((item, idx) => (  
-                                        <div 
-                                            className="projetPage_description_designer-fiche "
-                                            key={idx}
-                                        >
-                                            <div className="projetPage_description_designer_fiche-content">
-                                                <span>{item[0]}</span>
-                                                <p>{item.alt}</p>
-                                            </div>
-                                        </div>
-                                    ))} */}
-                                </Suspense>
+                        <div className=" flex flex-col gap-2 w-full">
+                            <div className="flex flex-row flex-wrap w-full">
+                                {renderTag("Client",project.tags.client)}
+                                {renderTag("Mission",project.tags.mission)}
+                                {renderTag("Stratégie",project.tags.strategie)}
+                                {project.tags.designer ?renderTag("Designer",project.tags.designer) : null }
                             </div>
-                                {/*  Quand hover fleche s'affiche et avance vers le droite */}
-                            <div className="projetPage_description_designer-fiche projetPage_description_designer-openProjet">
+                            <div className=" w-full flex justify-center">
                                 <CTA>
                                     <a
-                                        href={dataProject.link} 
-                                        className=""
+                                        href={project.link} 
+                                        className=" w-full max-w-[300px] text-center"
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         >
@@ -123,30 +139,66 @@ const Page = (params:string) => {
                             </div>
                         </div>
                     </section>
-                    <section className="">
-                        {/* {renderReseau}  */}
-                        {/* <div className="">
-                            <Suspense flassback={<div className=" bg-secondary h-full w-full rounded-sm "/>}>
-                                <Image src={pictures.presentation.image} alt={pictures.presentation.alt} width={200} height={200} />
-                            </Suspense>
-                        </div> */}
-                        {/* Pour chaque  */}
-                            {/* {pictures?.projet.map((item, idx) => (
-                                <div className="" key={`item_img`+idx}>
-                                    {item.map((image, idx) => (
-                                        <Image 
-                                            src={image.image} 
-                                            alt={image.alt}
-                                            key={`image_img`+idx}
-                                            fill
-                                        />
-                                    ))}
-                                </div>
-                            ))} */}
+                    <section className=" w-full flex flex-col gap-4 relative ">
+                        <div className="absolute top-4 left-4" >
+                            { project.reseau ? 
+                                (
+                                    project.reseau.map((item, idx) =>{
+                                        return (
+                                            <RenderReseau url={item.url} name={item.name} key={`reseau_${idx}`} />
+                                        )})
+                                )
+                                : 
+                                   null
+                            } 
+                        </div>
+                        <div className=" w-full h-full ">
+                            { project.mockup.type === "video" ?
+                            (
+                                <video loop muted autoPlay preload="false" controlsList="nodownload">
+                                    <source src={project.mockup.url} type="video/mp4" />
+                                </video>
+                            )
+                            :
+                                <Image src={project.mockup.url} alt={project.mockup.alt} width={1200} height={800} />
+                            }
+                        </div>
+                            {/* Pour chaque object dans pictures on recup "alt" puis pour chaque element dans "image" on creer une image
+                                    pictures:[
+                                        {
+                                            images:[
+                                                "string",
+                                                "string",
+                                                "string",
+                                            ];
+                                            alt: string;
+                                        }
+                                    ]
+                            */}
+                                {project.pictures.map((items) => (
+                                    <div className=" w-full h-full flex flex-col " key={`pack_img`+items.alt}>
+                                        {items.images.map((image: string, idx) => (
+                                            <Image 
+                                                src={image} 
+                                                alt={items.alt}
+                                                key={`image_img`+idx}
+                                                width={1200}
+                                                height={800}
+                                            />
+                                        ))}
+                                    </div>
+                                ))}
                     </section>
                 </main>
-                )
-            }
+            )
+        :
+        <main className="w-screen h-screen flex justify-center items-center">
+
+            <div className='size-20 rounded-full bg-primary flex items-center justify-center'>
+                <CircleLoader/>
+            </div>
+        </main>
+        }
         </>
     )
 }

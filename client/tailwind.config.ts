@@ -18,10 +18,11 @@ const config: Config = {
       },
       colors:{
         background: "rgb(249, 246, 244)",
-        accent:"#e86712",
+        accent:"#FF6542",
         primary: "#08172E",
         secondary: "#e5e7eb",
-        
+        foregroundAccent: "#88498F",
+  
       }
     },
   },

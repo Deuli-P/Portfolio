@@ -4,6 +4,7 @@ import { useSectionInView } from "@/lib/hooks";
 import Filter from "./Filter";
 import LastProjectCard from "./LastProject";
 import ListProjects from "./ListProjects";
+import { Suspense } from "react";
 
 const Project = () => {
 
@@ -27,7 +28,9 @@ const Project = () => {
             <div className="flex flex-col justify-start gap-4 w-full items-center">
                     <Filter />
                     <div className="flex flex-col gap-4 w-full items-center justify-start md:flex-row md:flex-wrap md:justify-center md:gap-4 my-8">
-                        <ListProjects />
+                        <Suspense fallback={<div>Loading liste...</div>}>
+                            <ListProjects />
+                        </Suspense>
                     </div>
             </div>
         </section>
@@ -38,15 +41,5 @@ export default Project;
 
 
 
-type LastProjectCardProps = {
-    title: string;
-    mockup?: string;
-    image?: string;
-    alt: string;
-    id: string;
-    github: string;
-    link: string;
-    contrast?: string;
-}
 
 

@@ -28,18 +28,14 @@ export type ProjectType = {
         {
             name: string;
             url: string;
-            icon: string;
         },
     ];
-    tags:[
-        {
-            mission: string,
-            strategie: string,
-            client?: string,
-            designer?: string,
-
-        }
-    ]
+    tags:{
+        mission: string,
+        strategie: string,
+        client: string,
+        designer?: string,
+    }
     createAt: string;
 }
 
@@ -52,3 +48,28 @@ export type ExpertiseProps = {
     text: string;
     icon: string;
 }
+
+
+export interface ExperienceProps {
+    entreprise: {
+        name: string;
+        job: string;
+        localisation: string;
+        website: string;
+        description: string;
+        logo: string;
+        startDate: number;
+        endDate?: number;
+        technologies: string[];
+        avis: {
+            surname: string;
+            name: string;
+            job: string;
+            picture: string;
+            comment: string;
+            BGColor: string;
+        };
+    };
+} 
+
+

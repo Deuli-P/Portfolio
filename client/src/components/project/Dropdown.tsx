@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useFilterContext } from "./../../context/filter-projets-context";
-import { IoIosArrowRoundUp, IoIosArrowRoundDown } from "react-icons/io";
+import { IoIosArrowRoundUp } from "react-icons/io";
 import OptionDropdown from "./OptionDropdown";
 
 type SelectProps = {

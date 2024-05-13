@@ -1,6 +1,3 @@
-import clsx from "clsx";
-import { useActiveSectionContext } from "../../../context/active-section-context";
-
 type BurgerType = {
     isOpen: boolean;
     HandleOpen: ()=>void;
@@ -8,7 +5,6 @@ type BurgerType = {
 
 const Burger = ({isOpen, HandleOpen}: BurgerType) => {
 
-    const { activeSection } = useActiveSectionContext();
 
     return (
         <button 

@@ -4,31 +4,11 @@ import { IoLocation } from "react-icons/io5";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ExperienceProps } from "@/lib/types";
 
 
-export interface ArticleProps {
-    entreprise: {
-        name: string;
-        job: string;
-        localisation: string;
-        website: string;
-        description: string;
-        logo: string;
-        startDate: number;
-        endDate?: number;
-        technologies: string[];
-        avis: {
-            surname: string;
-            name: string;
-            job: string;
-            picture: string;
-            comment: string;
-            BGColor: string;
-        };
-    };
-}
 
-const Article = ({ entreprise }:ArticleProps) => {
+const Article = ({ entreprise }:ExperienceProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
 

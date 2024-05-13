@@ -5,6 +5,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Contact from "../components/footer/Footer";
 import Providers from "./../context/Providers";
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,6 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Portfolio Developper Fullstack",
   description: "Portfolio de Pierre Antoniutti, Developpeur Fullstack, ReacJs, NodeJs, MongoDB, TailwindCSS.",
-  icons: {
-    icon: "/favicon-32x32.png",
-    shortcut: '/favicon-32x32.png',
-    apple: '/favicon-32x32.png',
-  }
 };
 
 
@@ -46,3 +42,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

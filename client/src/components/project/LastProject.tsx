@@ -9,7 +9,6 @@ import getProjects from "./getProjects";
 
 const LastProjectCard = (contrast: any) => {
 
-    const [ listAllProjects, setListAllProjects ] = useState([]);
     const [item, setItem ] = useState({
         name: "Titre",
         _id: undefined,
@@ -24,7 +23,6 @@ const LastProjectCard = (contrast: any) => {
     useEffect(() => {
     const fetchProject = async () => {
         const response = await getProjects();
-        console.log("[LAST] Item:",response);
         const listSort = response.sort((a:ProjectType, b:ProjectType) => Date.parse(a.createAt) - Date.parse(b.createAt));
         setItem(listSort[listSort.length - 1]);
     };
@@ -53,13 +51,13 @@ const LastProjectCard = (contrast: any) => {
                     )
                     : 
                     (
-                        <video>
-                            <source src={item.mockup.url} />
+                        <video loop muted autoPlay preload="false" controlsList="nodownload">
+                            <source src={item.mockup.url} type="video/mp4"/>
                         </video>
                     ) 
                 }
             </div>
-            <div className="w-auto absolute bottom-[-4%] gap-2 left-[-20px] flex flex-col justify-between md:left-[-70px]">
+            <div className="w-auto absolute bottom-[-4%] gap-2 lg:left-[-10rem] lg:w-[500px] left-[-20px] flex flex-col justify-between md:left-[-70px]">
                 <div className="pl-8">
                     <div className="w-[70px] flex justify-center items-center ">
                         <svg
@@ -78,14 +76,17 @@ const LastProjectCard = (contrast: any) => {
                             </path>
                         </svg>
                     </div>
-                    <span className={` text-primary text-xl  stroke-text`}>
-                        Dernier projet:
-                        <strong className={` text-[#551E5B] text-2xl drop-shadow-sm `}> {item.name}</strong>
-                    </span>
+                        <span className={` text-xl relative text-[#82735C]  `}>
+                            Dernier projet:
+                            <strong className={` text-2xl drop-shadow-sm ${contrast === "light" ? "fill-[#551E5B]" : contrast === "dark"? "fill-background" : "fill-[#551E5B]"} `} > {item.name}</strong>
+                        </span>
                 </div>
+                <div className=" w-full flex justify-center">
                     <CTA>
-                        <a href={item.link} className="text-background text-center  w-full text-xl">Voir projet</a>
+                        <a href={item.link} className="text-background text-center  w-full min-w-[200px] text-xl" id='link project'>Voir projet</a>
                     </CTA>
+                </div>
+                    
             </div>
         </div>
     )
