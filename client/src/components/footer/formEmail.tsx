@@ -86,138 +86,139 @@ const FormEmail = ()=> {
   
     return (
         <form 
-                className="flex flex-col gap-[4px] w-full md:w-1/2 items-center relative" 
-                onSubmit={handleSubmit(onSubmit)}
+            id='form-contact'
+            className="flex bg-[#08172E] xl:h-full py-12 flex-col gap-[4px] w-full md:w-1/2 items-center relative" 
+            onSubmit={handleSubmit(onSubmit)}
+        >
+            <label 
+                className={`label-form `}
+                >
+                Name
+                <input 
+                    type="text" 
+                    id="nom" 
+                    autoComplete='on'
+                    {...register("name", { required: true })}
+                    placeholder="Your name" 
+                    className={`input-form`}
+                />
+            </label>
+            <label 
+                className={`label-form `}
             >
-                <label 
-                    className={`label-form `}
-                    >
-                    Name
-                    <input 
-                        type="text" 
-                        id="nom" 
-                        autoComplete='on'
-                        {...register("name", { required: true })}
-                        placeholder="Your name" 
-                        className={`input-form`}
-                    />
-                </label>
-                <label 
-                    className={`label-form `}
-                >
-                    Email
-                    <input 
-                        autoComplete='on'
-                        type="email" 
-                        id="email" 
-                        placeholder="Your email"
-                        {...register("email", { required: true })}
-                        required
-                        className={`input-form`}
-                    />
-                </label>
-                <label 
-                    className={`label-form `}
-                >
-                    Entreprise
-                    <input 
-                        type="text" 
-                        id="entreprise" 
-                        placeholder="Your entreprise" 
-                        {...register("entreprise",)}
-                        className={`input-form`}
-                    />
-                </label>
-                <label 
-                    className={`label-form `}
-                >
-                    Message
-                    <textarea 
-                        id="message" 
-                        placeholder="Your message"
-                        {...register("message", { required: true })}
-                        className={`input-form mb-2 h-24 md:h-32`}
-                    />
-                </label>
-                {errors.root ?
-                    (<Message>
-                        {renderError}
-                    </Message>
+                Email
+                <input 
+                    autoComplete='on'
+                    type="email" 
+                    id="email" 
+                    placeholder="Your email"
+                    {...register("email", { required: true })}
+                    required
+                    className={`input-form`}
+                />
+            </label>
+            <label 
+                className={`label-form `}
+            >
+                Entreprise
+                <input 
+                    type="text" 
+                    id="entreprise" 
+                    placeholder="Your entreprise" 
+                    {...register("entreprise",)}
+                    className={`input-form`}
+                />
+            </label>
+            <label 
+                className={`label-form `}
+            >
+                Message
+                <textarea 
+                    id="message" 
+                    placeholder="Your message"
+                    {...register("message", { required: true })}
+                    className={`input-form mb-2 h-24 md:h-32`}
+                />
+            </label>
+            {errors.root ?
+                (<Message>
+                    {renderError}
+                </Message>
+                )
+                :
+                null
+            }
+            <div className=' h-12 md:h-16'>
+                { !isSubmitted ?
+                    (
+                        <motion.button 
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.5 }}
+                            transition={{ duration: 0.4, type: "spring" ,ease: "easeOut"}}
+                            className=' bg-accent w-full h-full rounded-full px-6 py-2 ' type='submit'
+                        >
+                            Envoyer
+                        </motion.button>
                     )
                     :
-                    null
-                }
-                <div className=' h-12 md:h-16'>
-                    { !isSubmitted ?
+                    ( isLoading  ?
                         (
-                            <motion.button 
+                            <motion.div 
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
-                                transition={{ duration: 0.4, type: "spring" ,ease: "easeOut"}}
-                                className=' bg-accent w-full h-full rounded-full px-6 py-2 ' type='submit'
+                                transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
+                                className='bg-blue-400 w-full h-full rounded-full px-6 py-2 flex justify-center items-center ' 
                             >
-                                Envoyer
-                            </motion.button>
+                                    <div className={`dot-spinner size-4 md:size-10 `}>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                    <div className={`dot-spinner__dot before:bg-background`}></div>
+                                </div>
+                            </motion.div>
                         )
                         :
-                        ( isLoading  ?
-                            (
-                                <motion.div 
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.5 }}
-                                    transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
-                                    className='bg-blue-400 w-full h-full rounded-full px-6 py-2 flex justify-center items-center ' 
-                                >
-                                     <div className={`dot-spinner size-4 md:size-10 `}>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
-                                        <div className={`dot-spinner__dot before:bg-background`}></div>
+                        (
+                            isSubmitSuccessful ?
+                                (
+                                    <div className=' h-full w-12 md:w-16 rounded-full bg-green-300 py-2 flex justify-center items-center '>
+                                        <motion.div 
+                                            initial={{ opacity: 0, scale: 0.5 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.5 }}
+                                            transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
+                                            className="text-background size-full flex justify-center items-center "
+                                        >
+                                            <FaCheckCircle />
+                                        </motion.div>
                                     </div>
-                                </motion.div>
-                            )
-                            :
-                            (
-                                isSubmitSuccessful ?
-                                    (
-                                        <div className=' h-full w-12 md:w-16 rounded-full bg-green-300 py-2 flex justify-center items-center '>
-                                            <motion.div 
-                                                initial={{ opacity: 0, scale: 0.5 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                exit={{ opacity: 0, scale: 0.5 }}
-                                                transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
-                                                className="text-background size-full flex justify-center items-center "
-                                            >
-                                                <FaCheckCircle />
-                                            </motion.div>
-                                        </div>
-                                    )
-                                    :
-                                    (
-                                        <div className=' h-full w-12 md:w-16 rounded-full bg-red-300 py-2 flex justify-center items-center '>
-                                            <motion.div 
-                                                initial={{ opacity: 0, scale: 0.5 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                exit={{ opacity: 0, scale: 0.5 }}
-                                                transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
-                                                className="text-background size-full flex justify-center items-center "
-                                            >
+                                )
+                                :
+                                (
+                                    <div className=' h-full w-12 md:w-16 rounded-full bg-red-300 py-2 flex justify-center items-center '>
+                                        <motion.div 
+                                            initial={{ opacity: 0, scale: 0.5 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, scale: 0.5 }}
+                                            transition={{ duration: 0.4, type: "tween",ease: "easeOut"}}
+                                            className="text-background size-full flex justify-center items-center "
+                                        >
 
-                                                <MdError />
-                                            </motion.div>
-                                        </div>
-                                    )
-                            )
+                                            <MdError />
+                                        </motion.div>
+                                    </div>
+                                )
                         )
-                }
-                </div>
-            </form>
+                    )
+            }
+            </div>
+        </form>
     )
 }
 

@@ -8,12 +8,12 @@ type CardProps = {
     alt: string;
     type: string;
     id: string;
-
 }
+
 
 const Card=({title,image,alt,type,id}:CardProps)=> {
     return (
-        <Link href={`/project/${id}`} rel="noopener noreferrer" target="_blank" className=" group w-full h-[365px] md:h-[452px] max-w-[350px] bg-red-400 article-height mb-4 overflow-hidden rounded-lg cursor-pointer shadow-2xl">
+        <Link href={`/project/${id}`} className=" group w-full h-[365px] md:h-[452px] max-w-[350px] bg-red-400 article-height mb-4 overflow-hidden rounded-lg cursor-pointer shadow-2xl">
             <article className=" flex flex-col items-center sm:justify-between h-full shadow-lg bg-primary">
                 <div className="w-full h-[360px] overflow-hidden ">
                     <div className="w-full h-full relative scale-100 group-hover:scale-110 transition-all duration-500 ease-in-out">

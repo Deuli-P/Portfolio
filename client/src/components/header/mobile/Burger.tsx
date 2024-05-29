@@ -8,7 +8,7 @@ const Burger = ({isOpen, HandleOpen}: BurgerType) => {
 
     return (
         <button 
-            className={` bg-[#e5e7eb] relative rounded-md size-full flex flex-col justify-center shadow-lg items-center p-[1.5rem] z-50`}
+            className={` bg-[#d7d2d2b8] relative rounded-md size-full flex flex-col justify-center shadow-lg items-center p-[1.5rem] z-50`}
             onClick={()=>HandleOpen()}
         >
             {/*  .burger-menu-tabs => globals.css */}

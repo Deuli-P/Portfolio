@@ -12,7 +12,7 @@ import { ExpertiseProps } from "../lib/types";
 const ExpertiseCard = ({ title, subtitle, icon, text }: ExpertiseProps) => {
   return (
     <article 
-      className="p-4 bg-primary text-secondary border-2 border-foregroundAccent shadow-lg backdrop-blur-2xl relative w-[350px] md:h-[300px] sm:max-w-[90%]
+      className="p-4 bg-primary text-secondary border-2 border-accent shadow-lg backdrop-blur-2xl relative w-[350px] md:h-[300px] sm:max-w-[90%]
         first:border-b-[3px] first:border-l-2 md:first:border-b-2 md:first:border-l-[3px] 
         last:border-t-[3px] last:border-r-2 last:first:border-t-2 last:first:border-r-[3px] 
       "
@@ -53,17 +53,19 @@ const ExpertiseCard = ({ title, subtitle, icon, text }: ExpertiseProps) => {
                         after:left-[17px] 
                         after:border-solid 
                         after:border-[1px] 
-                        after:border-zinc-50 
+                        after:border-accent 
                         after:content-default"
         >
           <div
             className="pl-[35px] text-[12px] flex flex-col items-start
                             before:ml-[-50px]
                             before:content-['<h3>'] 
+                            before:text-accent
                             before:mb-[5px] 
                             before:opacity-30 
                             after:ml-[-50px]
                             after:mt-[5px]
+                            after:text-accent
                             after:content-['</h3>'] 
                             after:opacity-30
                             "

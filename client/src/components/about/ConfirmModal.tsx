@@ -27,28 +27,12 @@ const ConfirmModal = () => {
         <div 
             className='flex flex-row gap-4 w-full justify-center mt-8 relative flex-wrap '
         >
-            <div
-                className=' size-16 border-2 border-[#e5e7eb]/75 rounded-lg shadow-xl bg-[#08172E] text-white font-bold text-[1.5rem] hover:bg-[#C2C1C1]/75 hover:text-[#08172E] hover:border-accent transition-colors duration-300 ease-in-out flex justify-center items-center  '
-            >
-                <a href="https://linkedin.com/in/pierre-antoniutti/" target='_blank ' className='size-[75%]' id='Linkedin'>
-                    <FaLinkedin className=" size-full "/>
-                </a>
-            </div>
-            <div className='order-last '>
-                <CTA>
-                    <div onClick={()=>setStartDownload(!startDownload)} className=' flex flex-row flex-nowrap items-center justify-center gap-3 w-full'>
-                        <span className='text-sm whitespace-nowrap text-ellipsis font-semibold'> Télécharger CV </span>
-                        <FaDownload className=" size-8 p-[2px]"/>
-                    </div>
-                </CTA>
-            </div>
-            <div
-                className='md:order-last size-16 border-2 border-[#e5e7eb]/75 rounded-full shadow-xl bg-[#08172E] text-white font-bold text-[1.5rem] hover:bg-[#C2C1C1]/75 hover:text-[#08172E] hover:border-accent transition-colors duration-300 ease-in-out flex justify-center items-center  '
-            >
-                <a href="https://github.com/Deuli-P" target='_blank ' className='size-[80%]' id='Github'>
-                    <FaGithub className=" size-full "/>
-                </a>
-            </div>
+            <CTA>
+                <div onClick={()=>setStartDownload(!startDownload)} className=' flex flex-row flex-nowrap items-center justify-center gap-3 w-full'>
+                    <span className='text-sm whitespace-nowrap text-ellipsis font-semibold'> Télécharger CV </span>
+                    <FaDownload className=" size-8 p-[2px]"/>
+                </div>
+            </CTA>
         </div>
         {startDownload ? 
             (
