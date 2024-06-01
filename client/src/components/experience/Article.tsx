@@ -5,6 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExperienceProps } from "@/lib/types";
+import Technologies from "../Technologies";
 
 
 
@@ -28,7 +29,7 @@ const Article = ({ entreprise }:ExperienceProps) => {
         <article 
             className={`w-full text-background flex flex-col gap-2`}>
             <div 
-                className={`${isOpen? "bg-foregroundAccent": "bg-[#551E5B]"} py-2 px-4 text-foreground font-semibold text-xl flex flex-row justify-between items-center rounded-md `}
+                className={`${isOpen? "bg-foregroundAccent": "bg-[#551E5B]"} py-2 cursor-pointer px-4 text-foreground font-semibold text-xl flex flex-row justify-between items-center rounded-md `}
                 onClick={()=>onToggle()}
             >
                 <div className={``}>
@@ -100,12 +101,7 @@ const Article = ({ entreprise }:ExperienceProps) => {
                         <p >{description ? description : "Description des missions effectués dans l'entreprise tout au long du contrat "}</p>
                         <div className={`w-full flex justify-start flex-wrap pb-4 mt-2`}>
                             {technologies.map((item, idx) => (
-                                <div 
-                                    key={idx}
-                                    className="bg-[#a5abf3] py-1 px-4 m-1 text-[#141e26] rounded-full w-auto"
-                                >
-                                    {item}
-                                </div>
+                                <Technologies key={idx} item={item}/>
                             ))}
                         </div>
                     </div>

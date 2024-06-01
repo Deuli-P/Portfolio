@@ -22,7 +22,10 @@ const Card=({title,image,alt,type,id}:CardProps)=> {
                             alt={alt} 
                             quality={65} 
                             fill
-                            objectFit="cover"
+                            sizes='100vw'
+                            className='size-full'
+                            loading='lazy'
+                            objectFit='cover'
                             />
                     </div>
                 </div>
@@ -34,7 +37,7 @@ const Card=({title,image,alt,type,id}:CardProps)=> {
                     <div className=" relative w-full h-full opacity-80">
                         <div className="opacity-0">i</div>
                         <p className=" absolute top-0 mb-[5px] transition-all duration-300 ease-in translate-y-0 group-hover:-translate-y-full group-hover:opacity-0">{type}</p>
-                        <p className=" absolute top-0 transition-all duration-300 ease-in -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Afficher plus</p>
+                        <p className=" absolute top-0 transition-all duration-300 ease-in -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">{`// Afficher plus`}</p>
                     </div>
                 </div>
             </article>

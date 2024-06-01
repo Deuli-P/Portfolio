@@ -1,5 +1,5 @@
 'use client'
-import CTA from "./../CTA";
+import CTAPrimary from "./../CTA/CTAPrimary";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ProjectType } from "./../../lib/types";
@@ -57,7 +57,7 @@ const LastProjectCard = () => {
             <div className="xl:absolute lg:bottom-0 lg:-left-[50%]">
 
                 <div className="relative flex flex-col gap-4 justify-center">
-                    <div className="absolute top-0 right-4 w-[70px] h-[70px] flex justify-center items-center -scale-x-100 xl:scale-x-100 xl:-scale-y-100">
+                    <div className="absolute top-0 right-4 w-[70px] h-[70px] flex justify-center items-center -scale-x-100 xl:scale-x-100 xl:rotate-90">
                         <Image src={Arrow} alt='Icon fleche' width={64} height={64} />
                     </div>
                     <span className={` text-xl relative text-primary whitespace-nowrap pt-16 `}>
@@ -65,9 +65,9 @@ const LastProjectCard = () => {
                         <strong className={` text-2xl text-foregroundAccent`}> {item.name}</strong>
                     </span>
                     <div className=" w-full flex justify-center">
-                        <CTA>
+                        <CTAPrimary>
                             <a href={item.link} className="text-background text-center  w-full min-w-[200px] text-xl" id='link project'>Voir projet</a>
-                        </CTA>
+                        </CTAPrimary>
                     </div>
                 </div>
             </div>

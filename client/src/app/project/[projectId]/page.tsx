@@ -1,13 +1,14 @@
 'use client'
 import { useEffect, useState } from "react";
-import CTA from "@/components/CTA";
+import CTAPrimary from "@/components/CTA/CTAPrimary";
 import Image from "next/image";
 import { CircleLoader } from "@/components/Loader";
 import getProject from "./ProjectData";
 import { useRouter } from 'next/navigation';
-import { BiArrowToLeft } from "react-icons/bi";
 import { ProjectType } from "@/lib/types";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronLeft} from "react-icons/fa";
+import TelechargerCV from "@/components/header/DLCV";
+import Technologies from "@/components/Technologies";
 
 
 type paramsType = {
@@ -47,17 +48,22 @@ const Page = ({params}:paramsType ) => {
 
       const renderTag = (tag: string,text:string) => (
         <div 
-            className=" w-[210px]"
+            className=" xl:w-[210px] w-[105px]"
         >
             <div className="border-t-[2px] text-left pt-4 mr-4 mb-4" >
                 <span className=" font-extrabold ">{tag}</span>
-                <p className="pl-2">{text}</p>
+                <p className="pl-2 text-[0.625rem] xl:text-[1rem]">{text}</p>
             </div>
         </div>
       )
 
 
-    const RenderReseau =(url, name)=>(
+    interface RenderReseauProps {
+    url: string;
+    name: string;
+    }
+
+    const RenderReseau: React.FC<RenderReseauProps> = ({ url, name })=>(
             <div className="projetPage_media_RS">
                 <a  target={`_blank`}
                     href={url}
@@ -81,52 +87,63 @@ const Page = ({params}:paramsType ) => {
  
     return(
         <>
-            <nav className='w-full flex justify-between items-center p-4 md:p-6 md:fixed'>
+            <nav className='w-full flex justify-between items-center py-6 px-2 md:px-6 xl:max-w-[1100px]'>
                 <div 
-                    className='size-10 bg-secondary cursor-pointer shadow-md rounded-full flex items-center justify-center group  hover:bg-primary  transition-all duration-200'
+                    className='size-10 cursor-pointer lg:hidden flex items-center justify-center group  hover:scale-80  transition-all duration-200'
                     onClick={handleBack}
                 >
-                    <BiArrowToLeft className='size-6 text-primary group-hover:text-secondary transition-all duration-300 delay-50'/>
+                    <FaChevronLeft className='size-6 text-primary group-hover:-translate-x-2 transition-all duration-300 delay-50'/>
                 </div>
-                <CTA>
+                <TelechargerCV />
+                <div className="cursor-pointer hidden lg:block">
+                    <span className=" hover:underline duration-300 transition-all delay-100 underline-offset-[8px] font-semibold text-lg">Accueil</span>
+                </div>
+                <CTAPrimary>
                     <a href='#contact' className='flex gap-2 items-center '  >
                         <span className='text-background'>Contact moi</span>
                     </a>
-                </CTA> 
+                </CTAPrimary> 
             </nav>
             { project ?
             (
-                <main id="main-projet" className=" bg-background text-primary w-full px-8 mb-12">
-                    <section className="flex flex-col justify-center items-star py-4 ">
+                <main id="main-projet" className=" bg-background text-primary w-full px-4 mb-12 xl:max-w-[1250px] flex flex-col justify-center">
+                    <section className="flex flex-col justify-center items-star gap-6 pb-4 pt-8 ">
                         <span>{`//`} { project.support}</span>
                         <h1 className="ml-2 font-black text-4xl text-foregroundAccent">{ project.name}</h1>
-                    </section>
-                    <section className="py-4 font-semibold text-lg">
-                        <span 
-                            onClick={handleBack}
-                            className=" cursor-pointer hover:underline underline-offset-2"
-                        >
-                            Home 
-                        </span>
-                            {' >'}
-                        <span>Portfolio {'>'} </span>
-                        <span>{project.name}</span>
-                    </section>
-                    <section className="flex flex-col gap-4 py-6">
-                        <div className="">
-                            <p>
-                                {project.description}
-                            </p>
+                        <div className="font-semibold">
+                            <span 
+                                onClick={handleBack}
+                                className=" cursor-pointer underline underline-offset-2"
+                                >
+                                Home 
+                            </span>
+                                {' >'}
+                            <span>Portfolio {'>'} </span>
+                            <span>{project.name}</span>
                         </div>
-                        <div className=" flex flex-col gap-2 w-full">
-                            <div className="flex flex-row flex-wrap w-full">
-                                {renderTag("Client",project.tags.client)}
-                                {renderTag("Mission",project.tags.mission)}
-                                {renderTag("Stratégie",project.tags.strategie)}
-                                {project.tags.designer ?renderTag("Designer",project.tags.designer) : null }
-                            </div>
-                            <div className=" w-full flex justify-center">
-                                <CTA>
+                    </section>
+                    <section className="flex flex-col gap-4 py-6 lg:flex-row lg:justify-around ">
+                        <p className="lg:w-[40%] xl:max-w-[550px] ">
+                            {project.description}
+                        </p>
+                        <div className="flex flex-row flex-wrap justify-center xl:justify-between w-full lg:max-w-[420px]">
+                            {renderTag("Client",project.tags.client)}
+                            {renderTag("Mission",project.tags.mission)}
+                            {renderTag("Stratégie",project.tags.strategie)}
+                            {project.tags.designer ?renderTag("Designer",project.tags.designer) : null }
+                        </div>
+                    </section>
+                    <section className=" w-full flex flex-col lg:flex-row lg:gap-20 lg:w-full items-center justify-center gap-4">
+                        <div className="flex flex-row flex-wrap xl:w-[50%]">
+                            {project.technologies.map((tech,index)=> {
+                                return(
+                                    <Technologies key={index} item={tech}/>
+                                )
+                            })}
+                        </div>
+                        <div className="w-full flex justify-center lg:w-[50%]">
+                            <div className="w-[200px] md:w-full md:max-w-[250px]">
+                                <CTAPrimary>
                                     <a
                                         href={project.link} 
                                         className=" w-full max-w-[300px] text-center"
@@ -135,11 +152,11 @@ const Page = ({params}:paramsType ) => {
                                         >
                                         Ouvrir projet
                                     </a>
-                                </CTA>
+                                </CTAPrimary>
                             </div>
                         </div>
                     </section>
-                    <section className=" w-full flex flex-col gap-4 relative ">
+                    <section className=" w-full flex flex-col gap-4 mt-8 relative ">
                         <div className="absolute top-4 left-4" >
                             { project.reseau ? 
                                 (

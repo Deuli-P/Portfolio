@@ -7,8 +7,8 @@ const Contact = () => {
 
 
     return (
-        <footer id='contact' className=" text-white xl:bg-primary flex flex-col xl:flex-row items-center w-full border-t-xl">
-          <div className=" flex flex-col items-center justify-center xl:items-start gap-8 py-10 xl:px-8 xl:h-full xl:w-auto bg-secondary w-full xl:rounded-tr-[50px] rounded-0">
+        <footer id='contact' className=" text-white lg:bg-primary flex flex-col lg:flex-row items-center w-full border-t-xl">
+          <div className=" flex flex-col items-center justify-center lg:items-start gap-8 py-10 lg:px-8 lg:h-full lg:w-[400px] xl:w-auto bg-secondary w-full lg:rounded-tr-[50px] rounded-0">
             <div className='mb-4 bg-primary text-background px-6 py-2 flex flex-row items-center gap-4'>
               <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const Contact = () => {
             <div className="w-[60%] xl:w-full xl:whitespace-nowrap flex flex-col gap-4 text-center xl:text-left text-primary">
               <p className="text-xs xl:text-2xl ">
                 {`Besoin d'une information suplémentaire?`}<br/>
-                <span className="underline underline-offset-2 text-sm xl:text-4xl ">Envoyez moi un message</span>
+                <span className="font-bold ">Envoyez moi un message</span>
               </p>
               <p>
                 {`par email via le formulaire de contact ou en suivant les liens suivant 😊`}

@@ -72,4 +72,6 @@ export interface ExperienceProps {
     };
 } 
 
-
+export type CtaType={
+    children: React.ReactNode;
+}

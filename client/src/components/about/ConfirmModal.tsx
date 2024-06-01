@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import CTA from "./../CTA";
+import CTAPrimary from "./../CTA/CTAPrimary";
+import CTASecond from '../CTA/CTASecondary';
 import { FaDownload } from "react-icons/fa6";
-import { FaLinkedin ,FaGithub } from "react-icons/fa";
 
-const ConfirmModal = () => {
+const DonwloadCV = () => {
 
     const modal = useRef<HTMLDivElement>(null);
 
@@ -25,14 +25,14 @@ const ConfirmModal = () => {
   return (
     <div className='relative flex justify-center items-center '>
         <div 
-            className='flex flex-row gap-4 w-full justify-center mt-8 relative flex-wrap '
+            className='flex flex-row gap-4 w-full justify-center items-center relative flex-wrap '
         >
-            <CTA>
+            <CTAPrimary>
                 <div onClick={()=>setStartDownload(!startDownload)} className=' flex flex-row flex-nowrap items-center justify-center gap-3 w-full'>
-                    <span className='text-sm whitespace-nowrap text-ellipsis font-semibold'> Télécharger CV </span>
+                    <span className='text-sm whitespace-nowrap text-ellipsis font-semibold lg:after:content-[Télécharger] after:content-none'> Télécharger CV </span>
                     <FaDownload className=" size-8 p-[2px]"/>
                 </div>
-            </CTA>
+            </CTAPrimary>
         </div>
         {startDownload ? 
             (
@@ -44,7 +44,13 @@ const ConfirmModal = () => {
                                 <button onClick={handleDownload} className='px-4 py-2 rounded-full bg-accent hover:opacity-75' name='Confirm téléchargement'>
                                     Confirm
                                 </button>
-                                <button onClick={() => setStartDownload(false)} className=' px-[4px] py-[2px] rounded-sm underline-offset-2  hover:underline transition-all duration-200' name='Annuler téléchargement'>Annuler</button>
+                                <CTASecond>
+                                    <span 
+                                        onClick={() => setStartDownload(false)} 
+                                    >
+                                        Annuler
+                                    </span>
+                                </CTASecond>
                             </div>
                         </div>
                     </div>
@@ -57,4 +63,4 @@ const ConfirmModal = () => {
   )
 }
 
-export default ConfirmModal
+export default DonwloadCV;

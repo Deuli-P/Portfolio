@@ -32,7 +32,7 @@ const Filter = () => {
 
             <div 
                 onClick={()=>{setIsOpen(!isOpen)}}
-                className={`flex items-center h-10 justify-center py-1 px-[10px] rounded-full duration-300 z-40  ${ !isOpen? "bg-secondary text-primary translate-y-32 md:translate-y-0" : "bg-primary text-background translate-y-0 "}`}
+                className={`flex items-center h-10 cursor-pointer justify-center py-1 px-[10px] rounded-full duration-300 z-40  ${ !isOpen? "bg-secondary text-primary translate-y-32 md:translate-y-0" : "bg-primary text-background translate-y-0 "}`}
                 >
                 <span className={`text-center text-lg`}>
                     Filtrer

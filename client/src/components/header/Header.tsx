@@ -1,8 +1,6 @@
 'use client';
-import CTA from "@/components/CTA";
+import CTAPrimary from "@/components/CTA/CTAPrimary";
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import Burger from "./mobile/Burger";
 import Element from "./Element";
 import { motion } from "framer-motion";
@@ -39,11 +37,11 @@ const NavBar = () => {
                 </div>
                 {/* Desktop */}
                 <div className="flex flex-row gap-4 justify-end">
-                    <CTA>
+                    <CTAPrimary>
                         <a href='#form-contact' className='flex gap-2 items-center '  >
                             <span className='text-background'>Contact moi</span>
                         </a>
-                    </CTA> 
+                    </CTAPrimary> 
                     
                 </div>
             </nav>

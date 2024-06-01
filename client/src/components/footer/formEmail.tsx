@@ -62,7 +62,7 @@ const FormEmail = ()=> {
         </div>
     )
 
-    const onSubmit = (data: FormData, event: React.FormEvent) => {        event.preventDefault();
+    const onSubmit = (data: FormData) => {
         setIsLoading(true);
         sendForm(data)
             .then((response) => {
@@ -87,7 +87,7 @@ const FormEmail = ()=> {
     return (
         <form 
             id='form-contact'
-            className="flex bg-[#08172E] xl:h-full py-12 flex-col gap-[4px] w-full md:w-1/2 items-center relative" 
+            className="flex bg-[#08172E] xl:h-full py-12 flex-col gap-[4px] w-full lg:w-full xl:w-1/2 items-center relative" 
             onSubmit={handleSubmit(onSubmit)}
         >
             <label 
