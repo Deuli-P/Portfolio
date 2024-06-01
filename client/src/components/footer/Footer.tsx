@@ -35,19 +35,19 @@ const Contact = () => {
             <div className='min-w-[260px] max-w-[310px] flex flex-col items-center xl:items-start gap-6'>
               <h5 className="font-bold text-xl text-primary xl:text-3xl">Suivez moi</h5>
               <div className="flex flex-col w-full gap-4 items-center">
-                <a href="https://linkedin.com/in/pierre-antoniutti/" id="profile-linkedin" className="bg-primary text-accent flex items-center shadow-lg hover:shadow-xl justify-center w-full h-14 rounded-md">
+                <a href="https://linkedin.com/in/pierre-antoniutti/" aria-label="Linkedin" className="bg-primary text-accent flex items-center shadow-lg hover:shadow-xl justify-center w-full h-14 rounded-md">
                   <LiaLinkedin className="size-11"/>
                 </a>
-                <a href="https://github.com/Deuli-P/" id="profile-github" className="bg-primary text-accent flex items-center justify-center shadow-lg hover:shadow-xl w-full h-14 rounded-md">
+                <a href="https://github.com/Deuli-P/" aria-label="Github" className="bg-primary text-accent flex items-center justify-center shadow-lg hover:shadow-xl w-full h-14 rounded-md">
                   <FaGithub className="size-11"/>
                 </a>
-                <a href="https://www.threads.net/@pierreantoniutti" id="profile-thread" className="bg-primary text-accent flex items-center shadow-lg hover:shadow-xl justify-center w-full h-14 rounded-md">
+                <a href="https://www.threads.net/@pierreantoniutti" aria-label="Thread" className="bg-primary text-accent flex items-center shadow-lg hover:shadow-xl justify-center w-full h-14 rounded-md">
                   <FaThreads className="size-11"/>
                 </a>
               </div>
             </div>
           </div>
-            <FormEmail />
+          <FormEmail />
         </footer>
     )
 }

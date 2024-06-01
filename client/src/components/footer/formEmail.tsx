@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import sendForm from './sendForm';
 import Message from './message';
 import { motion } from 'framer-motion';
-import CTA from "./../CTA";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 
@@ -156,7 +155,7 @@ const FormEmail = ()=> {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.5 }}
                             transition={{ duration: 0.4, type: "spring" ,ease: "easeOut"}}
-                            className=' bg-accent w-full h-full rounded-full px-6 py-2 ' type='submit'
+                            className=' bg-accent text-primary font-bold w-full h-full rounded-full px-6 py-2 ' type='submit'
                         >
                             Envoyer
                         </motion.button>

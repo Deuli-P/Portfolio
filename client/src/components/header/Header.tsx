@@ -39,7 +39,7 @@ const NavBar = () => {
                 <div className="flex flex-row gap-4 justify-end">
                     <CTAPrimary>
                         <a href='#form-contact' className='flex gap-2 items-center '  >
-                            <span className='text-background'>Contact moi</span>
+                            <span >Contact moi</span>
                         </a>
                     </CTAPrimary> 
                     

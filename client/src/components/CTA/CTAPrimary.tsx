@@ -24,7 +24,7 @@ const CTAPrimary =({children}:CtaType) => {
             initial="initial"
             variants={animationButton}
             custom={2}
-            className='bg-accent relative group py-2 px-4 overflow-hidden text-background shadow-lg cursor-pointer shaodw-neutral-50 rounded-full flex flex-row gap-5 items-center z-[1]'
+            className='bg-accent font-bold relative group hover:text-background py-2 px-4 overflow-hidden text-primary shadow-lg cursor-pointer shaodw-neutral-50 rounded-full flex flex-row gap-5 items-center z-[1]'
     >
         {/*  on peut pas faire avec le after l'animation */}
         <span className='absolute top-0 left-0 w-full h-full rounded-md bg-foregroundAccent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out -z-10'/>

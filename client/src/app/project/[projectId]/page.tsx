@@ -18,7 +18,6 @@ type paramsType = {
 
 }
 
-
 const Page = ({params}:paramsType ) => {
 
     const  id = params.projectId;
@@ -27,17 +26,14 @@ const Page = ({params}:paramsType ) => {
     const router = useRouter();
 
     const handleBack = ()=> {
-        console.log("[PAGE] handleBack");
         router.push('/')
     }
 
     useEffect(() => {
-        console.log("[PAGE] id:",id);
         
         const fetchProject = async () => {
           if (id) {
             const api = await getProject(id);
-            console.log("[PAGE] Api recup:",api);
             
             setProject(api);
           }
@@ -69,19 +65,19 @@ const Page = ({params}:paramsType ) => {
                     href={url}
                     className="projetPage_media_RS-a"
                 >
-                        { 
-                            name === "instagram" ?
-                                <FaInstagram className={`projetPage_media_RS-i`} /> 
-                            : 
-                            name === "facebook" ?
-                                <FaFacebookF className={`projetPage_media_RS-i`} />
-                            :
-                            name === "linkedin" ?
-                                <FaLinkedinIn className={`projetPage_media_RS-i`} />
-                            :
-                                null
-                        }
-                </a>
+                    { 
+                        name === "instagram" ?
+                            <FaInstagram className={`projetPage_media_RS-i`} /> 
+                        : 
+                        name === "facebook" ?
+                            <FaFacebookF className={`projetPage_media_RS-i`} />
+                        :
+                        name === "linkedin" ?
+                            <FaLinkedinIn className={`projetPage_media_RS-i`} />
+                        :
+                            null
+                    }
+            </a>
         </div>
     );
  
@@ -173,32 +169,27 @@ const Page = ({params}:paramsType ) => {
                             { project.mockup.type === "video" ?
                             (
                                 <video loop muted autoPlay preload="false" controlsList="nodownload">
-                                    <source src={project.mockup.url} type="video/mp4" />
+                                    <source 
+                                        src={project.mockup.url} 
+                                        type="video/mp4" 
+                                    />
                                 </video>
                             )
                             :
-                                <Image src={project.mockup.url} alt={project.mockup.alt} width={1200} height={800} />
+                                <Image 
+                                    src={project.mockup.url} 
+                                    alt={project.mockup.alt} 
+                                    width={1200} height={800} 
+                                />
                             }
                         </div>
-                            {/* Pour chaque object dans pictures on recup "alt" puis pour chaque element dans "image" on creer une image
-                                    pictures:[
-                                        {
-                                            images:[
-                                                "string",
-                                                "string",
-                                                "string",
-                                            ];
-                                            alt: string;
-                                        }
-                                    ]
-                            */}
-                                {project.pictures.map((items) => (
-                                    <div className=" w-full h-full flex flex-col " key={`pack_img`+items.alt}>
+                                {project.pictures.map((items,idx) => (
+                                    <div className=" w-full h-full flex flex-col " key={`pack_img_`+idx}>
                                         {items.images.map((image: string, idx) => (
                                             <Image 
                                                 src={image} 
                                                 alt={items.alt}
-                                                key={`image_img`+idx}
+                                                key={`image_img_`+idx}
                                                 width={1200}
                                                 height={800}
                                             />

@@ -66,7 +66,7 @@ const LastProjectCard = () => {
                     </span>
                     <div className=" w-full flex justify-center">
                         <CTAPrimary>
-                            <a href={item.link} className="text-background text-center  w-full min-w-[200px] text-xl" id='link project'>Voir projet</a>
+                            <a href={item.link} className=" text-center  w-full min-w-[200px] text-xl" id='link project'>Voir projet</a>
                         </CTAPrimary>
                     </div>
                 </div>
