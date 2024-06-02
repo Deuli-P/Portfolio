@@ -27,11 +27,11 @@ const TelechargerCV = () => {
   return (
     <div className='relative'>
         <div 
-            className='text-center text-primary bg-secondary md:flex md:flex-row items-center md:gap-4 shadow-lg rounded-full md:rounded-4xl p-2 md:px-4 md:py-2 whitespace-nowrap '
+            className='text-center text-primary bg-secondary sm:flex md:flex-row items-center sm:gap-4 shadow-lg rounded-full sm:rounded-4xl p-2 sm:px-4 sm:py-2 whitespace-nowrap '
             onClick={()=>setStartDownload(true)}
         >
-                <p className='hidden md:block'>{`Télécharger CV`}</p>
-                <p className='md:hidden'>CV</p>
+                <p className='hidden sm:block'>{`Télécharger CV`}</p>
+                <p className='sm:hidden'>CV</p>
             <FaDownload className=" size-6 p-[2px] hidden md:block"/>
         </div>
         {startDownload ? 
