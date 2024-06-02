@@ -3,7 +3,7 @@ import { links } from "./data";
 export type SectionName = (typeof links)[number]["name"];
 
 export type ProjectType = {
-    _id: number;
+    _id: string;
     name: string;
     description: string;
     mockup: {
@@ -12,7 +12,7 @@ export type ProjectType = {
         alt: string;
     }
     cover: {
-        url: string;
+        image: string;
         alt: string;
     }
     pictures:[

@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef, useState, useEffect } from "react";
-import { useFilterContext } from "./../../context/filter-projets-context";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import OptionDropdown from "./OptionDropdown";
 
@@ -16,15 +15,15 @@ type SelectProps = {
 }
 
 
-const Dropdown = ({ name, liste, show, delay, type, handle, selected}: SelectProps) => {
+const Dropdown = ({ name, liste, show, handle, selected}: SelectProps) => {
 
     const [ isOpen , setIsOpen ] = useState(false);
 
 
     // const { filterActive, mission, support, technos } = useFilterContext();
 
-    const dropDownRef = useRef<HTMLInputElement>();
-    const dropdownMenuRef = useRef<HTMLInputElement>();
+    const dropDownRef = useRef<HTMLButtonElement>(null);
+    const dropdownMenuRef = useRef<HTMLUListElement>(null);
 
     // Utilisez l'état local approprié pour suivre la sélection
     const isSelected = selected ;

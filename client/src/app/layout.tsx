@@ -5,7 +5,6 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Contact from "../components/footer/Footer";
 import Providers from "./../context/Providers";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 const inter = Inter({ subsets: ["latin"] });
 

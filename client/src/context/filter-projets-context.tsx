@@ -1,25 +1,25 @@
 'use client'  
 
-import { useContext, useState, useEffect, createContext } from "react";
+import { useContext, useState, useEffect, createContext, Dispatch, SetStateAction } from "react";
 
 type filterType = string | undefined;
 
 
 type FilterContextType = {
-    listFiltered: [];
-    setListFiltered: (listFiltered: []) => void;
-    listGet: [];
-    setListGet: (listGet: []) => void;
-    listShow: [];
-    setListShow: (listShow: []) => void;
-    filterActive: boolean,
-    setFilterActive:()=> void;
-    support: filterType,
-    setSupport:(support: filterType) => void,
-    mission: filterType,
-    setMission:(mission: filterType) => void,
-    technos: filterType,
-    setTechnos:(technos: filterType) => void,
+    listFiltered: ProjectType[];
+    setListFiltered: Dispatch<SetStateAction<ProjectType[]>>;
+    listGet: ProjectType[];
+    setListGet: Dispatch<SetStateAction<ProjectType[]>>;
+    listShow: ProjectType[];
+    setListShow: Dispatch<SetStateAction<ProjectType[]>>;
+    filterActive: boolean;
+    setFilterActive: Dispatch<SetStateAction<boolean>>;
+    support: filterType;
+    setSupport: Dispatch<SetStateAction<filterType>>;
+    mission: filterType;
+    setMission: Dispatch<SetStateAction<filterType>>;
+    technos: filterType;
+    setTechnos: Dispatch<SetStateAction<filterType>>;
 }
 
 type FilterContextProviderProps = {
@@ -61,25 +61,22 @@ const FilterContext = createContext<FilterContextType | null>(null);
 
 export const FilterProvider = ({children}: FilterContextProviderProps) => {
 
-    // Filtres actif ou pas
+    // Liste filtrée
+    const [listFiltered, setListFiltered] = useState<ProjectType[]>([]);
 
     // Liste Fetch depuis l'API
-    const [ listGet , setListGet ] = useState([])
+    const [ listGet , setListGet ] = useState<ProjectType[]>([])
 
     // Liste à afficher 
         // Si filtre non vide alors on affiche la liste filtrée
-    const[ listShow , setListShow ] = useState<[]>([]);
+    const[ listShow , setListShow ] = useState<ProjectType[]>([]);
 
     const[ filterActive, setFilterActive ] =useState<boolean>(false)
 
     // Techno 
     const [technos, setTechnos ] = useState<filterType>(undefined)
-
-
     // Support
     const [support, setSupport ] = useState<filterType>(undefined)
-
-
     // Mission 
     const [ mission, setMission ] = useState<filterType>(undefined)
 
@@ -92,7 +89,7 @@ export const FilterProvider = ({children}: FilterContextProviderProps) => {
         }
     },[mission, technos,support])
 
-    useState(() => {
+    useEffect(() => {
         if(listGet){
              if (filterActive){
                 const listFiltered = listGet.filter((item: ProjectType) => {
@@ -124,15 +121,17 @@ export const FilterProvider = ({children}: FilterContextProviderProps) => {
                 setListShow(listGet)
             }
         }
-    },[listGet]);
+    },[listGet, filterActive, mission, support, technos]);
 
 
 
-    const values ={
+    const values: FilterContextType = {
         filterActive,
         setFilterActive,
         listGet,
         setListGet,
+        listFiltered,
+        setListFiltered,
         listShow,
         setListShow,
         support,
@@ -141,9 +140,7 @@ export const FilterProvider = ({children}: FilterContextProviderProps) => {
         setMission,
         technos,
         setTechnos
-
-
-    } 
+    };
 
     return(
         <FilterContext.Provider value={values}>

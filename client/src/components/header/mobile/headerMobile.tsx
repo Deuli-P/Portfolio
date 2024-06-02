@@ -2,11 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Burger from "./Burger";
 import { links } from "../../../lib/data";
 import Element from './../Element';
-import CTA from "./../../CTA";
-import Image from "next/image";
 
 const HeaderMobile = () => {
 

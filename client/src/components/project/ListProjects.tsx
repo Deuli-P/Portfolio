@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 import getProjects from "./getProjects";
 import Card from "./Card";
+import { ProjectType } from "@/lib/types";
 
 const ListProjects = () => {
     
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState<ProjectType[]>([]);
     
     useEffect(() => {
     const fetchProjects = async () => {

@@ -1,6 +1,5 @@
 import { links } from "./../../lib/data";
 import Element from './../../components/header/Element';
-import CTA from "./../CTA";
 
 const HeaderDesktop = () => {
     return ( 

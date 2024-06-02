@@ -3,7 +3,7 @@
 
 type OptionDropdownProps = {
     tech: string;
-    state: string;
+    state: string | null;
     handle: (tech:string)=>void
 }
 
